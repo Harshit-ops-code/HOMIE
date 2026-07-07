@@ -1,0 +1,14 @@
+# Next.js build and dependencies
+basera/node_modules/
+basera/.next/
+basera/out/
+
+# Environment files
+basera/.env.local
+basera/.env.development.local
+basera/.env.test.local
+basera/.env.production.local
+
+# OS files
+.DS_Store
+Thumbs.db
