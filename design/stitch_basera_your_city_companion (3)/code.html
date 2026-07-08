@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Green View PG - Map View</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#ffc329",
+                        "tertiary-container": "#002819",
+                        "services-red": "#ef4444",
+                        "secondary-fixed-dim": "#f9bd22",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "secondary": "#795900",
+                        "surface-container": "#eceef0",
+                        "primary-container": "#1e1b4b",
+                        "primary": "#070235",
+                        "transport-slate": "#64748b",
+                        "surface-container-low": "#f2f4f6",
+                        "tertiary": "#000f07",
+                        "on-tertiary-container": "#009d6c",
+                        "on-primary-container": "#8683ba",
+                        "surface-bright": "#f7f9fb",
+                        "surface-tint": "#5b598c",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "surface-dim": "#d8dadc",
+                        "gym-purple": "#a855f7",
+                        "primary-fixed": "#e3dfff",
+                        "on-secondary-container": "#6f5100",
+                        "outline-variant": "#c8c5d0",
+                        "background": "#f7f9fb",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed": "#181445",
+                        "on-error": "#ffffff",
+                        "housing-indigo": "#4f46e5",
+                        "grocery-emerald": "#10b981",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#6ffbbe",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-secondary-fixed-variant": "#5c4300",
+                        "inverse-primary": "#c4c1fb",
+                        "error-container": "#ffdad6",
+                        "food-orange": "#f97316",
+                        "on-secondary-fixed": "#261a00",
+                        "on-primary-fixed-variant": "#444173",
+                        "inverse-on-surface": "#eff1f3",
+                        "surface-container-high": "#e6e8ea",
+                        "surface": "#f7f9fb",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#ffdf9f",
+                        "on-surface": "#191c1e",
+                        "on-tertiary-fixed": "#002113",
+                        "outline": "#787680",
+                        "on-surface-variant": "#47464f",
+                        "primary-fixed-dim": "#c4c1fb",
+                        "surface-variant": "#e0e3e5",
+                        "on-background": "#191c1e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "sm": "8px",
+                        "md": "16px",
+                        "xxl": "48px",
+                        "container-margin-mobile": "16px",
+                        "lg": "24px",
+                        "xl": "32px",
+                        "max-width-desktop": "1200px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Quicksand"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "display-lg": ["Quicksand"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-md": ["Quicksand"],
+                        "display-lg-mobile": ["Quicksand"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "700" }],
+                        "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "display-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md h-screen w-screen overflow-hidden flex flex-col relative antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-surface-container" data-alt="A clean, minimalist high-resolution digital map interface viewed from top-down perspective, centered on a modern urban neighborhood. The map features soft, muted pastel tones of light gray, beige, and faint greens representing parks, with crisp white lines indicating streets. Subtle, soft lighting gives a smooth, flat UI aesthetic, typical of a premium modern navigation app. A warm amber glow subtly highlights a central block. The overall mood is organized, helpful, and visually calming, avoiding harsh contrasts or realistic satellite textures. Designed in a pristine, bright light-mode aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCgdc12Elt0ThtYt-KssJ0_YX3Cyholukx84upnU1QTCYKuZ8FBATemUToNkfz9LDECxtaMfd2uG7PKVmBZ9mlgdNdN41uq9GAnWLNnbtTsiz8-g4eIWCbe3K-69GQvlj05qMNcqnx6vjMHds6XzW-CD1uvNmXdkZZUyCFPH4T7qIANkJhcKglm5AK94XZP87iCYm4vsTIV5mC_unQsBZlP4u7TXVr2G9jIHB-Go3UfNtqpGQs9nNozuA')"></div>
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 flex flex-col items-center">
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-md text-on-primary border-4 border-surface-container-lowest">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+</div>
+<div class="w-4 h-4 bg-primary rotate-45 transform -translate-y-2 rounded-sm -z-10"></div>
+</div>
+</div>
+<div class="absolute top-0 left-0 w-full z-20 p-container-margin-mobile pt-safe flex justify-between items-center pointer-events-none">
+<button aria-label="Go back" class="w-10 h-10 bg-surface-container-lowest rounded-full flex items-center justify-center shadow-sm text-on-surface hover:bg-surface-container-low transition-colors pointer-events-auto">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button aria-label="Share location" class="w-10 h-10 bg-surface-container-lowest rounded-full flex items-center justify-center shadow-sm text-on-surface hover:bg-surface-container-low transition-colors pointer-events-auto">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+<div class="absolute bottom-0 left-0 w-full z-30 p-container-margin-mobile pb-safe">
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_-8px_30px_rgba(30,27,75,0.08)] p-md flex flex-col gap-sm border border-outline-variant/30">
+<div>
+<h1 class="font-headline-md text-headline-md text-primary mb-1">Green View PG</h1>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-start gap-1">
+<span class="material-symbols-outlined text-[18px] mt-0.5 text-outline">location_on</span>
+                    Sector 4, Koramangala, Bengaluru - 560034
+                </p>
+</div>
+<div class="flex gap-sm mt-sm">
+<button class="flex-1 bg-secondary-container text-on-secondary-container font-label-md text-label-md py-3 px-4 rounded-full flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">directions</span>
+                    Get Directions
+                </button>
+<button aria-label="Call property" class="w-12 h-12 bg-surface-container rounded-full flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">call</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>

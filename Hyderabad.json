@@ -1,0 +1,5060 @@
+[{
+  "title": "The Exotic Grill - Multicuisine Restaurant",
+  "subTitle": null,
+  "description": null,
+  "price": "₹200–400",
+  "categoryName": "Continental restaurant",
+  "address": "shop 1,Ground floor,12-13-197,pavani anasuya towers, opp. hmda, beside sudharshan reddy sweets, Tarnaka, Hyderabad, Telangana 500017, India",
+  "neighborhood": "Shri Mitra Ramana Classic Enclave, Krishna Giri Enclave, Tarnaka",
+  "street": "shop 1,Ground floor,12-13-197,pavani anasuya towers, opp. hmda, beside sudharshan reddy sweets",
+  "city": "Hyderabad, Secunderabad",
+  "postalCode": "500017",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "phone": "+91 97038 90303",
+  "phoneUnformatted": "+919703890303",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 17.4250283,
+    "lng": 78.5357019
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 4.6,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJXalpChCZyzsR9ZJ6TVPmQPg",
+  "categories": [
+    "Continental restaurant"
+  ],
+  "fid": "0x3bcb99100a69a95d:0xf840e6534d7a92f5",
+  "cid": "17888550965372162805",
+  "reviewsCount": 2309,
+  "imagesCount": 428,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:35:59.932Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [
+    {
+      "day": "Monday",
+      "hours": "11 AM to 11 PM"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "11 AM to 11 PM"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "11 AM to 11 PM"
+    },
+    {
+      "day": "Thursday",
+      "hours": "11 AM to 11 PM"
+    },
+    {
+      "day": "Friday",
+      "hours": "11 AM to 11 PM"
+    },
+    {
+      "day": "Saturday",
+      "hours": "11 AM to 11 PM"
+    },
+    {
+      "day": "Sunday",
+      "hours": "11 AM to 11 PM"
+    }
+  ],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Service options": [
+      {
+        "No-contact delivery": true
+      },
+      {
+        "Delivery": true
+      },
+      {
+        "Drive-through": true
+      },
+      {
+        "Onsite services": true
+      },
+      {
+        "Takeout": true
+      },
+      {
+        "Dine-in": true
+      }
+    ],
+    "Highlights": [
+      {
+        "Great dessert": true
+      }
+    ],
+    "Popular for": [
+      {
+        "Lunch": true
+      },
+      {
+        "Dinner": true
+      },
+      {
+        "Solo dining": true
+      }
+    ],
+    "Offerings": [
+      {
+        "Alcohol": true
+      },
+      {
+        "All you can eat": true
+      },
+      {
+        "Late-night food": true
+      },
+      {
+        "Quick bite": true
+      },
+      {
+        "Small plates": true
+      },
+      {
+        "Vegetarian options": true
+      }
+    ],
+    "Dining options": [
+      {
+        "Brunch": true
+      },
+      {
+        "Lunch": true
+      },
+      {
+        "Dinner": true
+      },
+      {
+        "Catering": true
+      },
+      {
+        "Dessert": true
+      },
+      {
+        "Table service": true
+      }
+    ],
+    "Amenities": [
+      {
+        "Restroom": true
+      }
+    ],
+    "Atmosphere": [
+      {
+        "Casual": true
+      },
+      {
+        "Cozy": true
+      },
+      {
+        "Quiet": true
+      },
+      {
+        "Trendy": true
+      }
+    ],
+    "Crowd": [
+      {
+        "College students": true
+      },
+      {
+        "Groups": true
+      }
+    ],
+    "Planning": [
+      {
+        "Accepts reservations": true
+      }
+    ],
+    "Payments": [
+      {
+        "Credit cards": true
+      },
+      {
+        "Debit cards": true
+      },
+      {
+        "NFC mobile payments": true
+      }
+    ],
+    "Children": [
+      {
+        "Good for kids": true
+      }
+    ],
+    "Parking": [
+      {
+        "Free parking lot": true
+      },
+      {
+        "Free street parking": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=The%20Exotic%20Grill%20-%20Multicuisine%20Restaurant&query_place_id=ChIJXalpChCZyzsR9ZJ6TVPmQPg",
+  "searchPageUrl": "https://www.google.com/maps/search/restaurent/@17.426234899999997,78.56782912391434,13z?hl=en",
+  "searchString": "restaurent",
+  "language": "en",
+  "rank": 1,
+  "isAdvertisement": false,
+  "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHmugwDt9UFM8AxqwNUqV_rUqMTreY0amAaszFYY6BM3zD9k2jJv7uwW0P9LM78gRIhANI2LWNSyWP_RsJH5VF8n5TcY4ND2k4XIlgL8UPFIVQb1lGvh7tICNx3UEB4FUPJO7WHd9NyBZ-8=w408-h306-k-no",
+  "kgmid": "/g/11t5_494gg"
+},
+{
+  "title": "Platform 65 The Train Restaurant",
+  "subTitle": "ప్లాట్ఫారం 65 ద ట్రేన్ రెస్టారెంట్",
+  "description": "Eclectic, waiter-free eatery offering classic South Indian fare delivered via toy trains.",
+  "price": "₹200–1,400",
+  "categoryName": "North Indian restaurant",
+  "address": "Metro Station Dilsukhnagar, Platform 65 - Metro Pillar No. 1560 - 3rd Floor Chaitanya Puri, Chaitanyapuri Main Rd, beside Centro Near Dilsukhnagar &, Chaitanyapuri, Hyderabad, Telangana 500060, India",
+  "neighborhood": "VR Colony, Chaitanyapuri, Dilsukhnagar",
+  "street": "Metro Station Dilsukhnagar, Platform 65 - Metro Pillar No. 1560 - 3rd Floor Chaitanya Puri, Chaitanyapuri Main Rd, beside Centro Near Dilsukhnagar &",
+  "city": "Hyderabad",
+  "postalCode": "500060",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "website": "https://dilsukhnagar.platform65.in/",
+  "phone": "+91 98853 84849",
+  "phoneUnformatted": "+919885384849",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 17.3680865,
+    "lng": 78.5317564
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 4.6,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJJ94dcZeZyzsRUmYNDtuR5Os",
+  "categories": [
+    "North Indian restaurant",
+    "Biryani restaurant",
+    "Chinese restaurant",
+    "Family restaurant",
+    "Indian restaurant",
+    "Lunch restaurant",
+    "Non vegetarian restaurant",
+    "South Indian restaurant",
+    "Vegetarian restaurant"
+  ],
+  "fid": "0x3bcb9997711dde27:0xebe491db0e0d6652",
+  "cid": "16997871263622719058",
+  "reviewsCount": 37380,
+  "imagesCount": 4667,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:35:59.935Z",
+  "reserveTableUrl": "https://www.google.com/maps/reserve/v/dine/c/vBPQdhwRzI0?source=pa&opi=79508299&hl=en-US&gei=3_1Nar7KCOulj94PkdmWgA0&ahbb=1&sourceurl=https://www.google.com/search?tbm%3Dmap%26authuser%3D0%26hl%3Den%26gl%3Dus%26pb%3D!4m8!1m3!1d60907.18134625342!2d78.56782912391434!3d17.426234899999997!3m2!1i1475!2i1327!4f13.1!7i20!10b1!12m25!1m5!18b1!30b1!31m1!1b1!34e1!2m4!5m1!6e2!20e3!39b1!10b1!12b1!13b1!16b1!17m1!3e1!20m3!5e2!6b1!14b1!46m1!1b0!96b1!99b1!19m4!2m3!1i360!2i120!4i8!20m65!2m2!1i203!2i100!3m2!2i4!5b1!6m6!1m2!1i86!2i86!1m2!1i408!2i240!7m33!1m3!1e1!2b0!3e3!1m3!1e2!2b1!3e2!1m3!1e2!2b0!3e3!1m3!1e8!2b0!3e3!1m3!1e10!2b0!3e3!1m3!1e10!2b1!3e2!1m3!1e10!2b0!3e4!1m3!1e9!2b1!3e2!2b1!9b0!15m16!1m7!1m2!1m1!1e2!2m2!1i195!2i195!3i20!1m7!1m2!1m1!1e2!2m2!1i195!2i195!3i20!22m2!1s3P1NaorUJevsmLQP3djnoQ0!7e81!24m109!1m30!13m9!2b1!3b1!4b1!6i1!8b1!9b1!14b1!20b1!25b1!18m19!3b1!4b1!5b1!6b1!9b1!13b1!14b1!17b1!20b1!21b1!22b1!27m1!1b0!28b0!32b1!33m1!1b1!34b1!36e2!10m1!8e3!11m1!3e1!14m1!3b0!17b1!20m2!1e3!1e6!24b1!25b1!26b1!27b1!29b1!30m1!2b1!36b1!37b1!39m3!2m2!2i1!3i1!43b1!52b1!54m1!1b1!55b1!56m1!1b1!61m2!1m1!1e1!65m5!3m4!1m3!1m2!1i224!2i298!72m22!1m8!2b1!5b1!7b1!12m4!1b1!2b1!4m1!1e1!4b1!8m10!1m6!4m1!1e1!4m1!1e3!4m1!1e4!3sother_user_google_review_posts__and__hotel_and_vr_partner_review_posts!6m1!1e1!9b1!89b1!98m3!1b1!2b1!3b1!103b1!113b1!114m3!1b1!2m1!1b1!117b1!122m1!1b1!126b1!127b1!26m4!2m3!1i80!2i92!4i8!30m28!1m6!1m2!1i0!2i0!2m2!1i530!2i1327!1m6!1m2!1i1425!2i0!2m2!1i1475!2i1327!1m6!1m2!1i0!2i0!2m2!1i1475!2i20!1m6!1m2!1i0!2i1307!2m2!1i1475!2i1327!34m19!2b1!3b1!4b1!6b1!8m6!1b1!3b1!4b1!5b1!6b1!7b1!9b1!12b1!14b1!20b1!23b1!25b1!26b1!31b1!37m1!1e81!49m10!3b1!6m2!1b1!2b1!7m2!1e3!2b1!8b1!9b1!10e2!50m3!2e2!3m1!3b1!61b1!67m5!7b1!10b1!14b1!15m1!1b0!69i757%26q%3Drestaurent%26ech%3D1%26psi%3D3P1NaorUJevsmLQP3djnoQ0.1783496156892.1",
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [
+    {
+      "day": "Monday",
+      "hours": "11:30 AM to 10:45 PM"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "11:30 AM to 10:45 PM"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "11:30 AM to 10:45 PM"
+    },
+    {
+      "day": "Thursday",
+      "hours": "11:30 AM to 10:45 PM"
+    },
+    {
+      "day": "Friday",
+      "hours": "11:30 AM to 10:45 PM"
+    },
+    {
+      "day": "Saturday",
+      "hours": "11:30 AM to 10:45 PM"
+    },
+    {
+      "day": "Sunday",
+      "hours": "11:30 AM to 10:45 PM"
+    }
+  ],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Service options": [
+      {
+        "Curbside pickup": true
+      },
+      {
+        "No-contact delivery": true
+      },
+      {
+        "Delivery": true
+      },
+      {
+        "Onsite services": true
+      },
+      {
+        "Takeout": true
+      },
+      {
+        "Dine-in": true
+      }
+    ],
+    "Highlights": [
+      {
+        "Great dessert": true
+      },
+      {
+        "Sports": true
+      }
+    ],
+    "Popular for": [
+      {
+        "Lunch": true
+      },
+      {
+        "Dinner": true
+      },
+      {
+        "Solo dining": true
+      }
+    ],
+    "Accessibility": [
+      {
+        "Wheelchair accessible parking lot": true
+      },
+      {
+        "Wheelchair accessible restroom": true
+      }
+    ],
+    "Offerings": [
+      {
+        "All you can eat": true
+      },
+      {
+        "Coffee": true
+      },
+      {
+        "Healthy options": true
+      },
+      {
+        "Late-night food": true
+      },
+      {
+        "Organic dishes": true
+      },
+      {
+        "Small plates": true
+      },
+      {
+        "Vegan options": true
+      },
+      {
+        "Vegetarian options": true
+      }
+    ],
+    "Dining options": [
+      {
+        "Breakfast": true
+      },
+      {
+        "Brunch": true
+      },
+      {
+        "Lunch": true
+      },
+      {
+        "Dinner": true
+      },
+      {
+        "Catering": true
+      },
+      {
+        "Counter service": true
+      },
+      {
+        "Dessert": true
+      },
+      {
+        "Seating": true
+      },
+      {
+        "Table service": true
+      }
+    ],
+    "Amenities": [
+      {
+        "Gender-neutral restroom": true
+      },
+      {
+        "Restroom": true
+      },
+      {
+        "Wi-Fi": true
+      },
+      {
+        "Free Wi-Fi": true
+      }
+    ],
+    "Atmosphere": [
+      {
+        "Casual": true
+      },
+      {
+        "Cozy": true
+      },
+      {
+        "Quiet": true
+      },
+      {
+        "Trendy": true
+      }
+    ],
+    "Crowd": [
+      {
+        "Family-friendly": true
+      },
+      {
+        "Groups": true
+      },
+      {
+        "LGBTQ+ friendly": true
+      },
+      {
+        "Tourists": true
+      }
+    ],
+    "Planning": [
+      {
+        "Reservations required": true
+      },
+      {
+        "Dinner reservations recommended": true
+      },
+      {
+        "Accepts reservations": true
+      },
+      {
+        "Usually a wait": true
+      }
+    ],
+    "Payments": [
+      {
+        "Credit cards": true
+      },
+      {
+        "Debit cards": true
+      },
+      {
+        "Google Pay": true
+      },
+      {
+        "NFC mobile payments": true
+      },
+      {
+        "Credit cards": true
+      }
+    ],
+    "Children": [
+      {
+        "Good for kids": true
+      },
+      {
+        "Good for kids birthday": true
+      },
+      {
+        "High chairs": true
+      },
+      {
+        "Kids' menu": true
+      }
+    ],
+    "Parking": [
+      {
+        "Free parking lot": true
+      },
+      {
+        "Free street parking": true
+      },
+      {
+        "Paid parking lot": true
+      },
+      {
+        "Paid street parking": true
+      },
+      {
+        "Usually plenty of parking": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=Platform%2065%20The%20Train%20Restaurant&query_place_id=ChIJJ94dcZeZyzsRUmYNDtuR5Os",
+  "searchPageUrl": "https://www.google.com/maps/search/restaurent/@17.426234899999997,78.56782912391434,13z?hl=en",
+  "searchString": "restaurent",
+  "language": "en",
+  "rank": 3,
+  "isAdvertisement": false,
+  "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGEMr0s9aLuYynRuZTtK-Pucc9JrR7NxscztdQpWsIZck7BsezEgvxgucycWCblWPSSK3pSt8z2aESEUzoV_4qryKnVHmh7gwwrQ4JhcwlWQaHoaUjIDxU3Txio4wL7c9toj5Wkes0p6-sD=w408-h306-k-no",
+  "kgmid": "/g/11rwmm_rfw"
+},
+{
+  "title": "Jai Ratna Restaurant",
+  "subTitle": "జై రత్న రెస్టారెంట్",
+  "description": null,
+  "price": "₹200–400",
+  "categoryName": "Biryani restaurant",
+  "address": "21, NFC Rd, Krishna Nagar, Moula Ali, Secunderabad, Telangana 500040, India",
+  "neighborhood": "Krishna Nagar, Moula Ali",
+  "street": "21, NFC Rd",
+  "city": "Secunderabad",
+  "postalCode": "500040",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "website": "http://www.jairatna.com/",
+  "phone": "+91 92814 40028",
+  "phoneUnformatted": "+919281440028",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 17.4519096,
+    "lng": 78.5674183
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 4.8,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJo18gaACdyzsRTyww3zlpHAA",
+  "categories": [
+    "Biryani restaurant",
+    "Chinese restaurant",
+    "Family restaurant",
+    "Indian restaurant",
+    "Seafood restaurant",
+    "Vegetarian restaurant"
+  ],
+  "fid": "0x3bcb9d0068205fa3:0x1c6939df302c4f",
+  "cid": "7996996626426959",
+  "reviewsCount": 1159,
+  "imagesCount": 82,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:35:59.936Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [
+    {
+      "day": "Monday",
+      "hours": "11 AM to 11:30 PM"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "11 AM to 11:30 PM"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "11 AM to 11:30 PM"
+    },
+    {
+      "day": "Thursday",
+      "hours": "11 AM to 11:30 PM"
+    },
+    {
+      "day": "Friday",
+      "hours": "11 AM to 11:30 PM"
+    },
+    {
+      "day": "Saturday",
+      "hours": "11 AM to 11:30 PM"
+    },
+    {
+      "day": "Sunday",
+      "hours": "11 AM to 11:30 PM"
+    }
+  ],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Service options": [
+      {
+        "Delivery": true
+      },
+      {
+        "Onsite services": true
+      },
+      {
+        "Takeout": true
+      },
+      {
+        "Dine-in": true
+      }
+    ],
+    "Highlights": [
+      {
+        "Great dessert": true
+      }
+    ],
+    "Popular for": [
+      {
+        "Lunch": true
+      },
+      {
+        "Dinner": true
+      },
+      {
+        "Solo dining": true
+      }
+    ],
+    "Accessibility": [
+      {
+        "Assistive hearing loop": false
+      },
+      {
+        "Wheelchair accessible entrance": false
+      },
+      {
+        "Wheelchair accessible parking lot": false
+      },
+      {
+        "Wheelchair accessible seating": false
+      }
+    ],
+    "Offerings": [
+      {
+        "Coffee": true
+      },
+      {
+        "Hard liquor": true
+      },
+      {
+        "Private dining room": true
+      },
+      {
+        "Quick bite": true
+      },
+      {
+        "Small plates": true
+      },
+      {
+        "Vegan options": true
+      },
+      {
+        "Vegetarian options": true
+      }
+    ],
+    "Dining options": [
+      {
+        "Lunch": true
+      },
+      {
+        "Dinner": true
+      },
+      {
+        "Catering": true
+      },
+      {
+        "Counter service": true
+      },
+      {
+        "Dessert": true
+      },
+      {
+        "Seating": true
+      },
+      {
+        "Table service": true
+      }
+    ],
+    "Amenities": [
+      {
+        "Restroom": true
+      },
+      {
+        "Wi-Fi": true
+      },
+      {
+        "Free Wi-Fi": true
+      }
+    ],
+    "Atmosphere": [
+      {
+        "Casual": true
+      },
+      {
+        "Quiet": true
+      },
+      {
+        "Trendy": true
+      }
+    ],
+    "Crowd": [
+      {
+        "Family-friendly": true
+      },
+      {
+        "Groups": true
+      },
+      {
+        "LGBTQ+ friendly": true
+      }
+    ],
+    "Planning": [
+      {
+        "Accepts reservations": true
+      }
+    ],
+    "Payments": [
+      {
+        "Credit cards": true
+      },
+      {
+        "Debit cards": true
+      },
+      {
+        "Google Pay": true
+      },
+      {
+        "NFC mobile payments": true
+      }
+    ],
+    "Children": [
+      {
+        "Good for kids": true
+      },
+      {
+        "Has changing table(s)": true
+      }
+    ],
+    "Parking": [
+      {
+        "Free parking lot": true
+      },
+      {
+        "Free street parking": true
+      },
+      {
+        "On-site parking": true
+      },
+      {
+        "Usually plenty of parking": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=Jai%20Ratna%20Restaurant&query_place_id=ChIJo18gaACdyzsRTyww3zlpHAA",
+  "searchPageUrl": "https://www.google.com/maps/search/restaurent/@17.426234899999997,78.56782912391434,13z?hl=en",
+  "searchString": "restaurent",
+  "language": "en",
+  "rank": 4,
+  "isAdvertisement": false,
+  "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHXQgWqqxqEVwNsvxyVjN0MmYSy9JSgwAmkAyA_-pLFrHW0_tOxxxNS3saLYCsb0Yb32VpobkiUK5pIRdeEg7HaSL9wmn1aqVMxFnS0iTbEoRMi7vOtcXHKLTVJ0W59CoJDcTUBRZ0NP9dy=w426-h240-k-no",
+  "kgmid": "/g/11w_kqb0ky"
+},
+{
+  "title": "Terrace Grill",
+  "subTitle": "టెర్రెస్ గ్రిల్",
+  "description": "Grilled dishes, curries, kebabs and biryanis dished up in family-friendly quarters with a terrace for seating.",
+  "price": null,
+  "categoryName": "Family restaurant",
+  "address": "ECIL POST Behind Bus stop towards ECIL, Main Road, Trimulgherry - ECIL Rd, Dr. A. S. Rao Nagar, Secunderabad, Telangana 500062, India",
+  "neighborhood": "Lakshmipuram Colony, Brindavan Colony, Dr. A. S. Rao Nagar",
+  "street": "ECIL POST Behind Bus stop towards ECIL, Main Road, Trimulgherry - ECIL Rd",
+  "city": "Secunderabad",
+  "postalCode": "500062",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "phone": "+91 98490 67056",
+  "phoneUnformatted": "+919849067056",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 17.47963,
+    "lng": 78.5585964
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 4.3,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJn4WT4Y-byzsRQZFBWB0_U-s",
+  "categories": [
+    "Family restaurant",
+    "Bar",
+    "Barbecue restaurant"
+  ],
+  "fid": "0x3bcb9b8fe193859f:0xeb533f1d58419141",
+  "cid": "16956966417247342913",
+  "reviewsCount": 5632,
+  "imagesCount": 1575,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:35:59.936Z",
+  "reserveTableUrl": "https://www.google.com/maps/reserve/v/dine/c/i3TPjK3LsoE?source=pa&opi=79508299&hl=en-US&gei=3_1Nar7KCOulj94PkdmWgA0&ahbb=1&sourceurl=https://www.google.com/search?tbm%3Dmap%26authuser%3D0%26hl%3Den%26gl%3Dus%26pb%3D!4m8!1m3!1d60907.18134625342!2d78.56782912391434!3d17.426234899999997!3m2!1i1475!2i1327!4f13.1!7i20!10b1!12m25!1m5!18b1!30b1!31m1!1b1!34e1!2m4!5m1!6e2!20e3!39b1!10b1!12b1!13b1!16b1!17m1!3e1!20m3!5e2!6b1!14b1!46m1!1b0!96b1!99b1!19m4!2m3!1i360!2i120!4i8!20m65!2m2!1i203!2i100!3m2!2i4!5b1!6m6!1m2!1i86!2i86!1m2!1i408!2i240!7m33!1m3!1e1!2b0!3e3!1m3!1e2!2b1!3e2!1m3!1e2!2b0!3e3!1m3!1e8!2b0!3e3!1m3!1e10!2b0!3e3!1m3!1e10!2b1!3e2!1m3!1e10!2b0!3e4!1m3!1e9!2b1!3e2!2b1!9b0!15m16!1m7!1m2!1m1!1e2!2m2!1i195!2i195!3i20!1m7!1m2!1m1!1e2!2m2!1i195!2i195!3i20!22m2!1s3P1NaorUJevsmLQP3djnoQ0!7e81!24m109!1m30!13m9!2b1!3b1!4b1!6i1!8b1!9b1!14b1!20b1!25b1!18m19!3b1!4b1!5b1!6b1!9b1!13b1!14b1!17b1!20b1!21b1!22b1!27m1!1b0!28b0!32b1!33m1!1b1!34b1!36e2!10m1!8e3!11m1!3e1!14m1!3b0!17b1!20m2!1e3!1e6!24b1!25b1!26b1!27b1!29b1!30m1!2b1!36b1!37b1!39m3!2m2!2i1!3i1!43b1!52b1!54m1!1b1!55b1!56m1!1b1!61m2!1m1!1e1!65m5!3m4!1m3!1m2!1i224!2i298!72m22!1m8!2b1!5b1!7b1!12m4!1b1!2b1!4m1!1e1!4b1!8m10!1m6!4m1!1e1!4m1!1e3!4m1!1e4!3sother_user_google_review_posts__and__hotel_and_vr_partner_review_posts!6m1!1e1!9b1!89b1!98m3!1b1!2b1!3b1!103b1!113b1!114m3!1b1!2m1!1b1!117b1!122m1!1b1!126b1!127b1!26m4!2m3!1i80!2i92!4i8!30m28!1m6!1m2!1i0!2i0!2m2!1i530!2i1327!1m6!1m2!1i1425!2i0!2m2!1i1475!2i1327!1m6!1m2!1i0!2i0!2m2!1i1475!2i20!1m6!1m2!1i0!2i1307!2m2!1i1475!2i1327!34m19!2b1!3b1!4b1!6b1!8m6!1b1!3b1!4b1!5b1!6b1!7b1!9b1!12b1!14b1!20b1!23b1!25b1!26b1!31b1!37m1!1e81!49m10!3b1!6m2!1b1!2b1!7m2!1e3!2b1!8b1!9b1!10e2!50m3!2e2!3m1!3b1!61b1!67m5!7b1!10b1!14b1!15m1!1b0!69i757%26q%3Drestaurent%26ech%3D1%26psi%3D3P1NaorUJevsmLQP3djnoQ0.1783496156892.1",
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [
+    {
+      "day": "Monday",
+      "hours": "11:30 AM to 12 AM"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "11:30 AM to 12 AM"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "11:30 AM to 12 AM"
+    },
+    {
+      "day": "Thursday",
+      "hours": "11:30 AM to 12 AM"
+    },
+    {
+      "day": "Friday",
+      "hours": "11:30 AM to 1 AM"
+    },
+    {
+      "day": "Saturday",
+      "hours": "11:30 AM to 1 AM"
+    },
+    {
+      "day": "Sunday",
+      "hours": "11:30 AM to 12 AM"
+    }
+  ],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Service options": [
+      {
+        "Outdoor seating": true
+      },
+      {
+        "No-contact delivery": true
+      },
+      {
+        "Delivery": true
+      },
+      {
+        "Takeout": true
+      },
+      {
+        "Dine-in": true
+      }
+    ],
+    "Highlights": [
+      {
+        "Great beer selection": true
+      },
+      {
+        "Great dessert": true
+      },
+      {
+        "Rooftop seating": true
+      },
+      {
+        "Sports": true
+      }
+    ],
+    "Popular for": [
+      {
+        "Lunch": true
+      },
+      {
+        "Dinner": true
+      },
+      {
+        "Solo dining": true
+      }
+    ],
+    "Accessibility": [
+      {
+        "Wheelchair accessible entrance": true
+      },
+      {
+        "Wheelchair accessible parking lot": true
+      },
+      {
+        "Wheelchair accessible seating": true
+      }
+    ],
+    "Offerings": [
+      {
+        "Alcohol": true
+      },
+      {
+        "All you can eat": true
+      },
+      {
+        "Beer": true
+      },
+      {
+        "Cocktails": true
+      },
+      {
+        "Hard liquor": true
+      },
+      {
+        "Healthy options": true
+      },
+      {
+        "Organic dishes": true
+      },
+      {
+        "Private dining room": true
+      },
+      {
+        "Quick bite": true
+      },
+      {
+        "Salad bar": true
+      },
+      {
+        "Small plates": true
+      },
+      {
+        "Vegetarian options": true
+      },
+      {
+        "Wine": true
+      }
+    ],
+    "Dining options": [
+      {
+        "Brunch": true
+      },
+      {
+        "Lunch": true
+      },
+      {
+        "Dinner": true
+      },
+      {
+        "Catering": true
+      },
+      {
+        "Dessert": true
+      },
+      {
+        "Seating": true
+      },
+      {
+        "Table service": true
+      }
+    ],
+    "Amenities": [
+      {
+        "Bar onsite": true
+      },
+      {
+        "Gender-neutral restroom": true
+      },
+      {
+        "Restroom": true
+      }
+    ],
+    "Atmosphere": [
+      {
+        "Casual": true
+      },
+      {
+        "Cozy": true
+      },
+      {
+        "Trendy": true
+      },
+      {
+        "Upscale": true
+      }
+    ],
+    "Crowd": [
+      {
+        "College students": true
+      },
+      {
+        "Family-friendly": true
+      },
+      {
+        "Groups": true
+      },
+      {
+        "Tourists": true
+      }
+    ],
+    "Planning": [
+      {
+        "Brunch reservations recommended": true
+      },
+      {
+        "Lunch reservations recommended": true
+      },
+      {
+        "Dinner reservations recommended": true
+      },
+      {
+        "Accepts reservations": true
+      }
+    ],
+    "Payments": [
+      {
+        "Credit cards": true
+      },
+      {
+        "Debit cards": true
+      },
+      {
+        "Google Pay": true
+      },
+      {
+        "NFC mobile payments": true
+      },
+      {
+        "Credit cards": true
+      }
+    ],
+    "Children": [
+      {
+        "Good for kids": true
+      },
+      {
+        "Good for kids birthday": true
+      },
+      {
+        "High chairs": true
+      }
+    ],
+    "Parking": [
+      {
+        "Free parking lot": true
+      },
+      {
+        "Free street parking": true
+      },
+      {
+        "Usually plenty of parking": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=Terrace%20Grill&query_place_id=ChIJn4WT4Y-byzsRQZFBWB0_U-s",
+  "searchPageUrl": "https://www.google.com/maps/search/restaurent/@17.426234899999997,78.56782912391434,13z?hl=en",
+  "searchString": "restaurent",
+  "language": "en",
+  "rank": 5,
+  "isAdvertisement": false,
+  "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEafYpy0OUon6EAUe2yWXgcT9bktvs9biQpWj17Q-VhsRL1WYXfsvsZmAvGH0lhxLAKrOyL7TfLw9Twe26SvCQqJYNwI7jK-TaFn9vkwUpgjgIoev8jSN3_G73rqbe-e0mqszDZ=w408-h306-k-no",
+  "kgmid": "/g/11g1mw4gfw"
+},
+{
+  "title": "The Arabian Mandi",
+  "subTitle": "ద అరేబియన్ మండి",
+  "description": "Guests sit on colourful carpets & dine on Middle Eastern rice & meat dishes in this casual locale.",
+  "price": "₹200–400",
+  "categoryName": "Middle Eastern restaurant",
+  "address": "Andrews school, lane, Sainikpuri, Hyderabad, Telangana 500094, India",
+  "neighborhood": "Ambedkar Nagar, Madhura Nagar, Sainikpuri",
+  "street": "Andrews school, lane",
+  "city": "Hyderabad, Secunderabad",
+  "postalCode": "500094",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "phone": "+91 95730 42428",
+  "phoneUnformatted": "+919573042428",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 17.4831408,
+    "lng": 78.5450058
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 4.5,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJj2PuIUmbyzsRm9q2fjJgEJQ",
+  "categories": [
+    "Middle Eastern restaurant"
+  ],
+  "fid": "0x3bcb9b4921ee638f:0x941060327eb6da9b",
+  "cid": "10669133287231249051",
+  "reviewsCount": 2012,
+  "imagesCount": 649,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:35:59.936Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [
+    {
+      "day": "Monday",
+      "hours": "1 PM to 12 AM"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "1 PM to 12 AM"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "1 PM to 12 AM"
+    },
+    {
+      "day": "Thursday",
+      "hours": "1 PM to 12 AM"
+    },
+    {
+      "day": "Friday",
+      "hours": "1 PM to 12 AM"
+    },
+    {
+      "day": "Saturday",
+      "hours": "1 PM to 12 AM"
+    },
+    {
+      "day": "Sunday",
+      "hours": "1 PM to 12 AM"
+    }
+  ],
+  "additionalOpeningHours": {
+    "Delivery": [
+      {
+        "day": "Monday",
+        "hours": "12 PM–12 AM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "12 PM–12 AM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "12 PM–12 AM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "12 PM–12 AM"
+      },
+      {
+        "day": "Friday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Saturday",
+        "hours": "12 PM–12 AM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "12 PM–12 AM"
+      }
+    ]
+  },
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Service options": [
+      {
+        "No-contact delivery": true
+      },
+      {
+        "Delivery": true
+      },
+      {
+        "Onsite services": true
+      },
+      {
+        "Takeout": true
+      },
+      {
+        "Dine-in": true
+      }
+    ],
+    "Popular for": [
+      {
+        "Lunch": true
+      },
+      {
+        "Dinner": true
+      },
+      {
+        "Solo dining": true
+      }
+    ],
+    "Accessibility": [
+      {
+        "Wheelchair accessible restroom": true
+      },
+      {
+        "Wheelchair accessible entrance": false
+      },
+      {
+        "Wheelchair accessible seating": false
+      }
+    ],
+    "Offerings": [
+      {
+        "All you can eat": true
+      },
+      {
+        "Late-night food": true
+      },
+      {
+        "Small plates": true
+      },
+      {
+        "Vegan options": true
+      },
+      {
+        "Vegetarian options": true
+      }
+    ],
+    "Dining options": [
+      {
+        "Lunch": true
+      },
+      {
+        "Dinner": true
+      },
+      {
+        "Dessert": true
+      },
+      {
+        "Seating": true
+      },
+      {
+        "Table service": true
+      }
+    ],
+    "Amenities": [
+      {
+        "Restroom": true
+      },
+      {
+        "Wi-Fi": true
+      },
+      {
+        "Free Wi-Fi": true
+      }
+    ],
+    "Atmosphere": [
+      {
+        "Casual": true
+      },
+      {
+        "Quiet": true
+      },
+      {
+        "Trendy": true
+      }
+    ],
+    "Crowd": [
+      {
+        "College students": true
+      },
+      {
+        "Family-friendly": true
+      },
+      {
+        "Groups": true
+      }
+    ],
+    "Planning": [
+      {
+        "Accepts reservations": true
+      }
+    ],
+    "Payments": [
+      {
+        "Credit cards": true
+      },
+      {
+        "Debit cards": true
+      },
+      {
+        "Google Pay": true
+      },
+      {
+        "NFC mobile payments": true
+      },
+      {
+        "Credit cards": true
+      }
+    ],
+    "Children": [
+      {
+        "Good for kids": true
+      }
+    ],
+    "Parking": [
+      {
+        "Free parking lot": true
+      },
+      {
+        "Free street parking": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=The%20Arabian%20Mandi&query_place_id=ChIJj2PuIUmbyzsRm9q2fjJgEJQ",
+  "searchPageUrl": "https://www.google.com/maps/search/restaurent/@17.426234899999997,78.56782912391434,13z?hl=en",
+  "searchString": "restaurent",
+  "language": "en",
+  "rank": 6,
+  "isAdvertisement": false,
+  "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHD5UclVhRf318ldH4Y8plHvBfzimknTqxUUhydF_GN-khyOvRYEYpghOt5ohnTWci38SSgrg-3KyfE3V8DJ69ZjWp6r2DVQBf4s79LmggUnydz37f2pK8FCLhDyBp8RsUrhcha=w408-h306-k-no",
+  "kgmid": "/g/11h81k7p5l"
+},
+{
+  "title": "Dasara",
+  "subTitle": "దసరా",
+  "description": "Relaxed eatery offering a medley of dishes, including classic breakfast selections, chicken omelets and burgers.",
+  "price": "₹200–1,400",
+  "categoryName": "Indian restaurant",
+  "address": "Plot no.174, Admiral Katari Marg, Vayupuri, Sainikpuri, Secunderabad, Telangana 500094, India",
+  "neighborhood": "Vayupuri, Sainikpuri",
+  "street": "Plot no.174, Admiral Katari Marg",
+  "city": "Secunderabad",
+  "postalCode": "500094",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "phone": "+91 96520 90356",
+  "phoneUnformatted": "+919652090356",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 17.4854257,
+    "lng": 78.546585
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 4.1,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJiS9EYSubyzsRh48NPaxVocI",
+  "categories": [
+    "Indian restaurant",
+    "Breakfast restaurant",
+    "Chinese restaurant",
+    "North Indian restaurant",
+    "Restaurant",
+    "South Indian restaurant"
+  ],
+  "fid": "0x3bcb9b2b61442f89:0xc2a155ac3d0d8f87",
+  "cid": "14024584912855469959",
+  "reviewsCount": 3967,
+  "imagesCount": 3015,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:35:59.937Z",
+  "reserveTableUrl": "https://www.google.com/maps/reserve/v/dine/c/I74aH5qcjDs?source=pa&opi=79508299&hl=en-US&gei=3_1Nar7KCOulj94PkdmWgA0&ahbb=1&sourceurl=https://www.google.com/search?tbm%3Dmap%26authuser%3D0%26hl%3Den%26gl%3Dus%26pb%3D!4m8!1m3!1d60907.18134625342!2d78.56782912391434!3d17.426234899999997!3m2!1i1475!2i1327!4f13.1!7i20!10b1!12m25!1m5!18b1!30b1!31m1!1b1!34e1!2m4!5m1!6e2!20e3!39b1!10b1!12b1!13b1!16b1!17m1!3e1!20m3!5e2!6b1!14b1!46m1!1b0!96b1!99b1!19m4!2m3!1i360!2i120!4i8!20m65!2m2!1i203!2i100!3m2!2i4!5b1!6m6!1m2!1i86!2i86!1m2!1i408!2i240!7m33!1m3!1e1!2b0!3e3!1m3!1e2!2b1!3e2!1m3!1e2!2b0!3e3!1m3!1e8!2b0!3e3!1m3!1e10!2b0!3e3!1m3!1e10!2b1!3e2!1m3!1e10!2b0!3e4!1m3!1e9!2b1!3e2!2b1!9b0!15m16!1m7!1m2!1m1!1e2!2m2!1i195!2i195!3i20!1m7!1m2!1m1!1e2!2m2!1i195!2i195!3i20!22m2!1s3P1NaorUJevsmLQP3djnoQ0!7e81!24m109!1m30!13m9!2b1!3b1!4b1!6i1!8b1!9b1!14b1!20b1!25b1!18m19!3b1!4b1!5b1!6b1!9b1!13b1!14b1!17b1!20b1!21b1!22b1!27m1!1b0!28b0!32b1!33m1!1b1!34b1!36e2!10m1!8e3!11m1!3e1!14m1!3b0!17b1!20m2!1e3!1e6!24b1!25b1!26b1!27b1!29b1!30m1!2b1!36b1!37b1!39m3!2m2!2i1!3i1!43b1!52b1!54m1!1b1!55b1!56m1!1b1!61m2!1m1!1e1!65m5!3m4!1m3!1m2!1i224!2i298!72m22!1m8!2b1!5b1!7b1!12m4!1b1!2b1!4m1!1e1!4b1!8m10!1m6!4m1!1e1!4m1!1e3!4m1!1e4!3sother_user_google_review_posts__and__hotel_and_vr_partner_review_posts!6m1!1e1!9b1!89b1!98m3!1b1!2b1!3b1!103b1!113b1!114m3!1b1!2m1!1b1!117b1!122m1!1b1!126b1!127b1!26m4!2m3!1i80!2i92!4i8!30m28!1m6!1m2!1i0!2i0!2m2!1i530!2i1327!1m6!1m2!1i1425!2i0!2m2!1i1475!2i1327!1m6!1m2!1i0!2i0!2m2!1i1475!2i20!1m6!1m2!1i0!2i1307!2m2!1i1475!2i1327!34m19!2b1!3b1!4b1!6b1!8m6!1b1!3b1!4b1!5b1!6b1!7b1!9b1!12b1!14b1!20b1!23b1!25b1!26b1!31b1!37m1!1e81!49m10!3b1!6m2!1b1!2b1!7m2!1e3!2b1!8b1!9b1!10e2!50m3!2e2!3m1!3b1!61b1!67m5!7b1!10b1!14b1!15m1!1b0!69i757%26q%3Drestaurent%26ech%3D1%26psi%3D3P1NaorUJevsmLQP3djnoQ0.1783496156892.1",
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [
+    {
+      "day": "Monday",
+      "hours": "12 PM to 12 AM"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "12 PM to 12 AM"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "12 PM to 12 AM"
+    },
+    {
+      "day": "Thursday",
+      "hours": "12 PM to 12 AM"
+    },
+    {
+      "day": "Friday",
+      "hours": "12 PM to 12 AM"
+    },
+    {
+      "day": "Saturday",
+      "hours": "12 PM to 12 AM"
+    },
+    {
+      "day": "Sunday",
+      "hours": "12 PM to 12 AM"
+    }
+  ],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Service options": [
+      {
+        "Outdoor seating": true
+      },
+      {
+        "Curbside pickup": true
+      },
+      {
+        "No-contact delivery": true
+      },
+      {
+        "Delivery": true
+      },
+      {
+        "Drive-through": true
+      },
+      {
+        "Onsite services": true
+      },
+      {
+        "Takeout": true
+      },
+      {
+        "Dine-in": true
+      }
+    ],
+    "Highlights": [
+      {
+        "Great coffee": true
+      },
+      {
+        "Great dessert": true
+      },
+      {
+        "Great tea selection": true
+      },
+      {
+        "Live music": true
+      },
+      {
+        "Sports": true
+      }
+    ],
+    "Popular for": [
+      {
+        "Breakfast": true
+      },
+      {
+        "Lunch": true
+      },
+      {
+        "Dinner": true
+      },
+      {
+        "Solo dining": true
+      }
+    ],
+    "Accessibility": [
+      {
+        "Wheelchair accessible entrance": true
+      },
+      {
+        "Wheelchair accessible parking lot": true
+      },
+      {
+        "Wheelchair accessible restroom": true
+      },
+      {
+        "Wheelchair accessible seating": true
+      }
+    ],
+    "Offerings": [
+      {
+        "All you can eat": true
+      },
+      {
+        "Coffee": true
+      },
+      {
+        "Healthy options": true
+      },
+      {
+        "Late-night food": true
+      },
+      {
+        "Organic dishes": true
+      },
+      {
+        "Private dining room": true
+      },
+      {
+        "Quick bite": true
+      },
+      {
+        "Small plates": true
+      },
+      {
+        "Vegetarian options": true
+      }
+    ],
+    "Dining options": [
+      {
+        "Breakfast": true
+      },
+      {
+        "Brunch": true
+      },
+      {
+        "Lunch": true
+      },
+      {
+        "Dinner": true
+      },
+      {
+        "Catering": true
+      },
+      {
+        "Counter service": true
+      },
+      {
+        "Dessert": true
+      },
+      {
+        "Seating": true
+      },
+      {
+        "Table service": true
+      }
+    ],
+    "Amenities": [
+      {
+        "Restroom": true
+      },
+      {
+        "Wi-Fi": true
+      },
+      {
+        "Free Wi-Fi": true
+      }
+    ],
+    "Atmosphere": [
+      {
+        "Casual": true
+      },
+      {
+        "Cozy": true
+      },
+      {
+        "Quiet": true
+      },
+      {
+        "Romantic": true
+      },
+      {
+        "Trendy": true
+      },
+      {
+        "Upscale": true
+      }
+    ],
+    "Crowd": [
+      {
+        "College students": true
+      },
+      {
+        "Family-friendly": true
+      },
+      {
+        "Groups": true
+      },
+      {
+        "Tourists": true
+      }
+    ],
+    "Planning": [
+      {
+        "Brunch reservations recommended": true
+      },
+      {
+        "Lunch reservations recommended": true
+      },
+      {
+        "Dinner reservations recommended": true
+      },
+      {
+        "Accepts reservations": true
+      }
+    ],
+    "Payments": [
+      {
+        "Credit cards": true
+      },
+      {
+        "Debit cards": true
+      },
+      {
+        "Google Pay": true
+      },
+      {
+        "NFC mobile payments": true
+      },
+      {
+        "Credit cards": true
+      }
+    ],
+    "Children": [
+      {
+        "Good for kids": true
+      },
+      {
+        "High chairs": true
+      },
+      {
+        "Kids' menu": true
+      }
+    ],
+    "Parking": [
+      {
+        "Free parking lot": true
+      },
+      {
+        "Free street parking": true
+      },
+      {
+        "Usually plenty of parking": true
+      },
+      {
+        "Valet parking": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=Dasara&query_place_id=ChIJiS9EYSubyzsRh48NPaxVocI",
+  "searchPageUrl": "https://www.google.com/maps/search/restaurent/@17.426234899999997,78.56782912391434,13z?hl=en",
+  "searchString": "restaurent",
+  "language": "en",
+  "rank": 8,
+  "isAdvertisement": false,
+  "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH9IQviJr5Crc0O0Hj-zz03Wz8U_6s0KXTONKvl1KoZM7aKtoyg9ifIrF83xSTpoR8Zn6OxHx-5fLA4kAfd4AwVrNfJ2leT7l9tazuC2V5FfKQto3JMOrvOKTs-5wU1W_HYDxjopw=w425-h240-k-no",
+  "kgmid": "/g/11h1zm32g4"
+},
+{
+  "title": "Mehfil Restaurant | ECIL",
+  "subTitle": "మెహఫిల్ ఎ. ఎస్. రావు నగర్",
+  "description": null,
+  "price": "₹200–1,400",
+  "categoryName": "Hyderabadi restaurant",
+  "address": "Trimulgherry - ECIL Rd, opp. Radhika, Srinivasa Nagar Colony, Kapra, Secunderabad, Telangana 500062, India",
+  "neighborhood": "Srinivasa Nagar Colony, Kapra",
+  "street": "Trimulgherry - ECIL Rd, opp. Radhika",
+  "city": "Secunderabad",
+  "postalCode": "500062",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "website": "https://mehfilbiryani.com/",
+  "phone": "",
+  "phoneUnformatted": "",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 17.4776476,
+    "lng": 78.563062
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 4.2,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJNePEMACbyzsRT2ZIGi8lElY",
+  "categories": [
+    "Hyderabadi restaurant"
+  ],
+  "fid": "0x3bcb9b0030c4e335:0x5612252f1a48664f",
+  "cid": "6202060521077237327",
+  "reviewsCount": 1534,
+  "imagesCount": 481,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:35:59.938Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [
+    {
+      "day": "Monday",
+      "hours": "10:30 AM to 12 AM"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "10:30 AM to 12 AM"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "10:30 AM to 12 AM"
+    },
+    {
+      "day": "Thursday",
+      "hours": "10:30 AM to 12 AM"
+    },
+    {
+      "day": "Friday",
+      "hours": "10:30 AM to 12 AM"
+    },
+    {
+      "day": "Saturday",
+      "hours": "10:30 AM to 12 AM"
+    },
+    {
+      "day": "Sunday",
+      "hours": "10:30 AM to 12 AM"
+    }
+  ],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Service options": [
+      {
+        "No-contact delivery": true
+      },
+      {
+        "Delivery": true
+      },
+      {
+        "Takeout": true
+      },
+      {
+        "Dine-in": true
+      }
+    ],
+    "Popular for": [
+      {
+        "Lunch": true
+      },
+      {
+        "Dinner": true
+      },
+      {
+        "Solo dining": true
+      }
+    ],
+    "Accessibility": [
+      {
+        "Wheelchair accessible seating": false
+      }
+    ],
+    "Offerings": [
+      {
+        "Late-night food": true
+      },
+      {
+        "Quick bite": true
+      },
+      {
+        "Small plates": true
+      }
+    ],
+    "Dining options": [
+      {
+        "Lunch": true
+      },
+      {
+        "Dinner": true
+      },
+      {
+        "Catering": true
+      },
+      {
+        "Dessert": true
+      },
+      {
+        "Table service": true
+      }
+    ],
+    "Amenities": [
+      {
+        "Restroom": true
+      }
+    ],
+    "Atmosphere": [
+      {
+        "Casual": true
+      },
+      {
+        "Trendy": true
+      }
+    ],
+    "Crowd": [
+      {
+        "College students": true
+      },
+      {
+        "Groups": true
+      }
+    ],
+    "Planning": [
+      {
+        "Usually a wait": true
+      }
+    ],
+    "Payments": [
+      {
+        "Credit cards": true
+      },
+      {
+        "Debit cards": true
+      },
+      {
+        "NFC mobile payments": true
+      }
+    ],
+    "Children": [
+      {
+        "Good for kids": true
+      }
+    ],
+    "Parking": [
+      {
+        "Free parking lot": true
+      },
+      {
+        "Usually plenty of parking": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=Mehfil%20Restaurant%20%7C%20ECIL&query_place_id=ChIJNePEMACbyzsRT2ZIGi8lElY",
+  "searchPageUrl": "https://www.google.com/maps/search/restaurent/@17.426234899999997,78.56782912391434,13z?hl=en",
+  "searchString": "restaurent",
+  "language": "en",
+  "rank": 9,
+  "isAdvertisement": false,
+  "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEw-B3VLMfW6Ytlp93dAwRBtSth1XMfdO3kuiH3HEJjn4xYrVYHy_iRjQAtVNwKmIJuL6bC2I0DRSu8lghD3pvcuVYLo6y_RkwGvJBCjZsiISMANIATWDQpWuImoNj0tv_09d76abssZoKh=w408-h306-k-no",
+  "kgmid": "/g/11yplqgkp2"
+},
+{
+  "title": "PR Biryani Restaurants",
+  "subTitle": "PR బిర్యాని రేస్టారెంట్",
+  "description": null,
+  "price": "₹200–400",
+  "categoryName": "Biryani restaurant",
+  "address": "Pillar no C 961, Metro Station Habsiguda, G4, Mohan shraddha complex, beside Bajaj Electronics, NGRI, Hyderabad, Telangana 500007, India",
+  "neighborhood": "Vijayanagar Colony, NGRI, Habsiguda",
+  "street": "Pillar no C 961, Metro Station Habsiguda, G4, Mohan shraddha complex, beside Bajaj Electronics",
+  "city": "Hyderabad",
+  "postalCode": "500007",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "phone": "+91 99922 26623",
+  "phoneUnformatted": "+919992226623",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 17.4148894,
+    "lng": 78.5458666
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 4.6,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJObjY8dGZyzsRTb0x2bfxObM",
+  "categories": [
+    "Biryani restaurant"
+  ],
+  "fid": "0x3bcb99d1f1d8b839:0xb339f1b7d931bd4d",
+  "cid": "12914619178386832717",
+  "reviewsCount": 1317,
+  "imagesCount": 335,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:35:59.938Z",
+  "reserveTableUrl": "https://www.google.com/maps/reserve/v/dine/c/D9lCD90yjvw?source=pa&opi=79508299&hl=en-US&gei=3_1Nar7KCOulj94PkdmWgA0&ahbb=1&sourceurl=https://www.google.com/search?tbm%3Dmap%26authuser%3D0%26hl%3Den%26gl%3Dus%26pb%3D!4m8!1m3!1d60907.18134625342!2d78.56782912391434!3d17.426234899999997!3m2!1i1475!2i1327!4f13.1!7i20!10b1!12m25!1m5!18b1!30b1!31m1!1b1!34e1!2m4!5m1!6e2!20e3!39b1!10b1!12b1!13b1!16b1!17m1!3e1!20m3!5e2!6b1!14b1!46m1!1b0!96b1!99b1!19m4!2m3!1i360!2i120!4i8!20m65!2m2!1i203!2i100!3m2!2i4!5b1!6m6!1m2!1i86!2i86!1m2!1i408!2i240!7m33!1m3!1e1!2b0!3e3!1m3!1e2!2b1!3e2!1m3!1e2!2b0!3e3!1m3!1e8!2b0!3e3!1m3!1e10!2b0!3e3!1m3!1e10!2b1!3e2!1m3!1e10!2b0!3e4!1m3!1e9!2b1!3e2!2b1!9b0!15m16!1m7!1m2!1m1!1e2!2m2!1i195!2i195!3i20!1m7!1m2!1m1!1e2!2m2!1i195!2i195!3i20!22m2!1s3P1NaorUJevsmLQP3djnoQ0!7e81!24m109!1m30!13m9!2b1!3b1!4b1!6i1!8b1!9b1!14b1!20b1!25b1!18m19!3b1!4b1!5b1!6b1!9b1!13b1!14b1!17b1!20b1!21b1!22b1!27m1!1b0!28b0!32b1!33m1!1b1!34b1!36e2!10m1!8e3!11m1!3e1!14m1!3b0!17b1!20m2!1e3!1e6!24b1!25b1!26b1!27b1!29b1!30m1!2b1!36b1!37b1!39m3!2m2!2i1!3i1!43b1!52b1!54m1!1b1!55b1!56m1!1b1!61m2!1m1!1e1!65m5!3m4!1m3!1m2!1i224!2i298!72m22!1m8!2b1!5b1!7b1!12m4!1b1!2b1!4m1!1e1!4b1!8m10!1m6!4m1!1e1!4m1!1e3!4m1!1e4!3sother_user_google_review_posts__and__hotel_and_vr_partner_review_posts!6m1!1e1!9b1!89b1!98m3!1b1!2b1!3b1!103b1!113b1!114m3!1b1!2m1!1b1!117b1!122m1!1b1!126b1!127b1!26m4!2m3!1i80!2i92!4i8!30m28!1m6!1m2!1i0!2i0!2m2!1i530!2i1327!1m6!1m2!1i1425!2i0!2m2!1i1475!2i1327!1m6!1m2!1i0!2i0!2m2!1i1475!2i20!1m6!1m2!1i0!2i1307!2m2!1i1475!2i1327!34m19!2b1!3b1!4b1!6b1!8m6!1b1!3b1!4b1!5b1!6b1!7b1!9b1!12b1!14b1!20b1!23b1!25b1!26b1!31b1!37m1!1e81!49m10!3b1!6m2!1b1!2b1!7m2!1e3!2b1!8b1!9b1!10e2!50m3!2e2!3m1!3b1!61b1!67m5!7b1!10b1!14b1!15m1!1b0!69i757%26q%3Drestaurent%26ech%3D1%26psi%3D3P1NaorUJevsmLQP3djnoQ0.1783496156892.1",
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [
+    {
+      "day": "Monday",
+      "hours": "12 PM to 12 AM"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "12 PM to 12 AM"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "12 PM to 12 AM"
+    },
+    {
+      "day": "Thursday",
+      "hours": "12 PM to 12 AM"
+    },
+    {
+      "day": "Friday",
+      "hours": "12 PM to 12 AM"
+    },
+    {
+      "day": "Saturday",
+      "hours": "12 PM to 12 AM"
+    },
+    {
+      "day": "Sunday",
+      "hours": "12 PM to 12 AM"
+    }
+  ],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Service options": [
+      {
+        "Curbside pickup": true
+      },
+      {
+        "No-contact delivery": true
+      },
+      {
+        "Delivery": true
+      },
+      {
+        "Takeout": true
+      },
+      {
+        "Dine-in": true
+      }
+    ],
+    "Popular for": [
+      {
+        "Lunch": true
+      },
+      {
+        "Dinner": true
+      },
+      {
+        "Solo dining": true
+      }
+    ],
+    "Offerings": [
+      {
+        "All you can eat": true
+      },
+      {
+        "Quick bite": true
+      },
+      {
+        "Small plates": true
+      }
+    ],
+    "Dining options": [
+      {
+        "Lunch": true
+      },
+      {
+        "Dinner": true
+      },
+      {
+        "Catering": true
+      },
+      {
+        "Dessert": true
+      },
+      {
+        "Table service": true
+      }
+    ],
+    "Atmosphere": [
+      {
+        "Casual": true
+      },
+      {
+        "Trendy": true
+      }
+    ],
+    "Crowd": [
+      {
+        "Groups": true
+      }
+    ],
+    "Planning": [
+      {
+        "Accepts reservations": true
+      }
+    ],
+    "Payments": [
+      {
+        "Credit cards": true
+      },
+      {
+        "Debit cards": true
+      },
+      {
+        "Google Pay": true
+      },
+      {
+        "NFC mobile payments": true
+      },
+      {
+        "Credit cards": true
+      }
+    ],
+    "Children": [
+      {
+        "Good for kids": true
+      }
+    ],
+    "Parking": [
+      {
+        "Free parking lot": true
+      },
+      {
+        "Free street parking": true
+      },
+      {
+        "Usually plenty of parking": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=PR%20Biryani%20Restaurants&query_place_id=ChIJObjY8dGZyzsRTb0x2bfxObM",
+  "searchPageUrl": "https://www.google.com/maps/search/restaurent/@17.426234899999997,78.56782912391434,13z?hl=en",
+  "searchString": "restaurent",
+  "language": "en",
+  "rank": 10,
+  "isAdvertisement": false,
+  "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGCdbsXe7AFJ7LwcOCBOZLiyg_uzkR66weKQE62iV9ivG7eX4hnZHlPcUszS_EaeOaIqAl_W8D57s1YFtclRrF3tB3d4QVFJHXxbRn6cFiuyKHJ6SO1BiCBlCrL5G_57_nCjHbbvAJk8OI=w408-h544-k-no",
+  "kgmid": "/g/11svdb9zdl"
+},
+{
+  "title": "INIZIO PURE VEGETARIAN RESTAURANT",
+  "subTitle": null,
+  "description": null,
+  "price": "₹200–400",
+  "categoryName": "Vegetarian restaurant",
+  "address": "GROUND FLOOR, PLOT NO 151, Hi-Tension Rd, Lakshmipuram Colony, AYODHYA NAGAR, Kapra, Secunderabad, Telangana 500062, India",
+  "neighborhood": "Lakshmipuram Colony, AYODHYA NAGAR, Kapra",
+  "street": "GROUND FLOOR, PLOT NO 151, Hi-Tension Rd",
+  "city": "Secunderabad",
+  "postalCode": "500062",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "phone": "+91 95503 67744",
+  "phoneUnformatted": "+919550367744",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 17.4842155,
+    "lng": 78.5565682
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 4.5,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJMavFM1mbyzsRbiC2NV1CYgc",
+  "categories": [
+    "Vegetarian restaurant"
+  ],
+  "fid": "0x3bcb9b5933c5ab31:0x762425d35b6206e",
+  "cid": "532060674083659886",
+  "reviewsCount": 130,
+  "imagesCount": 53,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:35:59.938Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [
+    {
+      "day": "Monday",
+      "hours": "11 AM to 11 PM"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "11 AM to 11 PM"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "11 AM to 11 PM"
+    },
+    {
+      "day": "Thursday",
+      "hours": "11 AM to 11 PM"
+    },
+    {
+      "day": "Friday",
+      "hours": "11 AM to 11 PM"
+    },
+    {
+      "day": "Saturday",
+      "hours": "11 AM to 11 PM"
+    },
+    {
+      "day": "Sunday",
+      "hours": "11 AM to 11 PM"
+    }
+  ],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Service options": [
+      {
+        "Curbside pickup": true
+      },
+      {
+        "No-contact delivery": true
+      },
+      {
+        "Delivery": true
+      },
+      {
+        "Drive-through": true
+      },
+      {
+        "Takeout": true
+      },
+      {
+        "Dine-in": true
+      }
+    ],
+    "Popular for": [
+      {
+        "Lunch": true
+      },
+      {
+        "Solo dining": true
+      }
+    ],
+    "Offerings": [
+      {
+        "Healthy options": true
+      },
+      {
+        "Quick bite": true
+      },
+      {
+        "Small plates": true
+      },
+      {
+        "Vegetarian options": true
+      },
+      {
+        "Vegetarian options only": true
+      }
+    ],
+    "Dining options": [
+      {
+        "Lunch": true
+      },
+      {
+        "Dinner": true
+      },
+      {
+        "Catering": true
+      },
+      {
+        "Counter service": true
+      },
+      {
+        "Dessert": true
+      },
+      {
+        "Seating": true
+      },
+      {
+        "Table service": true
+      }
+    ],
+    "Amenities": [
+      {
+        "Restroom": true
+      },
+      {
+        "Wi-Fi": true
+      }
+    ],
+    "Atmosphere": [
+      {
+        "Casual": true
+      }
+    ],
+    "Crowd": [
+      {
+        "Family-friendly": true
+      },
+      {
+        "Groups": true
+      }
+    ],
+    "Planning": [
+      {
+        "Reservations required": true
+      },
+      {
+        "Accepts reservations": true
+      }
+    ],
+    "Payments": [
+      {
+        "Credit cards": true
+      },
+      {
+        "Debit cards": true
+      },
+      {
+        "Google Pay": true
+      }
+    ],
+    "Children": [
+      {
+        "Good for kids": true
+      },
+      {
+        "Has changing table(s)": true
+      }
+    ],
+    "Parking": [
+      {
+        "Free parking lot": true
+      },
+      {
+        "Free street parking": true
+      },
+      {
+        "On-site parking": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=INIZIO%20PURE%20VEGETARIAN%20RESTAURANT&query_place_id=ChIJMavFM1mbyzsRbiC2NV1CYgc",
+  "searchPageUrl": "https://www.google.com/maps/search/restaurent/@17.426234899999997,78.56782912391434,13z?hl=en",
+  "searchString": "restaurent",
+  "language": "en",
+  "rank": 11,
+  "isAdvertisement": false,
+  "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFR9BVacYpeIAJAcugZ7SFisMTEbqGohebDq0_B_5X4JZPrYLci3OcVud3aRXjEZXuW-vSXUe0NxDWCaDPMCEMyiBguhgjwCRZndKtT7U3_Q8GPxb6_E0ClKC9rhDwemJQ5s1p-jiJ7XIk=w408-h306-k-no",
+  "kgmid": "/g/11vwqt_lpt"
+},
+{
+  "title": "Spice 9 Restaurant",
+  "subTitle": "స్పైస్ 9 రెస్టారెంట్",
+  "description": null,
+  "price": "₹200–400",
+  "categoryName": "Biryani restaurant",
+  "address": "Spice 9 restaurant, Moosarambagh Rd, Moosarambagh, East Prasanth Nagar, Dilsukhnagar, Hyderabad, Telangana 500036, India",
+  "neighborhood": "Moosarambagh, East Prasanth Nagar, Dilsukhnagar",
+  "street": "Spice 9 restaurant, Moosarambagh Rd",
+  "city": "Hyderabad",
+  "postalCode": "500036",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "phone": "+91 98854 09990",
+  "phoneUnformatted": "+919885409990",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 17.3775485,
+    "lng": 78.5155196
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 4,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJn9Kwe1CZyzsR3xw6e0BxVmg",
+  "categories": [
+    "Biryani restaurant",
+    "Cafe"
+  ],
+  "fid": "0x3bcb99507bb0d29f:0x685671407b3a1cdf",
+  "cid": "7518321149700873439",
+  "reviewsCount": 1929,
+  "imagesCount": 489,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:35:59.939Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [
+    {
+      "day": "Monday",
+      "hours": "5 AM to 1 AM"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "5 AM to 1 AM"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "5 AM to 1 AM"
+    },
+    {
+      "day": "Thursday",
+      "hours": "5 AM to 1 AM"
+    },
+    {
+      "day": "Friday",
+      "hours": "5 AM to 1 AM"
+    },
+    {
+      "day": "Saturday",
+      "hours": "5 AM to 1 AM"
+    },
+    {
+      "day": "Sunday",
+      "hours": "5 AM to 1 AM"
+    }
+  ],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Service options": [
+      {
+        "No-contact delivery": true
+      },
+      {
+        "Delivery": true
+      },
+      {
+        "Onsite services": true
+      },
+      {
+        "Takeout": true
+      },
+      {
+        "Dine-in": true
+      }
+    ],
+    "Highlights": [
+      {
+        "Great dessert": true
+      },
+      {
+        "Great tea selection": true
+      }
+    ],
+    "Popular for": [
+      {
+        "Breakfast": true
+      },
+      {
+        "Lunch": true
+      },
+      {
+        "Dinner": true
+      },
+      {
+        "Solo dining": true
+      }
+    ],
+    "Accessibility": [
+      {
+        "Wheelchair accessible restroom": true
+      }
+    ],
+    "Offerings": [
+      {
+        "All you can eat": true
+      },
+      {
+        "Coffee": true
+      },
+      {
+        "Late-night food": true
+      },
+      {
+        "Quick bite": true
+      },
+      {
+        "Small plates": true
+      }
+    ],
+    "Dining options": [
+      {
+        "Breakfast": true
+      },
+      {
+        "Brunch": true
+      },
+      {
+        "Lunch": true
+      },
+      {
+        "Dinner": true
+      },
+      {
+        "Catering": true
+      },
+      {
+        "Counter service": true
+      },
+      {
+        "Dessert": true
+      },
+      {
+        "Seating": true
+      },
+      {
+        "Table service": true
+      }
+    ],
+    "Amenities": [
+      {
+        "Restroom": true
+      }
+    ],
+    "Atmosphere": [
+      {
+        "Casual": true
+      },
+      {
+        "Trendy": true
+      }
+    ],
+    "Crowd": [
+      {
+        "Family-friendly": true
+      },
+      {
+        "Groups": true
+      }
+    ],
+    "Planning": [
+      {
+        "Accepts reservations": true
+      }
+    ],
+    "Payments": [
+      {
+        "Credit cards": true
+      },
+      {
+        "Debit cards": true
+      },
+      {
+        "Google Pay": true
+      },
+      {
+        "NFC mobile payments": true
+      },
+      {
+        "Credit cards": true
+      }
+    ],
+    "Children": [
+      {
+        "Good for kids": true
+      }
+    ],
+    "Parking": [
+      {
+        "Free parking lot": true
+      },
+      {
+        "Free street parking": true
+      },
+      {
+        "Paid parking lot": true
+      },
+      {
+        "Usually plenty of parking": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=Spice%209%20Restaurant&query_place_id=ChIJn9Kwe1CZyzsR3xw6e0BxVmg",
+  "searchPageUrl": "https://www.google.com/maps/search/restaurent/@17.426234899999997,78.56782912391434,13z?hl=en",
+  "searchString": "restaurent",
+  "language": "en",
+  "rank": 12,
+  "isAdvertisement": false,
+  "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHTFUFtddcw2EZlo_WyQBwcwzJMQDz8z-M3t0qNlfk8Lg9u_MFjlj5ecPbaZDpQeKY-B9rzY4iMYmE1fDgY16RX7Vn6EttgF8nn3x6coXcYDGT1vT7lXdeyO6bc_dr6smbBWyMF=w426-h240-k-no",
+  "kgmid": "/g/11js3jl45n"
+},
+{
+  "title": "RIDHIMA E-COMMERCE SERVICES",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "E-commerce service",
+  "address": "OPP, SBI BANK LANE, Ganesh Nagar, Ramanthapur, Hyderabad, Telangana 500013, India",
+  "neighborhood": "Ganesh Nagar, Ramanthapur",
+  "street": "OPP, SBI BANK LANE",
+  "city": "Hyderabad",
+  "postalCode": "500013",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "phone": "",
+  "phoneUnformatted": "",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 17.3959085,
+    "lng": 78.5307788
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": null,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJqwDPjImZyzsR_WONhW0TTXs",
+  "categories": [
+    "E-commerce service"
+  ],
+  "fid": "0x3bcb99898ccf00ab:0x7b4d136d858d63fd",
+  "cid": "8884779000984855549",
+  "reviewsCount": null,
+  "imagesCount": 3,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:36:02.303Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [
+    {
+      "day": "Monday",
+      "hours": "11 AM to 6 PM"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "11 AM to 6 PM"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "11 AM to 6 PM"
+    },
+    {
+      "day": "Thursday",
+      "hours": "11 AM to 6 PM"
+    },
+    {
+      "day": "Friday",
+      "hours": "11 AM to 6 PM"
+    },
+    {
+      "day": "Saturday",
+      "hours": "12 AM to 4:30 PM"
+    },
+    {
+      "day": "Sunday",
+      "hours": "Closed"
+    }
+  ],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=RIDHIMA%20E-COMMERCE%20SERVICES&query_place_id=ChIJqwDPjImZyzsR_WONhW0TTXs",
+  "searchPageUrl": "https://www.google.com/maps/search/services%20/@17.426234899999997,78.56782912391434,13z?hl=en",
+  "searchString": "services ",
+  "language": "en",
+  "rank": 1,
+  "isAdvertisement": false,
+  "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGE9ya7eJv9xuvGUSDddzfLXs4Wzw20XNTnO0H2QDKJq5pNbLuxwvpcQ9lbxW7M_2anopiBAT9heyXM4tRiJM1Gy0UkTSEWHUH7l3hbrQaViyMso-A2FDrtNBE6YpAsMgzAeRAeQxIMEQO-=w408-h486-k-no",
+  "kgmid": "/g/11nr0l6fy5"
+},
+{
+  "title": "A1 Repair Services",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Small appliance repair service",
+  "address": "Shop No 12-367/5 Boduppal, Nacharam Malkajgiri, near by petrol pump line, Industrial Development Area, Nacharam, Secunderabad, Telangana 500039, India",
+  "neighborhood": "Industrial Development Area, Nacharam",
+  "street": "Shop No 12-367/5 Boduppal, Nacharam Malkajgiri, near by petrol pump line",
+  "city": "Secunderabad",
+  "postalCode": "500039",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "website": "https://a1-ac-and.grexa.site/",
+  "phone": "",
+  "phoneUnformatted": "",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 17.4327754,
+    "lng": 78.5667579
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": null,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJWxnlaeSdyzsRo6vHS006Tk4",
+  "categories": [
+    "Small appliance repair service"
+  ],
+  "fid": "0x3bcb9de469e5195b:0x4e4e3a4d4bc7aba3",
+  "cid": "5642511486800079779",
+  "reviewsCount": null,
+  "imagesCount": 0,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:36:02.303Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Offerings": [
+      {
+        "Repair services": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=A1%20Repair%20Services&query_place_id=ChIJWxnlaeSdyzsRo6vHS006Tk4",
+  "searchPageUrl": "https://www.google.com/maps/search/services%20/@17.426234899999997,78.56782912391434,13z?hl=en",
+  "searchString": "services ",
+  "language": "en",
+  "rank": 2,
+  "isAdvertisement": false,
+  "imageUrl": null,
+  "kgmid": "/g/11zgqdzyrb"
+},
+{
+  "title": "VIP Services",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Accounting firm",
+  "address": "Azad Nagar, Amberpet, Hyderabad, Telangana 500013, India",
+  "neighborhood": "Azad Nagar, Amberpet",
+  "street": null,
+  "city": "Hyderabad",
+  "postalCode": "500013",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "phone": "",
+  "phoneUnformatted": "",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 17.3815166,
+    "lng": 78.520787
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 4.3,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJnTxqIz-ZyzsRtxLxQrjCpBY",
+  "categories": [
+    "Accounting firm"
+  ],
+  "fid": "0x3bcb993f236a3c9d:0x16a4c2b842f112b7",
+  "cid": "1631643061667828407",
+  "reviewsCount": 9,
+  "imagesCount": 11,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:36:02.303Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [
+    {
+      "day": "Monday",
+      "hours": "9 AM to 9 PM"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "9 AM to 9 PM"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "9 AM to 9 PM"
+    },
+    {
+      "day": "Thursday",
+      "hours": "9 AM to 9 PM"
+    },
+    {
+      "day": "Friday",
+      "hours": "9 AM to 9 PM"
+    },
+    {
+      "day": "Saturday",
+      "hours": "9 AM to 9 PM"
+    },
+    {
+      "day": "Sunday",
+      "hours": "Closed"
+    }
+  ],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=VIP%20Services&query_place_id=ChIJnTxqIz-ZyzsRtxLxQrjCpBY",
+  "searchPageUrl": "https://www.google.com/maps/search/services%20/@17.426234899999997,78.56782912391434,13z?hl=en",
+  "searchString": "services ",
+  "language": "en",
+  "rank": 3,
+  "isAdvertisement": false,
+  "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFwYfRMYXMEjD4JliBcxAv5pXjFoNBJc8-w8hm5ITkr8S5OrUDzq7QI3lnCEoBbnDwY4E7GohgQ3XL-ZBUWyv8rb8r7hbMPRyJVqus6UBMoaqMiwA-B6rmiOh5LXk-cnO9ffm7u=w408-h245-k-no",
+  "kgmid": "/g/11pzfpdbgp"
+},
+{
+  "title": "MM Repair Service",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Appliance repair service",
+  "address": "Sri Raghavendra Colony, 4/10, near Road, Chilkanagar, Uppal, Hyderabad, Telangana 500039, India",
+  "neighborhood": "Chilkanagar, Uppal",
+  "street": "Sri Raghavendra Colony, 4/10, near Road",
+  "city": "Hyderabad",
+  "postalCode": "500039",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "website": "https://mmrepairservice.store/",
+  "phone": "+91 94905 96074",
+  "phoneUnformatted": "+919490596074",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 17.4133135,
+    "lng": 78.5634687
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 4.9,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJee4pYjCZyzsROuvFf7J_Ekw",
+  "categories": [
+    "Appliance repair service",
+    "Air conditioning repair service",
+    "Washer & dryer repair service"
+  ],
+  "fid": "0x3bcb99306229ee79:0x4c127fb27fc5eb3a",
+  "cid": "5481584101087898426",
+  "reviewsCount": 31,
+  "imagesCount": 4,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:36:02.303Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [
+    {
+      "day": "Monday",
+      "hours": "7 AM to 7 PM"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "7 AM to 7 PM"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "7 AM to 7 PM"
+    },
+    {
+      "day": "Thursday",
+      "hours": "7 AM to 7 PM"
+    },
+    {
+      "day": "Friday",
+      "hours": "7 AM to 7 PM"
+    },
+    {
+      "day": "Saturday",
+      "hours": "7 AM to 7 PM"
+    },
+    {
+      "day": "Sunday",
+      "hours": "7 AM to 7 PM"
+    }
+  ],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Service options": [
+      {
+        "Online estimates": true
+      },
+      {
+        "Onsite services": true
+      }
+    ],
+    "Offerings": [
+      {
+        "Repair services": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=MM%20Repair%20Service&query_place_id=ChIJee4pYjCZyzsROuvFf7J_Ekw",
+  "searchPageUrl": "https://www.google.com/maps/search/services%20/@17.426234899999997,78.56782912391434,13z?hl=en",
+  "searchString": "services ",
+  "language": "en",
+  "rank": 4,
+  "isAdvertisement": false,
+  "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAET8wTSbKop2xGCkokc7MCWvnTuOnUwIV0_RuGO98nvsM8oyY90CXEsUXm9bXCIMhYqOgRtCkJNaGKyBeNY9vnzv1Wfkxru9Gx__eAgMSgGh-lqUf4_w8bM4E4u_XIzBTaEJYUeuylSOaGV=w408-h904-k-no",
+  "kgmid": "/g/11mf95mmr9"
+},
+{
+  "title": "KS Services",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Passport agent",
+  "address": "10-4-C/321, Addagutta East Marredpally, Monda Market, Shivaji Nagar, Secunderabad, Hyderabad, Telangana 500003, India",
+  "neighborhood": "Monda Market, Shivaji Nagar",
+  "street": "10-4-C/321, Addagutta East Marredpally",
+  "city": "Secunderabad, Hyderabad",
+  "postalCode": "500003",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "phone": "",
+  "phoneUnformatted": "",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 17.4393535,
+    "lng": 78.4976251
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 1,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJz0DOJVebyzsRl2HNrnOMKoE",
+  "categories": [
+    "Passport agent"
+  ],
+  "fid": "0x3bcb9b5725ce40cf:0x812a8c73aecd6197",
+  "cid": "9307406008396374423",
+  "reviewsCount": 1,
+  "imagesCount": 3,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:36:02.304Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [
+    {
+      "day": "Monday",
+      "hours": "9 AM to 9 PM"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "9 AM to 9 PM"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "9 AM to 9 PM"
+    },
+    {
+      "day": "Thursday",
+      "hours": "9 AM to 9 PM"
+    },
+    {
+      "day": "Friday",
+      "hours": "9 AM to 9 PM"
+    },
+    {
+      "day": "Saturday",
+      "hours": "9 AM to 9 PM"
+    },
+    {
+      "day": "Sunday",
+      "hours": "9 AM to 9 PM"
+    }
+  ],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=KS%20Services&query_place_id=ChIJz0DOJVebyzsRl2HNrnOMKoE",
+  "searchPageUrl": "https://www.google.com/maps/search/services%20/@17.426234899999997,78.56782912391434,13z?hl=en",
+  "searchString": "services ",
+  "language": "en",
+  "rank": 5,
+  "isAdvertisement": false,
+  "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=xu0idKO9uyvRIaiDMUOl_w&cb_client=search.gws-prod.gps&w=408&h=240&yaw=15.801636&pitch=0&thumbfov=100",
+  "kgmid": "/g/11x68q0y2s"
+},
+{
+  "title": "R.K.Services",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": null,
+  "address": "CGP2+V3G, Regimental Bazar Main Rd, Regimental Bazaar, Shivaji Nagar, Secunderabad, Telangana 500003, India",
+  "neighborhood": "Regimental Bazaar, Shivaji Nagar",
+  "street": "CGP2+V3G, Regimental Bazar Main Rd",
+  "city": "Secunderabad",
+  "postalCode": "500003",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "phone": "+91 73311 32343",
+  "phoneUnformatted": "+917331132343",
+  "claimThisBusiness": true,
+  "location": {
+    "lat": 17.4371874,
+    "lng": 78.5001978
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 5,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJuZsiSiKayzsRpIKyChSuDxU",
+  "categories": [],
+  "fid": "0x3bcb9a224a229bb9:0x150fae140ab282a4",
+  "cid": "1517623000549196452",
+  "reviewsCount": 1,
+  "imagesCount": 1,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:36:02.304Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=R.K.Services&query_place_id=ChIJuZsiSiKayzsRpIKyChSuDxU",
+  "searchPageUrl": "https://www.google.com/maps/search/services%20/@17.426234899999997,78.56782912391434,13z?hl=en",
+  "searchString": "services ",
+  "language": "en",
+  "rank": 6,
+  "isAdvertisement": false,
+  "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=1N2mI1yLx1sVShlksY3o2w&cb_client=search.gws-prod.gps&w=408&h=240&yaw=79.73688&pitch=0&thumbfov=100",
+  "kgmid": "/g/11sq15gs3v"
+},
+{
+  "title": "Provident fund Queries and Services",
+  "subTitle": null,
+  "description": "Assistance, advice and solutions geared towards PF claim and payroll issues.",
+  "price": null,
+  "categoryName": "Consultant",
+  "address": "Gemini Colony, 1-7-630/B/3/1, near sai Baba temple, Ram Nagar, Jamini Colony, Zamistanpur, Srk nagar, Hyderabad, Telangana 500020, India",
+  "neighborhood": "Ram Nagar, Jamini Colony, Zamistanpur, Srk nagar",
+  "street": "Gemini Colony, 1-7-630/B/3/1, near sai Baba temple",
+  "city": "Hyderabad",
+  "postalCode": "500020",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "website": "https://providentfundquery.in/",
+  "phone": "+91 95157 06001",
+  "phoneUnformatted": "+919515706001",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 17.4124696,
+    "lng": 78.5044172
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 4.9,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJbV5grcKZyzsRh8egKTMOtzY",
+  "categories": [
+    "Consultant"
+  ],
+  "fid": "0x3bcb99c2ad605e6d:0x36b70e3329a0c787",
+  "cid": "3942635611690682247",
+  "reviewsCount": 583,
+  "imagesCount": 5,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:36:02.304Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [
+    {
+      "day": "Monday",
+      "hours": "8 AM to 11 PM"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "8 AM to 11 PM"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "8 AM to 11 PM"
+    },
+    {
+      "day": "Thursday",
+      "hours": "8 AM to 11 PM"
+    },
+    {
+      "day": "Friday",
+      "hours": "8 AM to 11 PM"
+    },
+    {
+      "day": "Saturday",
+      "hours": "8 AM to 11 PM"
+    },
+    {
+      "day": "Sunday",
+      "hours": "8 AM to 11 PM"
+    }
+  ],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Accessibility": [
+      {
+        "Wheelchair accessible parking lot": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=Provident%20fund%20Queries%20and%20Services&query_place_id=ChIJbV5grcKZyzsRh8egKTMOtzY",
+  "searchPageUrl": "https://www.google.com/maps/search/services%20/@17.426234899999997,78.56782912391434,13z?hl=en",
+  "searchString": "services ",
+  "language": "en",
+  "rank": 7,
+  "isAdvertisement": false,
+  "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHE-prETBG6ivMLT0gEEfNxQfwSphW3tSKcjej2dKlyuTNNoLdLBJDqWCOF8-8qdaVk8pcc4nkGOxm5j4XfNVgtnen5MJsvqNxQGXjJsPWDVMrg28yUE4vHEDjC7cTR6CINYf4X8g=w408-h544-k-no",
+  "kgmid": "/g/11syfnht5f"
+},
+{
+  "title": "GVR International Courier Services",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Courier service",
+  "address": "12-11-1009, Lane Number 7, Boudha Nagar, Warasiguda, Boudhanagar Colony, Secunderabad, Hyderabad, Telangana 500061, India",
+  "neighborhood": "Boudha Nagar, Warasiguda, Boudhanagar Colony",
+  "street": "12-11-1009, Lane Number 7",
+  "city": "Secunderabad, Hyderabad",
+  "postalCode": "500061",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "phone": "+91 86881 06286",
+  "phoneUnformatted": "+918688106286",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 17.4175868,
+    "lng": 78.5168116
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 4.9,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJw7105kSZyzsRxgqrH-pLltw",
+  "categories": [
+    "Courier service"
+  ],
+  "fid": "0x3bcb9944e674bdc3:0xdc964bea1fab0ac6",
+  "cid": "15894975403776477894",
+  "reviewsCount": 183,
+  "imagesCount": 11,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:36:02.304Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [
+    {
+      "day": "Monday",
+      "hours": "9 AM to 8 PM"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "9 AM to 8 PM"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "9 AM to 8 PM"
+    },
+    {
+      "day": "Thursday",
+      "hours": "9 AM to 8 PM"
+    },
+    {
+      "day": "Friday",
+      "hours": "9 AM to 8 PM"
+    },
+    {
+      "day": "Saturday",
+      "hours": "9 AM to 8 PM"
+    },
+    {
+      "day": "Sunday",
+      "hours": "10 AM to 5 PM"
+    }
+  ],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=GVR%20International%20Courier%20Services&query_place_id=ChIJw7105kSZyzsRxgqrH-pLltw",
+  "searchPageUrl": "https://www.google.com/maps/search/services%20/@17.426234899999997,78.56782912391434,13z?hl=en",
+  "searchString": "services ",
+  "language": "en",
+  "rank": 9,
+  "isAdvertisement": false,
+  "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=k5tHIcG56bTd_03jpN6nNA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=251.59943&pitch=0&thumbfov=100",
+  "kgmid": "/g/11hr7n5wyd"
+},
+{
+  "title": "Mi Service Center Hyderabad, Telangana (RSI)",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Mobile phone repair shop",
+  "address": "Shop No.3 & 4, Arunodaya Resdency, H. No. 2-1-55/9, nr. I Floor, Venkateswara Colony, Uppal, Hyderabad, Telangana 500039, India",
+  "neighborhood": "Venkateswara Colony, Uppal",
+  "street": "Shop No.3 & 4, Arunodaya Resdency, H. No. 2-1-55/9, nr. I Floor",
+  "city": "Hyderabad",
+  "postalCode": "500039",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "website": "https://miservicemanager.mi.com/customer.html",
+  "phone": "+91 73309 37555",
+  "phoneUnformatted": "+917330937555",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 17.3986241,
+    "lng": 78.5613506
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 3.3,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJWbco8AyZyzsRimsqAsh76Js",
+  "categories": [
+    "Mobile phone repair shop",
+    "Repair service"
+  ],
+  "fid": "0x3bcb990cf028b759:0x9be87bc8022a6b8a",
+  "cid": "11234365369435712394",
+  "reviewsCount": 1052,
+  "imagesCount": 106,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:36:02.304Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [
+    {
+      "day": "Monday",
+      "hours": "10 AM to 7 PM"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "10 AM to 7 PM"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "10 AM to 7 PM"
+    },
+    {
+      "day": "Thursday",
+      "hours": "10 AM to 7 PM"
+    },
+    {
+      "day": "Friday",
+      "hours": "10 AM to 7 PM"
+    },
+    {
+      "day": "Saturday",
+      "hours": "10 AM to 7 PM"
+    },
+    {
+      "day": "Sunday",
+      "hours": "Closed"
+    }
+  ],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Service options": [
+      {
+        "Onsite services": true
+      }
+    ],
+    "Accessibility": [
+      {
+        "Wheelchair accessible entrance": false
+      },
+      {
+        "Wheelchair accessible parking lot": false
+      }
+    ],
+    "Recycling": [
+      {
+        "Batteries": true
+      },
+      {
+        "Electronics": true
+      }
+    ],
+    "Payments": [
+      {
+        "Credit cards": true
+      },
+      {
+        "Debit cards": true
+      },
+      {
+        "NFC mobile payments": true
+      }
+    ],
+    "Parking": [
+      {
+        "Free street parking": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=Mi%20Service%20Center%20Hyderabad%2C%20Telangana%20(RSI)&query_place_id=ChIJWbco8AyZyzsRimsqAsh76Js",
+  "searchPageUrl": "https://www.google.com/maps/search/services%20/@17.426234899999997,78.56782912391434,13z?hl=en",
+  "searchString": "services ",
+  "language": "en",
+  "rank": 10,
+  "isAdvertisement": false,
+  "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFIp64qqUtx_Yx_FvBde_dc9HWInR4Fa1yxg3z1di7tjwQ7XSjWmuwCkq6q1mMOrTcoGeke8HHl272GYOpAI7bEmQ-Wp2rBu3PcwhaiVS_aJ7Qi_ggg2hH1qNhCYPkbKq1a61HN=w426-h240-k-no",
+  "kgmid": "/g/11f3bv16zh"
+},
+{
+  "title": "Hyderabad Cabz I Outstation Cab Services",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Taxi service",
+  "address": "Sri Satya Sai Apartment, Asmangadh, SBH Colony, New Malakpet, Hyderabad, Telangana 500036, India",
+  "neighborhood": "SBH Colony, New Malakpet",
+  "street": "Sri Satya Sai Apartment, Asmangadh",
+  "city": "Hyderabad",
+  "postalCode": "500036",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "website": "https://hyderabadcabz.com/",
+  "phone": "+91 90000 55669",
+  "phoneUnformatted": "+919000055669",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 17.3660487,
+    "lng": 78.5142259
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 4.8,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJ9UZXJHGXyzsRIbGk-BrcFGQ",
+  "categories": [
+    "Taxi service"
+  ],
+  "fid": "0x3bcb9771245746f5:0x6414dc1af8a4b121",
+  "cid": "7211630911725809953",
+  "reviewsCount": 884,
+  "imagesCount": 36,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:36:02.304Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=Hyderabad%20Cabz%20I%20Outstation%20Cab%20Services&query_place_id=ChIJ9UZXJHGXyzsRIbGk-BrcFGQ",
+  "searchPageUrl": "https://www.google.com/maps/search/services%20/@17.426234899999997,78.56782912391434,13z?hl=en",
+  "searchString": "services ",
+  "language": "en",
+  "rank": 12,
+  "isAdvertisement": false,
+  "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEHxV6iSsjQl7DKsXPWdfg38nweIYqx-fQPiYrz6yauBQL7r8ycL_EHwU5WZBN0df4Vq9RJiADzkQAp0YP_R5kmPOExycilyaWY1_PaJbfzdMyiomZEq9G6HRe6jInsU9IkFTIV4kmqazts=w408-h725-k-no",
+  "kgmid": "/g/11j7yzdhyq"
+},
+{
+  "title": "SV Premium Mens PG Hostel",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Student dormitory",
+  "address": "Road No. 3, beside croma Lane, Srinagar Colony, Swati Tower, Kamala Nagar, Dilsukhnagar, Hyderabad, Telangana 500060, India",
+  "neighborhood": "Srinagar Colony, Swati Tower, Kamala Nagar, Dilsukhnagar",
+  "street": "Road No. 3, beside croma Lane",
+  "city": "Hyderabad",
+  "postalCode": "500060",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "phone": "",
+  "phoneUnformatted": "",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 17.36646,
+    "lng": 78.5276043
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 4.7,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJzZtSYz6ZyzsRiLm7QAG_vZg",
+  "categories": [
+    "Student dormitory"
+  ],
+  "fid": "0x3bcb993e63529bcd:0x98bdbf0140bbb988",
+  "cid": "11006163076465277320",
+  "reviewsCount": 12,
+  "imagesCount": 16,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:36:03.994Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [
+    {
+      "day": "Monday",
+      "hours": "6 AM to 10 PM"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "6 AM to 10 PM"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "6 AM to 10 PM"
+    },
+    {
+      "day": "Thursday",
+      "hours": "6 AM to 10 PM"
+    },
+    {
+      "day": "Friday",
+      "hours": "6 AM to 10 PM"
+    },
+    {
+      "day": "Saturday",
+      "hours": "6 AM to 10 PM"
+    },
+    {
+      "day": "Sunday",
+      "hours": "6 AM to 10 PM"
+    }
+  ],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=SV%20Premium%20Mens%20PG%20Hostel&query_place_id=ChIJzZtSYz6ZyzsRiLm7QAG_vZg",
+  "searchPageUrl": "https://www.google.com/maps/search/PGs/@17.3370845,78.52601935,17z?hl=en",
+  "searchString": "PGs",
+  "language": "en",
+  "rank": 1,
+  "isAdvertisement": false,
+  "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGsCIHKSqIyBiu2HHOhpvl5leRSi3wHCbNfRxJZqxYDwXeJ62fqxRsAeGBvWCEQHZMLlytHJN2_T0wCD6UgrkQcmTdYQev7WyUmgD8q2yQ-FpzCeMjWCfo6D2mdRCrBzC-aGmFlgD2_qnw=w408-h544-k-no",
+  "kgmid": "/g/11ysbh7n92"
+},
+{
+  "title": "Pravalika Reddy women's pg hostel",
+  "subTitle": "Pravalika Reddy వర్కింగ్ ఉమెన్స్ హాస్టల్",
+  "description": null,
+  "price": null,
+  "categoryName": "Student dormitory",
+  "address": "Plot No.31, 9-1-7/1, YGG Rd No. 2, near vidya dayini model high school, Santosh Nagar, Hyderabad, Telangana 500059, India",
+  "neighborhood": "Yadagiri Nagar, Durga Bhavani Nagar, New Santoshnagar, Santosh Nagar",
+  "street": "Plot No.31, 9-1-7/1, YGG Rd No. 2, near vidya dayini model high school",
+  "city": "Hyderabad",
+  "postalCode": "500059",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "phone": "+91 90520 80116",
+  "phoneUnformatted": "+919052080116",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 17.3470681,
+    "lng": 78.5095123
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 4.8,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJu9WvUACZyzsRFApdT2m3JSo",
+  "categories": [
+    "Student dormitory"
+  ],
+  "fid": "0x3bcb990050afd5bb:0x2a25b7694f5d0a14",
+  "cid": "3037035186662214164",
+  "reviewsCount": 39,
+  "imagesCount": 24,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:36:03.994Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [
+    {
+      "day": "Monday",
+      "hours": "5:30 AM to 10 PM"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "5:30 AM to 10 PM"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "5:30 AM to 10 PM"
+    },
+    {
+      "day": "Thursday",
+      "hours": "5:30 AM to 10 PM"
+    },
+    {
+      "day": "Friday",
+      "hours": "5:30 AM to 10 PM"
+    },
+    {
+      "day": "Saturday",
+      "hours": "5:30 AM to 10 PM"
+    },
+    {
+      "day": "Sunday",
+      "hours": "5:30 AM to 10 PM"
+    }
+  ],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=Pravalika%20Reddy%20women's%20pg%20hostel&query_place_id=ChIJu9WvUACZyzsRFApdT2m3JSo",
+  "searchPageUrl": "https://www.google.com/maps/search/PGs/@17.3370845,78.52601935,17z?hl=en",
+  "searchString": "PGs",
+  "language": "en",
+  "rank": 2,
+  "isAdvertisement": false,
+  "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHjbgORftMlHcQsov0wlaWz6l_iFMdGaFfrkcYl7gA_aOVKz7fzz2xM_l92UYFYrm7w1sQot4CAMlyaymcb3ou5CF9t5GEhc3iUW7I7-eWDH8zQ2qeFGUWNizyOOGC6hZiGRAiSBLFgd4w=w408-h544-k-no",
+  "kgmid": "/g/11mcqc5910"
+},
+{
+  "title": "SHINE Executive Boys Hostel",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Boys' hostel",
+  "address": "Sadguru Nagar, Vivekananda Colony, L. B. Nagar, Hyderabad, Telangana 500074, India",
+  "neighborhood": "Sadguru Nagar, Vivekananda Colony, L. B. Nagar",
+  "street": null,
+  "city": "Hyderabad",
+  "postalCode": "500074",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "phone": "+91 83408 49521",
+  "phoneUnformatted": "+918340849521",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 17.3432918,
+    "lng": 78.5524711
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 4.5,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJOe9Rc0eZyzsRmfL6pKLd8EM",
+  "categories": [
+    "Boys' hostel"
+  ],
+  "fid": "0x3bcb99477351ef39:0x43f0dda2a4faf299",
+  "cid": "4895656485574079129",
+  "reviewsCount": 416,
+  "imagesCount": 93,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:36:03.994Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [
+    {
+      "day": "Monday",
+      "hours": "Open 24 hours"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "Open 24 hours"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "Open 24 hours"
+    },
+    {
+      "day": "Thursday",
+      "hours": "Open 24 hours"
+    },
+    {
+      "day": "Friday",
+      "hours": "Open 24 hours"
+    },
+    {
+      "day": "Saturday",
+      "hours": "Open 24 hours"
+    },
+    {
+      "day": "Sunday",
+      "hours": "Open 24 hours"
+    }
+  ],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Service options": [
+      {
+        "Onsite services": true
+      }
+    ],
+    "Parking": [
+      {
+        "Free parking lot": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=SHINE%20Executive%20Boys%20Hostel&query_place_id=ChIJOe9Rc0eZyzsRmfL6pKLd8EM",
+  "searchPageUrl": "https://www.google.com/maps/search/PGs/@17.3370845,78.52601935,17z?hl=en",
+  "searchString": "PGs",
+  "language": "en",
+  "rank": 3,
+  "isAdvertisement": false,
+  "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGS2Cplvn-pTcioYvcY0HKzcsJpjOdPTzXu3D-tvD5j7V5XiHS_rHUXG1iKdjsBW3_gAcIE4zV5-wGlDvqUmHpP9mfbTT7cBWM3CVVbXaWM-9u-K7oMUddL3TThPo2_XyMOs8iY=w408-h558-k-no",
+  "kgmid": "/g/11pr41g9bb"
+},
+{
+  "title": "Goutham Boys P.G.",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Boys' hostel",
+  "address": "13-9-91, shanthi nagar, Gaddiannaram, Lalitha Nagar, Dilsukhnagar, Hyderabad, Telangana 500060, India",
+  "neighborhood": "Gaddiannaram, Lalitha Nagar, Dilsukhnagar",
+  "street": "13-9-91, shanthi nagar",
+  "city": "Hyderabad",
+  "postalCode": "500060",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "phone": "+91 90525 72574",
+  "phoneUnformatted": "+919052572574",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 17.3654264,
+    "lng": 78.5263019
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 4.5,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJlVUrRfSZyzsRCC9v78S28eQ",
+  "categories": [
+    "Boys' hostel"
+  ],
+  "fid": "0x3bcb99f4452b5595:0xe4f1b6c4ef6f2f08",
+  "cid": "16497167866981723912",
+  "reviewsCount": 2,
+  "imagesCount": 1,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:36:03.994Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [
+    {
+      "day": "Monday",
+      "hours": "5 AM to 10 PM"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "5 AM to 10 PM"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "5 AM to 10 PM"
+    },
+    {
+      "day": "Thursday",
+      "hours": "5 AM to 10 PM"
+    },
+    {
+      "day": "Friday",
+      "hours": "5 AM to 10 PM"
+    },
+    {
+      "day": "Saturday",
+      "hours": "5 AM to 10 PM"
+    },
+    {
+      "day": "Sunday",
+      "hours": "5 AM to 10 PM"
+    }
+  ],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Parking": [
+      {
+        "Free parking lot": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=Goutham%20Boys%20P.G.&query_place_id=ChIJlVUrRfSZyzsRCC9v78S28eQ",
+  "searchPageUrl": "https://www.google.com/maps/search/PGs/@17.3370845,78.52601935,17z?hl=en",
+  "searchString": "PGs",
+  "language": "en",
+  "rank": 4,
+  "isAdvertisement": false,
+  "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=tHAzVQRaSBipoW6ElnDIFg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=187.32785&pitch=0&thumbfov=100",
+  "kgmid": "/g/11mzsnzjyk"
+},
+{
+  "title": "Gangonis Luxury Boys Hostel & Pg",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Boys' hostel",
+  "address": "pillar no 1559, Khazana jewellery, back side, 3-30, Meghana Degree Lane, Chaitanyapuri Main Rd, Dilsukhnagar, Hyderabad, Telangana 500060, India",
+  "neighborhood": "Millenium Residency, Krishna Nagar, Dilsukhnagar",
+  "street": "pillar no 1559, Khazana jewellery, back side, 3-30, Meghana Degree Lane, Chaitanyapuri Main Rd",
+  "city": "Hyderabad",
+  "postalCode": "500060",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "phone": "+91 90145 38940",
+  "phoneUnformatted": "+919014538940",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 17.3691934,
+    "lng": 78.5313727
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 4.5,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJXQ7kmPWZyzsRf_iT_FnLtoA",
+  "categories": [
+    "Boys' hostel"
+  ],
+  "fid": "0x3bcb99f598e40e5d:0x80b6cb59fc93f87f",
+  "cid": "9274824069966198911",
+  "reviewsCount": 43,
+  "imagesCount": 24,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:36:03.994Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [
+    {
+      "day": "Monday",
+      "hours": "Open 24 hours"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "Open 24 hours"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "Open 24 hours"
+    },
+    {
+      "day": "Thursday",
+      "hours": "Open 24 hours"
+    },
+    {
+      "day": "Friday",
+      "hours": "Open 24 hours"
+    },
+    {
+      "day": "Saturday",
+      "hours": "Open 24 hours"
+    },
+    {
+      "day": "Sunday",
+      "hours": "Open 24 hours"
+    }
+  ],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Service options": [
+      {
+        "Onsite services": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=Gangonis%20Luxury%20Boys%20Hostel%20%26%20Pg&query_place_id=ChIJXQ7kmPWZyzsRf_iT_FnLtoA",
+  "searchPageUrl": "https://www.google.com/maps/search/PGs/@17.3370845,78.52601935,17z?hl=en",
+  "searchString": "PGs",
+  "language": "en",
+  "rank": 6,
+  "isAdvertisement": false,
+  "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFH_G8SNJOHun0wDxI0rx7X6YGq3td3neYmEBKRBpHslkSOYUE398CMAq7FzBWbwCwyR6Ao4yV2XEPJFJNcpuhjoHd2cKORwfwoszSkW9Bu6oZJuBG3hCgQa_b4ilrHvfJ4LOHlr3v8W4tQ=w408-h544-k-no",
+  "kgmid": "/g/11yzb6vym_"
+},
+{
+  "title": "No pg here",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Boys' hostel",
+  "address": "Praneet Pranav Pride, Plot No.34, NTR Nagar Colony, Road, near Gopanapally Wipro Campus, Hyderabad, Telangana 500075, India",
+  "neighborhood": "NTR Nagar, L. B. Nagar",
+  "street": "Praneet Pranav Pride, Plot No.34, NTR Nagar Colony, Road, near Gopanapally Wipro Campus",
+  "city": "Hyderabad",
+  "postalCode": "500075",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "phone": "",
+  "phoneUnformatted": "",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 17.3571551,
+    "lng": 78.5456202
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 5,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJLxTiefiZyzsRf8Kgth76Oq8",
+  "categories": [
+    "Boys' hostel"
+  ],
+  "fid": "0x3bcb99f879e2142f:0xaf3afa1eb6a0c27f",
+  "cid": "12626679515106558591",
+  "reviewsCount": 1,
+  "imagesCount": 15,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:36:03.994Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [
+    {
+      "day": "Monday",
+      "hours": "Open 24 hours"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "Open 24 hours"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "Open 24 hours"
+    },
+    {
+      "day": "Thursday",
+      "hours": "Open 24 hours"
+    },
+    {
+      "day": "Friday",
+      "hours": "Open 24 hours"
+    },
+    {
+      "day": "Saturday",
+      "hours": "Open 24 hours"
+    },
+    {
+      "day": "Sunday",
+      "hours": "Open 24 hours"
+    }
+  ],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=No%20pg%20here&query_place_id=ChIJLxTiefiZyzsRf8Kgth76Oq8",
+  "searchPageUrl": "https://www.google.com/maps/search/PGs/@17.3370845,78.52601935,17z?hl=en",
+  "searchString": "PGs",
+  "language": "en",
+  "rank": 7,
+  "isAdvertisement": false,
+  "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH1P4goqcvAxZWPETJFQjjqPzJNUDu7aCyChuA4s5BjVVoMHaR1qnfYahJoqshVlP28nqR4rxduq7sTdj65GLLoYL1SKW6dLAlRisL1CqAgh6bmbhJQAdUr1hFqs8elv7gzULc5MogisaPL=w408-h306-k-no",
+  "kgmid": "/g/11ymhk2zl0"
+},
+{
+  "title": "Aspirants Luxury Boys & PG Hostel",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Boys' hostel",
+  "address": "Metro Pillar No. 1559, Khajana Jewellery 3, 13-22/1, beside Tapsya College, Millenium Residency, Chaitanyapuri, Dilsukhnagar, Hyderabad, Telangana 500060, India",
+  "neighborhood": "Millenium Residency, Chaitanyapuri, Dilsukhnagar",
+  "street": "Metro Pillar No. 1559, Khajana Jewellery 3, 13-22/1, beside Tapsya College",
+  "city": "Hyderabad",
+  "postalCode": "500060",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "phone": "+91 94905 77621",
+  "phoneUnformatted": "+919490577621",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 17.3696626,
+    "lng": 78.5312182
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 4.9,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJKQsyAlGZyzsR-Mmuz3BMPvY",
+  "categories": [
+    "Boys' hostel"
+  ],
+  "fid": "0x3bcb995102320b29:0xf63e4c70cfaec9f8",
+  "cid": "17743703629290719736",
+  "reviewsCount": 115,
+  "imagesCount": 22,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:36:03.994Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [
+    {
+      "day": "Monday",
+      "hours": "Open 24 hours"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "Open 24 hours"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "Open 24 hours"
+    },
+    {
+      "day": "Thursday",
+      "hours": "Open 24 hours"
+    },
+    {
+      "day": "Friday",
+      "hours": "Open 24 hours"
+    },
+    {
+      "day": "Saturday",
+      "hours": "Open 24 hours"
+    },
+    {
+      "day": "Sunday",
+      "hours": "Open 24 hours"
+    }
+  ],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Service options": [
+      {
+        "Onsite services": false
+      }
+    ],
+    "Amenities": [
+      {
+        "Gender-neutral restroom": true
+      }
+    ],
+    "Parking": [
+      {
+        "Free parking garage": true
+      },
+      {
+        "Free parking lot": true
+      },
+      {
+        "Free street parking": true
+      },
+      {
+        "On-site parking": true
+      },
+      {
+        "Paid parking garage": true
+      },
+      {
+        "Paid parking lot": true
+      },
+      {
+        "Paid street parking": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=Aspirants%20Luxury%20Boys%20%26%20PG%20Hostel&query_place_id=ChIJKQsyAlGZyzsR-Mmuz3BMPvY",
+  "searchPageUrl": "https://www.google.com/maps/search/PGs/@17.3370845,78.52601935,17z?hl=en",
+  "searchString": "PGs",
+  "language": "en",
+  "rank": 8,
+  "isAdvertisement": false,
+  "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEfqvKFCazh5Tb75OUEmNqbYJkOQw5ybn7NKcfWCEQtuGDtZPC752KkO4c38u15DeUNU2CzXK59yepRXvJ6gPPBDFlzz04cHGgGw0j9ioHsA8STxeJX7isgj7yNbnxw3TkiQ4WF-Tk7o9fx=w408-h896-k-no",
+  "kgmid": "/g/11yd09_tl9"
+},
+{
+  "title": "SBL Homes - PG Accomodation for Boys / Boys Hostel",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Boys' hostel",
+  "address": "13/10/62, New Gaddiannaram Colony, Sahithi Nagar, Dilsukhnagar, Hyderabad, Telangana 500060, India",
+  "neighborhood": "New Gaddiannaram Colony, Sahithi Nagar, Dilsukhnagar",
+  "street": "13/10/62",
+  "city": "Hyderabad",
+  "postalCode": "500060",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "phone": "+91 99081 11001",
+  "phoneUnformatted": "+919908111001",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 17.3623403,
+    "lng": 78.5230338
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 4.5,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJr9tYEXaZyzsRnQMNS0bfnZM",
+  "categories": [
+    "Boys' hostel",
+    "Condominium complex",
+    "Extended stay hotel",
+    "Guest house",
+    "Homestay",
+    "Self-catering accommodation",
+    "Student housing center"
+  ],
+  "fid": "0x3bcb99761158dbaf:0x939ddf464b0d039d",
+  "cid": "10636903387918828445",
+  "reviewsCount": 345,
+  "imagesCount": 62,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:36:03.995Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Parking": [
+      {
+        "Paid parking lot": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=SBL%20Homes%20-%20PG%20Accomodation%20for%20Boys%20%2F%20Boys%20Hostel&query_place_id=ChIJr9tYEXaZyzsRnQMNS0bfnZM",
+  "searchPageUrl": "https://www.google.com/maps/search/PGs/@17.3370845,78.52601935,17z?hl=en",
+  "searchString": "PGs",
+  "language": "en",
+  "rank": 9,
+  "isAdvertisement": false,
+  "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHYssGaXC8nMR5hlHZvcaHQmRUINNYuCX__0-upl7Uqjq-Aa4YCz1kdGRCGpQUpNd45_Ldw6rnsLT9DuUU67KC8OGIfgbU01SsanvepIPpH3Vsi_NGXpGNh0nSPWUgX1x6IXj4=w427-h240-k-no",
+  "kgmid": "/g/11fhypksdz"
+},
+{
+  "title": "JVS EXCELLENT BOYS HOSTEL & PG",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Student dormitory",
+  "address": "PLOT NO 72, near Sri Chaitanya school, Keshavapuri Colony, Laxmi Narashima Puram Colony, Hastinapuram, Hyderabad, Telangana 500079, India",
+  "neighborhood": "Keshavapuri Colony, Laxmi Narashima Puram Colony, Hastinapuram",
+  "street": "PLOT NO 72, near Sri Chaitanya school",
+  "city": "Hyderabad",
+  "postalCode": "500079",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "phone": "",
+  "phoneUnformatted": "",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 17.3321876,
+    "lng": 78.5522573
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 4.9,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJd8bgHKKjyzsRzFVSu-ETU6Q",
+  "categories": [
+    "Student dormitory"
+  ],
+  "fid": "0x3bcba3a21ce0c677:0xa45313e1bb5255cc",
+  "cid": "11840829705518470604",
+  "reviewsCount": 40,
+  "imagesCount": 39,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:36:03.995Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [
+    {
+      "day": "Monday",
+      "hours": "Open 24 hours"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "Open 24 hours"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "Open 24 hours"
+    },
+    {
+      "day": "Thursday",
+      "hours": "Open 24 hours"
+    },
+    {
+      "day": "Friday",
+      "hours": "Open 24 hours"
+    },
+    {
+      "day": "Saturday",
+      "hours": "Open 24 hours"
+    },
+    {
+      "day": "Sunday",
+      "hours": "Open 24 hours"
+    }
+  ],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Service options": [
+      {
+        "Onsite services": false
+      }
+    ],
+    "Parking": [
+      {
+        "Free street parking": true
+      },
+      {
+        "On-site parking": true
+      },
+      {
+        "Paid parking lot": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=JVS%20EXCELLENT%20BOYS%20HOSTEL%20%26%20PG&query_place_id=ChIJd8bgHKKjyzsRzFVSu-ETU6Q",
+  "searchPageUrl": "https://www.google.com/maps/search/PGs/@17.3370845,78.52601935,17z?hl=en",
+  "searchString": "PGs",
+  "language": "en",
+  "rank": 10,
+  "isAdvertisement": false,
+  "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFwB2WiI7T25vdrKlWYdTZdFgO5Uq14pAGawl2JhQeAUbY5AWqazp3-zhowQ3cbSlkuqEL9ybGFuq1B2HQOnEXnGwjhIohxp2vwdsM6Fa3vOYJVv5VHs-hVsxZ5VFj_ug0uaWbKHPpiObA=w408-h544-k-no",
+  "kgmid": "/g/11ydxycj1m"
+},
+{
+  "title": "Dhruthi Homes by SBL - PG Accomodation for Men / Boys Hostel",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Boys' hostel",
+  "address": "13-10-101, New Gaddiannaram Colony, Sahithi Nagar, Dilsukhnagar, Hyderabad, Telangana 500060, India",
+  "neighborhood": "New Gaddiannaram Colony, Sahithi Nagar, Dilsukhnagar",
+  "street": "13-10-101",
+  "city": "Hyderabad",
+  "postalCode": "500060",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "phone": "+91 99081 11001",
+  "phoneUnformatted": "+919908111001",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 17.3617948,
+    "lng": 78.5238193
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 4.8,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJX4rgvZCZyzsRahTJ4rehHAg",
+  "categories": [
+    "Boys' hostel",
+    "Student housing center"
+  ],
+  "fid": "0x3bcb9990bde08a5f:0x81ca1b7e2c9146a",
+  "cid": "584519862807237738",
+  "reviewsCount": 98,
+  "imagesCount": 14,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:36:03.995Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [
+    {
+      "day": "Monday",
+      "hours": "6 AM to 5 PM"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "6 AM to 5 PM"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "6 AM to 5 PM"
+    },
+    {
+      "day": "Thursday",
+      "hours": "6 AM to 5 PM"
+    },
+    {
+      "day": "Friday",
+      "hours": "6 AM to 5 PM"
+    },
+    {
+      "day": "Saturday",
+      "hours": "6 AM to 5 PM"
+    },
+    {
+      "day": "Sunday",
+      "hours": "6 AM to 5 PM"
+    }
+  ],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "additionalInfo": {
+    "Amenities": [
+      {
+        "Gender-neutral restroom": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=Dhruthi%20Homes%20by%20SBL%20-%20PG%20Accomodation%20for%20Men%20%2F%20Boys%20Hostel&query_place_id=ChIJX4rgvZCZyzsRahTJ4rehHAg",
+  "searchPageUrl": "https://www.google.com/maps/search/PGs/@17.3370845,78.52601935,17z?hl=en",
+  "searchString": "PGs",
+  "language": "en",
+  "rank": 11,
+  "isAdvertisement": false,
+  "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFNlPhL1MiF_-HDz1g-73CJYBlsC6hU0GALcPAoYqfcPM9BTYEdxDEfFQPJwPW6tr0Vxa8E-Z_2WcrnTJZDO-DRkwh102DsQI6uVSpuvrN0bMrzW5QHLOxwQ2kvVVqAKTkpHkmx=w408-h544-k-no",
+  "kgmid": "/g/11t6g9zn3x"
+},
+{
+  "title": "Reddy’s bungalow",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Apartment building",
+  "address": "MIG-4503, Rd Number 14, Vidyut Nagar, MIG Phase 2 Colony, Bharat Heavy Electricals Limited, Serilingampalle (M), Telangana 502032, India",
+  "neighborhood": "Vidyut Nagar, MIG Phase 2 Colony, Bharat Heavy Electricals Limited",
+  "street": "MIG-4503, Rd Number 14",
+  "city": "Serilingampalle (M)",
+  "postalCode": "502032",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "phone": "",
+  "phoneUnformatted": "",
+  "claimThisBusiness": true,
+  "location": {
+    "lat": 17.4805841,
+    "lng": 78.2844543
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 5,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJ7SAYU6btyzsRboyLfbvnuK4",
+  "categories": [
+    "Apartment building"
+  ],
+  "fid": "0x3bcbeda6531820ed:0xaeb8e7bb7d8b8c6e",
+  "cid": "12590067550765419630",
+  "reviewsCount": 3,
+  "imagesCount": 1,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:36:09.304Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=Reddy%E2%80%99s%20bungalow&query_place_id=ChIJ7SAYU6btyzsRboyLfbvnuK4",
+  "searchPageUrl": "https://www.google.com/maps/search/Apartment/@17.48200805,78.2848635,17z?hl=en",
+  "searchString": "Apartment",
+  "language": "en",
+  "rank": 2,
+  "isAdvertisement": false,
+  "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=LiDs1Kzt9RUpzuTUa49RpQ&cb_client=search.gws-prod.gps&w=408&h=240&yaw=279.06152&pitch=0&thumbfov=100",
+  "kgmid": "/g/11sbhpkjqw"
+},
+{
+  "title": "Anamya enclave",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Apartment building",
+  "address": "76, Rd Number 18, Annamayya Enclave, MIG Phase 2 Colony, Bharat Heavy Electricals Limited, Hyderabad, Serilingampalle (M), Telangana 502032, India",
+  "neighborhood": "Annamayya Enclave, MIG Phase 2 Colony, Bharat Heavy Electricals Limited",
+  "street": "76, Rd Number 18",
+  "city": "Hyderabad, Serilingampalle (M)",
+  "postalCode": "502032",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "phone": "",
+  "phoneUnformatted": "",
+  "claimThisBusiness": true,
+  "location": {
+    "lat": 17.4824395,
+    "lng": 78.2820162
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 4,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJ5SKTaXvtyzsRUZHQTS_nq60",
+  "categories": [
+    "Apartment building"
+  ],
+  "fid": "0x3bcbed7b699322e5:0xadabe72f4dd09151",
+  "cid": "12514350179934048593",
+  "reviewsCount": 1,
+  "imagesCount": 0,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:36:09.304Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=Anamya%20enclave&query_place_id=ChIJ5SKTaXvtyzsRUZHQTS_nq60",
+  "searchPageUrl": "https://www.google.com/maps/search/Apartment/@17.48200805,78.2848635,17z?hl=en",
+  "searchString": "Apartment",
+  "language": "en",
+  "rank": 5,
+  "isAdvertisement": false,
+  "imageUrl": null,
+  "kgmid": "/g/11vdq75gsl"
+},
+{
+  "title": "26, Annamayya enclave",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Apartment building",
+  "address": "F7JM+P3Q, Rd Number 17, Annamayya Enclave, MIG Phase 2 Colony, Bharat Heavy Electricals Limited, Hyderabad, Serilingampalle (M), Telangana 502032, India",
+  "neighborhood": "Annamayya Enclave, MIG Phase 2 Colony, Bharat Heavy Electricals Limited",
+  "street": "F7JM+P3Q, Rd Number 17",
+  "city": "Hyderabad, Serilingampalle (M)",
+  "postalCode": "502032",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "phone": "",
+  "phoneUnformatted": "",
+  "claimThisBusiness": true,
+  "location": {
+    "lat": 17.4818396,
+    "lng": 78.2827327
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 4,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJuc-kyuvtyzsRTR2wiW8yfes",
+  "categories": [
+    "Apartment building"
+  ],
+  "fid": "0x3bcbedebcaa4cfb9:0xeb7d326f89b01d4d",
+  "cid": "16968774425634676045",
+  "reviewsCount": 1,
+  "imagesCount": 2,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:36:09.304Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=26%2C%20Annamayya%20enclave&query_place_id=ChIJuc-kyuvtyzsRTR2wiW8yfes",
+  "searchPageUrl": "https://www.google.com/maps/search/Apartment/@17.48200805,78.2848635,17z?hl=en",
+  "searchString": "Apartment",
+  "language": "en",
+  "rank": 6,
+  "isAdvertisement": false,
+  "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAElpZaFLIfmXKtW0AwAvUK6w4BzVVsVvv5y8CYS0e1Xvk6kNXAC1b97Aw6QTsUM-l40qcr9gRmlBGb4ht3LedJLrw4m1VFFzwDRXLQtrbRtbGkHiT5HqImCCP0FzY_MOIPF9QOR=w408-h725-k-no",
+  "kgmid": "/g/11s376lnyc"
+},
+{
+  "title": "Koppula Venkataiah Nilayam",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Apartment building",
+  "address": "F7JM+J4F, MIG Phase 2 Colony, Bharat Heavy Electricals Limited, Hyderabad, Serilingampalle (M), Telangana 502032, India",
+  "neighborhood": "MIG Phase 2 Colony, Bharat Heavy Electricals Limited",
+  "street": "F7JM+J4F",
+  "city": "Hyderabad, Serilingampalle (M)",
+  "postalCode": "502032",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "phone": "",
+  "phoneUnformatted": "",
+  "claimThisBusiness": true,
+  "location": {
+    "lat": 17.4815535,
+    "lng": 78.2827857
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 5,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJN4pnEgDtyzsRKgenRzNc9NA",
+  "categories": [
+    "Apartment building"
+  ],
+  "fid": "0x3bcbed0012678a37:0xd0f45c3347a7072a",
+  "cid": "15056760829521626922",
+  "reviewsCount": 1,
+  "imagesCount": 1,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:36:09.305Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=Koppula%20Venkataiah%20Nilayam&query_place_id=ChIJN4pnEgDtyzsRKgenRzNc9NA",
+  "searchPageUrl": "https://www.google.com/maps/search/Apartment/@17.48200805,78.2848635,17z?hl=en",
+  "searchString": "Apartment",
+  "language": "en",
+  "rank": 7,
+  "isAdvertisement": false,
+  "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=EyO_J8C6GdjuesjR6e-Zlg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=265.78366&pitch=0&thumbfov=100",
+  "kgmid": "/g/11vym63hdp"
+},
+{
+  "title": "Vidyut nagar, mig phase 2",
+  "subTitle": "విద్యుత్ నగర్, MIG ఫేస్ 2",
+  "description": null,
+  "price": null,
+  "categoryName": "Apartment complex",
+  "address": "F7JP+76P, Vidyut Nagar, MIG Phase 2 Colony, Bharat Heavy Electricals Limited, Hyderabad, Serilingampalle (M), Telangana 502032, India",
+  "neighborhood": "Vidyut Nagar, MIG Phase 2 Colony, Bharat Heavy Electricals Limited",
+  "street": "F7JP+76P",
+  "city": "Hyderabad, Serilingampalle (M)",
+  "postalCode": "502032",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "phone": "",
+  "phoneUnformatted": "",
+  "claimThisBusiness": true,
+  "location": {
+    "lat": 17.4807014,
+    "lng": 78.2855791
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 3,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJ5wiuCQDtyzsR2wTbHam1dH8",
+  "categories": [
+    "Apartment complex"
+  ],
+  "fid": "0x3bcbed0009ae08e7:0x7f74b5a91ddb04db",
+  "cid": "9184165278070277339",
+  "reviewsCount": 2,
+  "imagesCount": 8,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:36:09.305Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=Vidyut%20nagar%2C%20mig%20phase%202&query_place_id=ChIJ5wiuCQDtyzsR2wTbHam1dH8",
+  "searchPageUrl": "https://www.google.com/maps/search/Apartment/@17.48200805,78.2848635,17z?hl=en",
+  "searchString": "Apartment",
+  "language": "en",
+  "rank": 8,
+  "isAdvertisement": false,
+  "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=Y6zYkNAFfpOw-6VwGSs98Q&cb_client=search.gws-prod.gps&w=408&h=240&yaw=82.115074&pitch=0&thumbfov=100",
+  "kgmid": "/g/11v_6h47nx"
+},
+{
+  "title": "MIG PHASE II 5911",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Apartment building",
+  "address": "F7JJ+FJQ, MIG Phase II, Bharat Heavy Electricals Limited, Hyderabad, Serilingampalle (M), Telangana 502032, India",
+  "neighborhood": "MIG Phase II, Bharat Heavy Electricals Limited",
+  "street": "F7JJ+FJQ",
+  "city": "Hyderabad, Serilingampalle (M)",
+  "postalCode": "502032",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "phone": "",
+  "phoneUnformatted": "",
+  "claimThisBusiness": true,
+  "location": {
+    "lat": 17.4812099,
+    "lng": 78.2816115
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 3,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJ3WwyfgDtyzsRSqAa9l_VAF8",
+  "categories": [
+    "Apartment building"
+  ],
+  "fid": "0x3bcbed007e326cdd:0x5f00d55ff61aa04a",
+  "cid": "6845706041730703434",
+  "reviewsCount": 1,
+  "imagesCount": 1,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:36:09.305Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=MIG%20PHASE%20II%205911&query_place_id=ChIJ3WwyfgDtyzsRSqAa9l_VAF8",
+  "searchPageUrl": "https://www.google.com/maps/search/Apartment/@17.48200805,78.2848635,17z?hl=en",
+  "searchString": "Apartment",
+  "language": "en",
+  "rank": 11,
+  "isAdvertisement": false,
+  "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=vE9KkRUTArCWi6YcAArNUQ&cb_client=search.gws-prod.gps&w=408&h=240&yaw=255.70699&pitch=0&thumbfov=100",
+  "kgmid": "/g/11y06prmr4"
+},
+{
+  "title": "Kasturi Villa",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Apartment building",
+  "address": "H No#68, HIG, Annamayya Enclave, Phase 3, Bharat Heavy Electricals Limited, Hyderabad, Serilingampalle (M), Telangana 502032, India",
+  "neighborhood": "Annamayya Enclave, Phase 3, Bharat Heavy Electricals Limited",
+  "street": "H No#68, HIG",
+  "city": "Hyderabad, Serilingampalle (M)",
+  "postalCode": "502032",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "phone": "",
+  "phoneUnformatted": "",
+  "claimThisBusiness": true,
+  "location": {
+    "lat": 17.4835757,
+    "lng": 78.2819762
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": null,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJtWmqu5LtyzsROa6z-x3ekFE",
+  "categories": [
+    "Apartment building"
+  ],
+  "fid": "0x3bcbed92bbaa69b5:0x5190de1dfbb3ae39",
+  "cid": "5877441734076771897",
+  "reviewsCount": null,
+  "imagesCount": 0,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:36:09.305Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=Kasturi%20Villa&query_place_id=ChIJtWmqu5LtyzsROa6z-x3ekFE",
+  "searchPageUrl": "https://www.google.com/maps/search/Apartment/@17.48200805,78.2848635,17z?hl=en",
+  "searchString": "Apartment",
+  "language": "en",
+  "rank": 15,
+  "isAdvertisement": false,
+  "imageUrl": null,
+  "kgmid": "/g/11v0f21g6w"
+},
+{
+  "title": "DATLA SUSHMA",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Apartment building",
+  "address": "House no 4903 road no:20, newmig, Vidyut Nagar, phase 2, Bharat Heavy Electricals Limited, sari lingampalli, Serilingampalle (M), Telangana 502032, India",
+  "neighborhood": "Vidyut Nagar, phase 2, Bharat Heavy Electricals Limited",
+  "street": "House no 4903 road no:20, newmig",
+  "city": "sari lingampalli, Serilingampalle (M)",
+  "postalCode": "502032",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "phone": "",
+  "phoneUnformatted": "",
+  "claimThisBusiness": true,
+  "location": {
+    "lat": 17.4810673,
+    "lng": 78.2817678
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 5,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJc4bpLwDtyzsR8G4mtMBtS3A",
+  "categories": [
+    "Apartment building"
+  ],
+  "fid": "0x3bcbed002fe98673:0x704b6dc0b4266ef0",
+  "cid": "8091681829924794096",
+  "reviewsCount": 1,
+  "imagesCount": 1,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:36:09.305Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=DATLA%20SUSHMA&query_place_id=ChIJc4bpLwDtyzsR8G4mtMBtS3A",
+  "searchPageUrl": "https://www.google.com/maps/search/Apartment/@17.48200805,78.2848635,17z?hl=en",
+  "searchString": "Apartment",
+  "language": "en",
+  "rank": 16,
+  "isAdvertisement": false,
+  "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=hgpaI7tJn3cqR5o76NknMg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=64.984955&pitch=0&thumbfov=100",
+  "kgmid": "/g/11wv32r7d3"
+},
+{
+  "title": "Devasari Nilayam",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Condominium complex",
+  "address": "F7MJ+HHX, Annamayya Enclave, MIG Phase 2 Colony, Bharat Heavy Electricals Limited, Hyderabad, Serilingampalle (M), Telangana 502032, India",
+  "neighborhood": "Annamayya Enclave, MIG Phase 2 Colony, Bharat Heavy Electricals Limited",
+  "street": "F7MJ+HHX",
+  "city": "Hyderabad, Serilingampalle (M)",
+  "postalCode": "502032",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "phone": "",
+  "phoneUnformatted": "",
+  "claimThisBusiness": true,
+  "location": {
+    "lat": 17.4839943,
+    "lng": 78.2814922
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 5,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJleJ0agDtyzsRT-bCwK-E-cY",
+  "categories": [
+    "Condominium complex"
+  ],
+  "fid": "0x3bcbed006a74e295:0xc6f984afc0c2e64f",
+  "cid": "14337636779098826319",
+  "reviewsCount": 6,
+  "imagesCount": 4,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:36:09.305Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=Devasari%20Nilayam&query_place_id=ChIJleJ0agDtyzsRT-bCwK-E-cY",
+  "searchPageUrl": "https://www.google.com/maps/search/Apartment/@17.48200805,78.2848635,17z?hl=en",
+  "searchString": "Apartment",
+  "language": "en",
+  "rank": 17,
+  "isAdvertisement": false,
+  "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHhhsTd2q6ojDhH7MOTO8r0RfrCRosJBHP7FeZTCRyEjtMoMAkNqtiR7ElZDGzrCMTOyLKWMJmmGJf1TylrtwAz7If-cXrUea5kM5VFYp0W1DL1_Z939udbBajAsYXkTLaK5tsTug=w408-h272-k-no",
+  "kgmid": "/g/11y41bsn8z"
+},
+{
+  "title": "Moparthi's Residency",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Apartment building",
+  "address": "F7MJ+3JJ, Annamayya Enclave, MIG Phase 2 Colony, Bharat Heavy Electricals Limited, Hyderabad, Serilingampalle (M), Telangana 502032, India",
+  "neighborhood": "Annamayya Enclave, MIG Phase 2 Colony, Bharat Heavy Electricals Limited",
+  "street": "F7MJ+3JJ",
+  "city": "Hyderabad, Serilingampalle (M)",
+  "postalCode": "502032",
+  "state": "Telangana",
+  "countryCode": "IN",
+  "phone": "",
+  "phoneUnformatted": "",
+  "claimThisBusiness": true,
+  "location": {
+    "lat": 17.4823084,
+    "lng": 78.2813852
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": null,
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": null,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJo6JQMADtyzsRcbjggHmx5Gg",
+  "categories": [
+    "Apartment building"
+  ],
+  "fid": "0x3bcbed003050a2a3:0x68e4b17980e0b871",
+  "cid": "7558361210045905009",
+  "reviewsCount": null,
+  "imagesCount": 0,
+  "imageCategories": [],
+  "scrapedAt": "2026-07-08T07:36:09.305Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [],
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [],
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=Moparthi's%20Residency&query_place_id=ChIJo6JQMADtyzsRcbjggHmx5Gg",
+  "searchPageUrl": "https://www.google.com/maps/search/Apartment/@17.48200805,78.2848635,17z?hl=en",
+  "searchString": "Apartment",
+  "language": "en",
+  "rank": 20,
+  "isAdvertisement": false,
+  "imageUrl": null,
+  "kgmid": "/g/11vppdjzyl"
+}]

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Basera - Settle in like a Local</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;family=Quicksand:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#ffffff",
+                        "secondary": "#795900",
+                        "surface-dim": "#d8dadc",
+                        "surface-bright": "#f7f9fb",
+                        "on-error-container": "#93000a",
+                        "primary": "#070235",
+                        "on-primary-container": "#8683ba",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "surface-container-low": "#f2f4f6",
+                        "inverse-surface": "#2d3133",
+                        "on-primary-fixed": "#181445",
+                        "food-orange": "#f97316",
+                        "on-tertiary-container": "#009d6c",
+                        "grocery-emerald": "#10b981",
+                        "tertiary-container": "#002819",
+                        "on-primary-fixed-variant": "#444173",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "secondary-fixed-dim": "#f9bd22",
+                        "background": "#f7f9fb",
+                        "inverse-primary": "#c4c1fb",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c8c5d0",
+                        "on-background": "#191c1e",
+                        "housing-indigo": "#4f46e5",
+                        "on-tertiary-fixed": "#002113",
+                        "on-secondary-container": "#6f5100",
+                        "primary-container": "#1e1b4b",
+                        "surface-container-high": "#e6e8ea",
+                        "secondary-fixed": "#ffdf9f",
+                        "primary-fixed": "#e3dfff",
+                        "services-red": "#ef4444",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#5c4300",
+                        "surface-container": "#eceef0",
+                        "secondary-container": "#ffc329",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e0e3e5",
+                        "on-surface-variant": "#47464f",
+                        "transport-slate": "#64748b",
+                        "surface-tint": "#5b598c",
+                        "surface": "#f7f9fb",
+                        "tertiary": "#000f07",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-surface": "#191c1e",
+                        "primary-fixed-dim": "#c4c1fb",
+                        "inverse-on-surface": "#eff1f3",
+                        "error-container": "#ffdad6",
+                        "on-tertiary": "#ffffff",
+                        "outline": "#787680",
+                        "tertiary-fixed": "#6ffbbe",
+                        "gym-purple": "#a855f7",
+                        "on-secondary-fixed": "#261a00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "24px",
+                        "xxl": "48px",
+                        "md": "16px",
+                        "xs": "4px",
+                        "max-width-desktop": "1200px",
+                        "container-margin-mobile": "16px",
+                        "sm": "8px",
+                        "xl": "32px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Quicksand"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "display-lg-mobile": ["Quicksand"],
+                        "headline-md": ["Quicksand"],
+                        "headline-sm": ["Quicksand"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "display-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Subtle background pattern */
+        .bg-pattern {
+            background-image: radial-gradient(circle at 2px 2px, rgba(7, 2, 53, 0.05) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+
+        /* Float animation for app mockup */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-surface/90 dark:bg-surface/90 text-primary dark:text-primary-fixed docked full-width top-0 sticky backdrop-blur-md border-b border-outline-variant/30 shadow-sm z-50">
+<div class="flex justify-between items-center w-full px-md md:px-xl max-w-max-width-desktop mx-auto h-[72px]">
+<a class="font-display-lg text-display-lg font-bold text-primary dark:text-primary-fixed flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[32px] text-secondary">home_pin</span>
+                Basera
+            </a>
+<div class="hidden md:flex items-center gap-lg font-label-md text-label-md">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#">How it works</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#">Services</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#">Cities</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#">Community</a>
+</div>
+<button class="font-label-md text-label-md bg-secondary text-on-secondary px-6 py-2 rounded-full hover:bg-secondary/90 transition-colors Active: scale-95 transition-transform duration-150 shadow-sm hidden md:block">
+                Get Started
+            </button>
+<!-- Mobile Menu Button -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-[28px]">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative pt-xxl pb-32 md:pt-32 md:pb-40 overflow-hidden bg-pattern">
+<div class="max-w-max-width-desktop mx-auto px-md md:px-xl relative z-10 flex flex-col md:flex-row items-center gap-xl">
+<div class="w-full md:w-1/2 flex flex-col gap-lg z-20">
+<div class="inline-flex items-center gap-2 bg-surface-container-lowest border border-outline-variant/30 px-4 py-2 rounded-full w-fit shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Your Hyperlocal Relocation Partner</span>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary">
+                        Settle in like a Local.<br/>
+<span class="text-secondary opacity-90 mt-2 block font-medium">नए शहर में घर जैसा एहसास।</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        Find housing, food, maids, and everything you need to make a new city feel like home. Seamless transition, guaranteed.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-sm">
+<button class="bg-secondary text-on-secondary px-8 py-3 rounded-full font-label-md text-label-md hover:bg-secondary/90 transition-all shadow-sm flex items-center justify-center gap-2 group">
+                            Get Started
+                            <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="border-2 border-primary text-primary bg-transparent px-8 py-3 rounded-full font-label-md text-label-md hover:bg-primary/5 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">download</span>
+                            Download App
+                        </button>
+</div>
+<div class="mt-lg flex items-center gap-4">
+<div class="flex -space-x-3">
+<img class="w-10 h-10 rounded-full border-2 border-surface object-cover" data-alt="A portrait of a smiling Indian professional woman in her 20s, well-lit studio shot, corporate modern style, soft background, high resolution, realistic, warm tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW_YzgyzF5238DYkA2Wg7JfJZvuMC6fIUbxppOI0oZb1i9I4LlVXc9JhYMxDKGgnXiTTkb-55Qvh06E2BXhh14vSV5dkPrvIAijDqLiMkp1j6SKaGdc2hPr0ScN2r6j4P_RG55UcrnJmoOI-O6ZX8jo5ypkReVPpTvJBX9rMrK9_auefPJlFO4HFANVwGzysrLcOhA0uzomaYp9jHPAYPF5B984cxFee35moGvIUUQs01Qc-eV5Kv7Qw"/>
+<img class="w-10 h-10 rounded-full border-2 border-surface object-cover" data-alt="A portrait of a young Indian man in a casual shirt, smiling outdoors in a city setting, bright daylight, modern aesthetic, high resolution." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLlc8j4aoT2CIZJbqDkm_o30eFTXDAD6eOkxri22gEybdaGO_1gebpBP27_dmBaFTHYysFyxHf2EkdaGaCKEhHsC3lMijAJjTa9riZ2xNrldcXXKn4jM3J9FeVCsVL1UJFAxAErWwSsYChDiqjfcXSGntJtd3MepfCycrpRTtlWJyaQ8YrByNyjPjCoorEqcYS5wWdxYgsFKjjG17BC4XbIdrzqM8BfxRO1YKkd3Wx0Z9QIOA_jNai7Q"/>
+<img class="w-10 h-10 rounded-full border-2 border-surface object-cover" data-alt="A portrait of a mature Indian woman looking confident, professional attire, soft indoor lighting, premium modern style, high resolution." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_8ld4NFwphF0mPdV7Wq771jvU0DqNi7vRnAxmmvH4BeRtjgVJZdQ5gSlzDav7gZ5HvrTy_gXkVW8K-ULY26uYdp8TwQZ6xrTAZgobM19Fp7jbIMPzz6oK6fJ_xf939i0tyjmVt5apwa7YBCr--JV2cNs-HRPj75yzmO-QRc818CmfsjifUxNsFHhdAx4__rUcH1JHLarQTTKHNq5WoCGWsM0fMbv1ewsoCT3BJcwe2SCHm7XP3UPWEQ"/>
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-surface-container-high flex items-center justify-center font-label-sm text-label-sm text-primary">
+                                50k+
+                            </div>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Trusted by 50,000+ residents across 10 cities.</p>
+</div>
+</div>
+<div class="w-full md:w-1/2 relative mt-xl md:mt-0">
+<div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-sm">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent z-10"></div>
+<img class="w-full h-full object-cover" data-alt="A high-quality, cinematic photo of a modern, well-lit Indian apartment interior with a large window showing a beautiful view of Bengaluru city skyline at dusk. Warm golden hour lighting, stylish furniture, minimalist aesthetic, deep indigo and warm gold accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAAgjAHcosEYyHejCPa1FazNaRZ2wPYnc4ez7-sXk1y3pege8NBQm8s4b9am5Vdce9NnZ3dA0yES9qvXXU6zh5vL0-w3Ch5Ey8usI750L-tvISxPkjzWaq5F_4wVnf_iAQrV2ea_XZTg4XDI2oGZCDRK8NIs3usLYoscKz54OqWbhTeMysyRkvvKUTQEgvpP2tyrNv4mkigQNTl8XqAOxS9nnjZw6YQq_XsVdj1NdeZjhIjGeqIvlNtA"/>
+</div>
+<!-- Floating Glass Card -->
+<div class="absolute -bottom-6 -left-6 md:-left-12 bg-surface-container-lowest/90 backdrop-blur-md p-md rounded-xl border border-outline-variant/30 shadow-sm flex items-center gap-4 z-20 animate-float" style="animation-delay: 1s;">
+<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">real_estate_agent</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-primary">Found an apartment</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Just now in Indiranagar</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Bento Grid -->
+<section class="py-xxl bg-surface-container-lowest border-y border-outline-variant/30">
+<div class="max-w-max-width-desktop mx-auto px-md md:px-xl">
+<div class="text-center mb-xl">
+<h2 class="font-headline-md text-headline-md text-primary mb-sm">Everything you need, in one place.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Skip the endless searching and coordinating. Basera brings all essential relocation services together.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<!-- Feature 1 -->
+<div class="bg-surface rounded-2xl p-lg border border-outline-variant/30 hover:shadow-sm transition-shadow group">
+<div class="w-14 h-14 rounded-full bg-housing-indigo/10 flex items-center justify-center text-housing-indigo mb-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">apartment</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-xs">Verified Housing</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg">Move-in ready homes, verified listings, and hassle-free brokerage. Find your perfect spot instantly.</p>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-housing-indigo hover:text-housing-indigo/80 transition-colors" href="#">
+                            Explore Homes <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Feature 2 -->
+<div class="bg-surface rounded-2xl p-lg border border-outline-variant/30 hover:shadow-sm transition-shadow group">
+<div class="w-14 h-14 rounded-full bg-food-orange/10 flex items-center justify-center text-food-orange mb-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-xs">Home-cooked Food</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg">Craving 'Ghar ka khana'? Subscribe to verified local tiffin services and home chefs.</p>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-food-orange hover:text-food-orange/80 transition-colors" href="#">
+                            Find Tiffins <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Feature 3 -->
+<div class="bg-surface rounded-2xl p-lg border border-outline-variant/30 hover:shadow-sm transition-shadow group">
+<div class="w-14 h-14 rounded-full bg-services-red/10 flex items-center justify-center text-services-red mb-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">cleaning_services</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-xs">Trusted Services</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg">Reliable maids, quick repairs, and deep cleaning. Background-checked professionals at your door.</p>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-services-red hover:text-services-red/80 transition-colors" href="#">
+                            Book Services <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- App Showcase Section -->
+<section class="py-xxl bg-primary text-on-primary overflow-hidden relative">
+<!-- Decorative background elements -->
+<div class="absolute top-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-primary-fixed/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3"></div>
+<div class="max-w-max-width-desktop mx-auto px-md md:px-xl relative z-10 flex flex-col md:flex-row items-center gap-xl">
+<div class="w-full md:w-1/2 flex flex-col gap-lg">
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-primary">
+                        Your city companion in your pocket.
+                    </h2>
+<p class="font-body-lg text-body-lg text-on-primary/80">
+                        Manage your rent, subscribe to daily meals, and book services instantly from the Basera app. The entire city's ecosystem curated for you.
+                    </p>
+<ul class="flex flex-col gap-4 mt-sm">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="font-body-md text-body-md">One-tap service bookings</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="font-body-md text-body-md">Unified billing for all subscriptions</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="font-body-md text-body-md">24/7 dedicated local concierge support</span>
+</li>
+</ul>
+<div class="mt-lg flex gap-4">
+<button class="bg-surface-container-lowest text-primary px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-surface-container-low transition-colors font-label-md text-label-md">
+<span class="material-symbols-outlined">shop</span> Google Play
+                        </button>
+<button class="bg-surface-container-lowest text-primary px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-surface-container-low transition-colors font-label-md text-label-md">
+<span class="material-symbols-outlined">apps</span> App Store
+                        </button>
+</div>
+</div>
+<div class="w-full md:w-1/2 flex justify-center mt-xl md:mt-0">
+<div class="relative w-[280px] h-[580px] bg-black rounded-[40px] border-[8px] border-surface-container-lowest/10 shadow-sm overflow-hidden animate-float">
+<!-- Embedded Screen -->
+<img alt="Basera Mobile App Interface" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfI-eKo5urjjlJlEvzguls9e6SLbWhQtj-5FSu00Go9lwqQgylBkCSRrNmcXVnM3nmc97YMXsEgKDwk82f48I2_-ZWabS50TSi3-ohzaOjrfl6jmNrATpWtuJNIJWsZkaEh-_mdAaSMeEbhlTjkg6hFet7mVWPf5Nf2gA-9hCdRtv3xDe7ZX9slmIAbdM9dEw8feFD5X4EotGXxkgtozPWlG2ftZsb5AZ0Ngu4vLsoHTPy3okHfWZDzg"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-primary-container text-on-primary dark:text-on-primary-container full-width rounded-t-xl mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-start w-full px-md md:px-xl py-xl max-w-max-width-desktop mx-auto gap-lg">
+<div class="flex flex-col gap-4 max-w-sm">
+<a class="font-display-lg text-display-lg font-bold text-on-primary dark:text-on-primary-container flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[32px] text-secondary">home_pin</span>
+                    Basera
+                </a>
+<p class="font-body-md text-body-md text-on-primary/80 dark:text-on-primary-container/80">
+                    © 2024 Basera Hyperlocal. Your neighborhood friend in every city.
+                </p>
+</div>
+<div class="flex flex-col gap-3 font-label-sm text-label-sm">
+<h4 class="font-label-md text-label-md text-secondary dark:text-secondary-fixed mb-2">Legal</h4>
+<a class="text-on-primary/80 dark:text-on-primary-container/80 hover:text-on-primary dark:hover:text-on-primary-container transition-all Active: opacity-80" href="#">Privacy Policy</a>
+<a class="text-on-primary/80 dark:text-on-primary-container/80 hover:text-on-primary dark:hover:text-on-primary-container transition-all Active: opacity-80" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-3 font-label-sm text-label-sm">
+<h4 class="font-label-md text-label-md text-secondary dark:text-secondary-fixed mb-2">Company</h4>
+<a class="text-on-primary/80 dark:text-on-primary-container/80 hover:text-on-primary dark:hover:text-on-primary-container transition-all Active: opacity-80" href="#">Partner with us</a>
+<a class="text-on-primary/80 dark:text-on-primary-container/80 hover:text-on-primary dark:hover:text-on-primary-container transition-all Active: opacity-80" href="#">Contact Support</a>
+</div>
+</div>
+</footer>
+</body></html>

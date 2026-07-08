@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Housing in Bengaluru - Basera</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Quicksand:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#f9bd22",
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#e0e3e5",
+                        "surface-dim": "#d8dadc",
+                        "on-secondary-fixed-variant": "#5c4300",
+                        "transport-slate": "#64748b",
+                        "tertiary": "#000f07",
+                        "surface-container": "#eceef0",
+                        "secondary-fixed": "#ffdf9f",
+                        "on-primary-fixed-variant": "#444173",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f2f4f6",
+                        "services-red": "#ef4444",
+                        "tertiary-fixed": "#6ffbbe",
+                        "housing-indigo": "#4f46e5",
+                        "food-orange": "#f97316",
+                        "inverse-primary": "#c4c1fb",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "outline-variant": "#c8c5d0",
+                        "outline": "#787680",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-secondary-container": "#6f5100",
+                        "surface-container-high": "#e6e8ea",
+                        "on-surface-variant": "#47464f",
+                        "on-secondary-fixed": "#261a00",
+                        "secondary-container": "#ffc329",
+                        "inverse-surface": "#2d3133",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "on-background": "#191c1e",
+                        "primary-container": "#1e1b4b",
+                        "on-primary-fixed": "#181445",
+                        "surface-bright": "#f7f9fb",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#002819",
+                        "gym-purple": "#a855f7",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#5b598c",
+                        "background": "#f7f9fb",
+                        "on-primary-container": "#8683ba",
+                        "primary-fixed": "#e3dfff",
+                        "on-tertiary-fixed": "#002113",
+                        "on-surface": "#191c1e",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-error-container": "#93000a",
+                        "primary": "#070235",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#c4c1fb",
+                        "surface": "#f7f9fb",
+                        "grocery-emerald": "#10b981",
+                        "on-tertiary-container": "#009d6c",
+                        "secondary": "#795900",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xxl": "48px",
+                        "lg": "24px",
+                        "container-margin-mobile": "16px",
+                        "xs": "4px",
+                        "xl": "32px",
+                        "md": "16px",
+                        "sm": "8px",
+                        "max-width-desktop": "1200px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Quicksand"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "display-lg": ["Quicksand"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "headline-sm": ["Quicksand"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-md": ["Quicksand"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "700" }],
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(200, 197, 208, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface/90 dark:bg-surface-dim/90 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant/30 shadow-sm transition-all duration-200">
+<div class="flex justify-between items-center h-20 px-lg max-w-max-width-desktop mx-auto">
+<div class="font-display-lg text-display-lg font-bold text-primary dark:text-primary-fixed">Basera</div>
+<nav class="hidden md:flex gap-xl">
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors transition-all duration-200 active:scale-95" href="#">How it works</a>
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary dark:border-primary-fixed pb-1 font-label-md text-label-md hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors transition-all duration-200 active:scale-95" href="#">Services</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors transition-all duration-200 active:scale-95" href="#">Cities</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors transition-all duration-200 active:scale-95" href="#">Community</a>
+</nav>
+<button class="bg-primary text-on-primary font-label-md text-label-md py-sm px-lg rounded-full hover:bg-primary-container transition-colors hidden md:block">Get Started</button>
+</div>
+</header>
+<main class="flex-grow pt-[104px] pb-xxl px-lg max-w-max-width-desktop mx-auto w-full flex gap-xl">
+<!-- Sidebar Filters -->
+<aside class="w-64 hidden md:flex flex-col gap-lg flex-shrink-0">
+<div class="glass-panel rounded-xl p-lg sticky top-[104px]">
+<h2 class="font-headline-sm text-headline-sm text-primary mb-lg">Filters</h2>
+<!-- Price Range -->
+<div class="mb-xl">
+<h3 class="font-label-md text-label-md text-on-surface-variant mb-sm">Price Range</h3>
+<input class="w-full accent-primary" max="50000" min="5000" step="1000" type="range"/>
+<div class="flex justify-between text-label-sm text-outline mt-xs">
+<span>₹5k</span>
+<span>₹50k+</span>
+</div>
+</div>
+<!-- Property Type -->
+<div class="mb-xl">
+<h3 class="font-label-md text-label-md text-on-surface-variant mb-sm">Property Type</h3>
+<div class="flex flex-col gap-sm">
+<label class="flex items-center gap-sm cursor-pointer">
+<input checked="" class="rounded border-outline-variant text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="font-body-md text-body-md">PG / Coliving</span>
+</label>
+<label class="flex items-center gap-sm cursor-pointer">
+<input checked="" class="rounded border-outline-variant text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="font-body-md text-body-md">Apartments</span>
+</label>
+<label class="flex items-center gap-sm cursor-pointer">
+<input class="rounded border-outline-variant text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="font-body-md text-body-md">Independent Houses</span>
+</label>
+</div>
+</div>
+<!-- Verification -->
+<div class="mb-xl">
+<h3 class="font-label-md text-label-md text-on-surface-variant mb-sm">Verification</h3>
+<label class="flex items-center gap-sm cursor-pointer">
+<input checked="" class="rounded border-outline-variant text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="font-body-md text-body-md">Basera Verified Only</span>
+</label>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<div class="flex-grow flex flex-col gap-lg">
+<div class="flex justify-between items-end mb-sm">
+<div>
+<h1 class="font-display-lg text-display-lg text-primary mb-xs">Housing in Bengaluru</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Showing 245 verified properties</p>
+</div>
+</div>
+<!-- Featured Banner -->
+<div class="relative w-full h-64 rounded-xl overflow-hidden shadow-sm group cursor-pointer mb-lg">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A modern, high-end apartment complex exterior in Bengaluru at twilight. The building features large glass windows reflecting a vibrant sunset. Warm, inviting lighting spills from the balconies. The aesthetic is clean, corporate modern, and highly aspirational, embodying a premium yet approachable neighborhood vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQlkayBbrRLsdn2GNMhcpYX22WZ2Z8xY0bqHdoYyytR4_vBtUY1eOsShNubJ-C0feOpJyExXRn1a5cUV007uhVjxlDsdd_jeyORbN6-ib53cC_x0k0sD7TCo41ZDg9w1xeBe8fofDUVe2n9A8PxismnrGZFoHN2yoWxbMJ0U76FDNdcC_IPOMV4Y4G_XU1VnXNFkv4lw_RWNnEncmSmPEQrWzRH53mXmtT1ndEX4b85hZo3dZd67h0xA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-tertiary/80 via-tertiary/20 to-transparent"></div>
+<div class="absolute top-lg left-lg">
+<span class="bg-secondary text-on-secondary font-label-sm text-label-sm px-sm py-xs rounded-full uppercase tracking-wider shadow-sm">New Launch</span>
+</div>
+<div class="absolute bottom-lg left-lg right-lg flex justify-between items-end">
+<div>
+<h2 class="font-headline-md text-headline-md text-surface-container-lowest mb-xs">The Skyline Residences</h2>
+<p class="font-body-md text-body-md text-surface-container-highest flex items-center gap-xs">
+<span class="material-symbols-outlined" style="font-size: 16px;">location_on</span> Indiranagar
+                        </p>
+</div>
+<div class="text-right">
+<p class="font-label-sm text-label-sm text-surface-container-highest mb-xs">Starting from</p>
+<p class="font-headline-sm text-headline-sm text-surface-container-lowest">₹25,000<span class="font-body-md text-body-md opacity-80">/mo</span></p>
+</div>
+</div>
+</div>
+<!-- Property Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow group flex flex-col cursor-pointer">
+<div class="relative h-48 w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A brightly lit, modern coliving room interior in Bengaluru. The space features a comfortable bed with clean, crisp linens, a wooden study desk, and a large window letting in soft natural daylight. The design is warm vernacular minimalism, utilizing soft neutral tones and light wood textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNPQC5Ch3XQqpOd0Sz1PIOm-Ct4BscGk38CSMxQLORQKAloJ47tUF1_i5xrAvACV3BXBJ09nkES-TncwJcbCWJdacu3p8L71LHh3zhgsqhmTiduYCRe6TeVzIt1AUDO0pkGxULMJ80nVFiOYBz3KJVge_iaukguR7CevllwzB7-yNMK_3i-kO6_NPRAmeeM1JnfnopSPH464UG58dTava6Zpcfy3TiuYm4-3xUo5DI7C5ftJCAZYE0yA"/>
+<button class="absolute top-sm right-sm bg-surface-container-lowest/80 backdrop-blur p-sm rounded-full text-on-surface-variant hover:text-services-red transition-colors z-10">
+<span class="material-symbols-outlined" data-icon="favorite" style="font-size: 20px;">favorite</span>
+</button>
+<div class="absolute bottom-sm left-sm bg-surface-container-lowest/90 backdrop-blur px-sm py-xs rounded-lg flex items-center gap-xs border border-outline-variant/20 shadow-sm">
+<span class="material-symbols-outlined text-primary" style="font-size: 14px; font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-sm text-label-sm text-primary">Verified</span>
+</div>
+</div>
+<div class="p-md flex-grow flex flex-col">
+<div class="flex justify-between items-start mb-sm">
+<h3 class="font-headline-sm text-headline-sm text-primary line-clamp-1">Green View PG</h3>
+<div class="flex items-center gap-xs bg-surface-container p-xs rounded">
+<span class="material-symbols-outlined text-secondary-fixed-dim" style="font-size: 14px; font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm">4.8</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md flex items-center gap-xs">
+<span class="material-symbols-outlined" style="font-size: 16px;">location_on</span> Koramangala
+                        </p>
+<div class="mt-auto flex justify-between items-end border-t border-outline-variant/20 pt-sm">
+<div>
+<span class="font-label-sm text-label-sm text-outline block mb-xs">Private Room</span>
+<span class="font-headline-sm text-headline-sm text-primary">₹8,500<span class="font-body-md text-body-md text-on-surface-variant">/mo</span></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow group flex flex-col cursor-pointer">
+<div class="relative h-48 w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A spacious, contemporary living room in a Bengaluru apartment. Features a minimalist beige sofa, a modern glass coffee table, and subtle indoor plants. The lighting is bright and inviting, showcasing a premium, sophisticated aesthetic that feels like a well-organized home." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGLfHgq0T-nLHfVlZ0N4oUh7-f57ffMZpTdYScfqogu1OiEvIcBZmXas44dSOLK4bQZ8txhic6cQwu0jxCfrRBQsTn0M-7nypqgxuY32KdodYTup5wmk_lyMmCq1aXlnQoGBF-c7pHLVdNEjij3rtY_y587tYKZXGwSZLrs5rXVUr2Q_qZ2DY11oK3t9sS-T9Hb3xNEUc6mQigFhfmg97mAHDGXw2Tw2up-PwoqY3REuxfi4QtxoirRQ"/>
+<button class="absolute top-sm right-sm bg-surface-container-lowest/80 backdrop-blur p-sm rounded-full text-on-surface-variant hover:text-services-red transition-colors z-10">
+<span class="material-symbols-outlined" data-icon="favorite" style="font-size: 20px;">favorite</span>
+</button>
+</div>
+<div class="p-md flex-grow flex flex-col">
+<div class="flex justify-between items-start mb-sm">
+<h3 class="font-headline-sm text-headline-sm text-primary line-clamp-1">Sunrise Apartments</h3>
+<div class="flex items-center gap-xs bg-surface-container p-xs rounded">
+<span class="material-symbols-outlined text-secondary-fixed-dim" style="font-size: 14px; font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm">4.5</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md flex items-center gap-xs">
+<span class="material-symbols-outlined" style="font-size: 16px;">location_on</span> HSR Layout
+                        </p>
+<div class="mt-auto flex justify-between items-end border-t border-outline-variant/20 pt-sm">
+<div>
+<span class="font-label-sm text-label-sm text-outline block mb-xs">1 BHK</span>
+<span class="font-headline-sm text-headline-sm text-primary">₹18,000<span class="font-body-md text-body-md text-on-surface-variant">/mo</span></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm hover:shadow-md transition-shadow group flex flex-col cursor-pointer">
+<div class="relative h-48 w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="The exterior entrance of a charming independent cottage in a quiet Bengaluru neighborhood. Features a small, well-maintained garden path leading up to a wooden door. The style is warm, communal, and deeply rooted in local context, bathed in soft afternoon sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASHujZFhsZNq9YDVCr8p97bUWt0EE1YxNaTk7ttuGQF8hUu3P7P3vdqxtiWvVXtuF9imwgevzX77c1-jiiZ3OYhjGhkHA41DNBVxbC-9Uxpv0V14rFdFkkx0VnY0mb8IxDHFUq82OFc5AmD8Ltb9ObGO5-GoC2hbz536-MVBtePFh9VraSbEoMf8GxurakpClLhw8_SHp1JGdxuyttAdIH_IFCdxWBfkshw_Isfvk5y7hRIbwQhBNAmQ"/>
+<button class="absolute top-sm right-sm bg-surface-container-lowest/80 backdrop-blur p-sm rounded-full text-on-surface-variant hover:text-services-red transition-colors z-10">
+<span class="material-symbols-outlined" data-icon="favorite" style="font-size: 20px;">favorite</span>
+</button>
+<div class="absolute bottom-sm left-sm bg-surface-container-lowest/90 backdrop-blur px-sm py-xs rounded-lg flex items-center gap-xs border border-outline-variant/20 shadow-sm">
+<span class="material-symbols-outlined text-primary" style="font-size: 14px; font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-sm text-label-sm text-primary">Verified</span>
+</div>
+</div>
+<div class="p-md flex-grow flex flex-col">
+<div class="flex justify-between items-start mb-sm">
+<h3 class="font-headline-sm text-headline-sm text-primary line-clamp-1">Maple Cottage</h3>
+<div class="flex items-center gap-xs bg-surface-container p-xs rounded">
+<span class="material-symbols-outlined text-secondary-fixed-dim" style="font-size: 14px; font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm">4.9</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md flex items-center gap-xs">
+<span class="material-symbols-outlined" style="font-size: 16px;">location_on</span> Jayanagar
+                        </p>
+<div class="mt-auto flex justify-between items-end border-t border-outline-variant/20 pt-sm">
+<div>
+<span class="font-label-sm text-label-sm text-outline block mb-xs">Independent House</span>
+<span class="font-headline-sm text-headline-sm text-primary">₹35,000<span class="font-body-md text-body-md text-on-surface-variant">/mo</span></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface w-full mt-xxl flat no shadows opacity-100 hover:opacity-80">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg py-xl px-lg max-w-max-width-desktop mx-auto">
+<div>
+<div class="font-display-lg text-display-lg font-bold text-primary dark:text-primary-fixed mb-md">Basera</div>
+<p class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md">© 2024 Basera. All rights reserved.</p>
+</div>
+<div class="flex flex-col gap-sm">
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md hover:text-primary dark:hover:text-primary-fixed underline transition-all" href="#">About Us</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md hover:text-primary dark:hover:text-primary-fixed underline transition-all" href="#">Terms of Service</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md hover:text-primary dark:hover:text-primary-fixed underline transition-all" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md hover:text-primary dark:hover:text-primary-fixed underline transition-all" href="#">Contact Support</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md hover:text-primary dark:hover:text-primary-fixed underline transition-all" href="#">Careers</a>
+</div>
+</div>
+</footer>
+</body></html>

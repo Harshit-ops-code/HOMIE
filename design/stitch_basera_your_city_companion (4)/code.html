@@ -1,0 +1,214 @@
+<!DOCTYPE html><html class="light" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Quicksand:wght@600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                  primary: "#1E1B4B",
+                  "primary-light": "#312E81",
+                  secondary: "#FBBF24",
+                  "secondary-light": "#FDE68A",
+                  surface: "#fcfcfc",
+                  "surface-alt": "#f4f5f7",
+                  outline: "#cbd5e1",
+                  "outline-variant": "#e2e8f0"
+              },
+              borderRadius: {
+                      "card": "24px",
+                      "pill": "9999px"
+              },
+              spacing: {
+                      "container-margin-mobile": "20px",
+              }
+            },
+          },
+        }
+    }catch(_e){}</script></head><body class="bg-surface text-gray-800 min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-surface/90 backdrop-blur-lg w-full border-b border-outline-variant/50">
+<div class="flex justify-between items-center px-container-margin-mobile w-full py-4 max-w-desktop mx-auto">
+<div class="flex flex-col">
+<span class="font-quicksand text-2xl font-bold text-primary flex items-center gap-2">Namaste <span class="text-2xl leading-none">👋</span></span>
+<div class="flex items-center gap-1 text-primary mt-0.5 cursor-pointer active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[18px]" data-original-icon="location_on">location_on</span>
+<span class="text-sm font-medium">Bengaluru</span>
+<span class="material-symbols-outlined text-[18px]" data-original-icon="arrow_drop_down">arrow_drop_down</span>
+</div>
+</div>
+<div class="flex gap-4">
+<button class="w-10 h-10 rounded-full flex items-center justify-center bg-surface-alt border border-outline-variant/60 hover:bg-gray-100 transition-all">
+<span class="material-symbols-outlined text-gray-600">notifications</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-desktop mx-auto px-container-margin-mobile pb-32">
+<!-- Hero Search Section -->
+<section class="mt-6 mb-8">
+<div class="relative group premium-shadow rounded-full">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-gray-400">search</span>
+</div>
+<input class="w-full bg-white border border-outline-variant rounded-full py-4 pl-12 pr-4 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-base shadow-sm outline-none" placeholder="Find anything in Bengaluru..." type="text">
+</div>
+<div class="mt-5 flex items-center justify-center gap-3 text-sm font-medium">
+<span class="bg-primary/10 text-primary-light px-4 py-1.5 rounded-full border border-primary/10">2.4K+ Listings</span>
+<span class="text-gray-300">•</span>
+<span class="bg-secondary/20 text-yellow-800 px-4 py-1.5 rounded-full border border-secondary/30">800+ Services</span>
+</div>
+</section>
+<!-- Dynamic Branding Banner -->
+<section class="mb-10 relative overflow-hidden rounded-card aspect-[16/9] md:aspect-[21/9] premium-shadow">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A cinematic, high-quality photograph of Bengaluru's iconic Vidhana Soudha at dusk." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAQmL4y6rl9W0YHqsnVenhnapICpmZ0SxbNo7acyNFBMeV3yeQDlrquAHJnRb0aTbkWJ4TQ3NzvrHSvze8QVJ4ca1Kt80SayQ4L7kNvSUnY5gOs5J9NcwsOIBIoAUlqFIftVSMYe8gHXytxigtLw9I9qlmQOKKM1wZ7bkTQ4BgBLhstLJy4SWJ2eFg_h94o3u6mm4VXITsIYJ_eakNhubWYR3eo9baLjA6Wd_3M3nQoPV61SsT2mwEL9A&quot;);"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent"></div>
+</div>
+<div class="absolute bottom-6 left-6 text-white z-10">
+<h2 class="font-quicksand text-3xl font-bold mb-1 tracking-tight">Your City. Your Home.</h2>
+<p class="text-white/90 font-medium">Settle in with ease, neighbor.</p>
+</div>
+</section>
+<!-- Checklist Section -->
+<section class="mb-10">
+<div class="bg-white p-6 rounded-card premium-shadow border border-gray-100">
+<div class="flex justify-between items-start mb-5">
+<div>
+<h3 class="font-quicksand text-xl font-bold text-primary mb-1 flex items-center gap-2">New in city? Your checklist 📋</h3>
+<p class="text-sm text-gray-500 font-medium">3 of 8 tasks completed</p>
+</div>
+<span class="bg-primary text-white text-xs font-semibold px-3 py-1.5 rounded-full">Essential</span>
+</div>
+<div class="w-full bg-gray-100 h-2.5 rounded-full overflow-hidden mb-5">
+<div class="bg-primary h-full w-[37.5%] rounded-full"></div>
+</div>
+<div class="flex gap-3 overflow-x-auto hide-scrollbar pb-2">
+<div class="flex-shrink-0 px-4 py-2.5 bg-gray-50 rounded-xl border border-gray-200 flex items-center gap-2 transition-colors hover:bg-gray-100">
+<span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: &quot;FILL&quot; 1;">verified</span>
+<span class="text-sm font-semibold text-gray-800">Rent Agreement</span>
+</div>
+<div class="flex-shrink-0 px-4 py-2.5 bg-white rounded-xl border border-gray-200 flex items-center gap-2 transition-colors hover:bg-gray-50">
+<span class="material-symbols-outlined text-gray-400 text-[20px]">radio_button_unchecked</span>
+<span class="text-sm font-medium text-gray-600">Gas Connection</span>
+</div>
+<div class="flex-shrink-0 px-4 py-2.5 bg-white rounded-xl border border-gray-200 flex items-center gap-2 transition-colors hover:bg-gray-50">
+<span class="material-symbols-outlined text-gray-400 text-[20px]">radio_button_unchecked</span>
+<span class="text-sm font-medium text-gray-600">WiFi Setup</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Grid Section -->
+<section class="mb-10">
+<div class="flex items-center justify-between mb-5"><div class="flex flex-col gap-1"><h2 class="font-quicksand text-xl font-bold text-primary">What do you need?</h2><span class="text-xs font-medium text-gray-400">आपको क्या चाहिए?</span></div><button class="text-primary-light text-sm font-semibold hover:underline self-start mt-1">View All</button></div>
+<div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3"><!-- Housing --><div class="group bg-white p-4 rounded-xl soft-shadow border border-gray-100/50 hover:border-primary/20 transition-all cursor-pointer flex flex-col items-center justify-center aspect-square"><div class="w-12 h-12 rounded-full bg-indigo-50/50 flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">🏠</div><span class="text-xs font-bold text-primary">Housing</span></div><!-- Food --><div class="group bg-white p-4 rounded-xl soft-shadow border border-gray-100/50 hover:border-orange-300/40 transition-all cursor-pointer flex flex-col items-center justify-center aspect-square"><div class="w-12 h-12 rounded-full bg-orange-50/50 flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">🍽️</div><span class="text-xs font-bold text-orange-900">Food</span></div><!-- Grocery --><div class="group bg-white p-4 rounded-xl soft-shadow border border-gray-100/50 hover:border-emerald-300/40 transition-all cursor-pointer flex flex-col items-center justify-center aspect-square"><div class="w-12 h-12 rounded-full bg-emerald-50/50 flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">🛒</div><span class="text-xs font-bold text-emerald-900">Grocery</span></div><!-- Sabji Mandi --><div class="group bg-white p-4 rounded-xl soft-shadow border border-gray-100/50 hover:border-green-300/40 transition-all cursor-pointer flex flex-col items-center justify-center aspect-square"><div class="w-12 h-12 rounded-full bg-green-50/50 flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">🥦</div><span class="text-xs font-bold text-green-900">Sabji Mandi</span></div><!-- Dairy --><div class="group bg-white p-4 rounded-xl soft-shadow border border-gray-100/50 hover:border-blue-300/40 transition-all cursor-pointer flex flex-col items-center justify-center aspect-square"><div class="w-12 h-12 rounded-full bg-blue-50/50 flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">🥛</div><span class="text-xs font-bold text-blue-900">Dairy</span></div><!-- Services --><div class="group bg-white p-4 rounded-xl soft-shadow border border-gray-100/50 hover:border-red-300/40 transition-all cursor-pointer flex flex-col items-center justify-center aspect-square"><div class="w-12 h-12 rounded-full bg-red-50/50 flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">🔧</div><span class="text-xs font-bold text-red-900">Services</span></div><!-- Tiffin --><div class="group bg-white p-4 rounded-xl soft-shadow border border-gray-100/50 hover:border-amber-300/40 transition-all cursor-pointer flex flex-col items-center justify-center aspect-square"><div class="w-12 h-12 rounded-full bg-amber-50/50 flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">🍱</div><span class="text-xs font-bold text-amber-900">Tiffin</span></div><!-- Gym --><div class="group bg-white p-4 rounded-xl soft-shadow border border-gray-100/50 hover:border-purple-300/40 transition-all cursor-pointer flex flex-col items-center justify-center aspect-square"><div class="w-12 h-12 rounded-full bg-purple-50/50 flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">💪</div><span class="text-xs font-bold text-purple-900">Gym</span></div><!-- Places --><div class="group bg-white p-4 rounded-xl soft-shadow border border-gray-100/50 hover:border-sky-300/40 transition-all cursor-pointer flex flex-col items-center justify-center aspect-square"><div class="w-12 h-12 rounded-full bg-sky-50/50 flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">🗺️</div><span class="text-xs font-bold text-sky-900">Places</span></div><!-- Social --><div class="group bg-white p-4 rounded-xl soft-shadow border border-gray-100/50 hover:border-pink-300/40 transition-all cursor-pointer flex flex-col items-center justify-center aspect-square"><div class="w-12 h-12 rounded-full bg-pink-50/50 flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">🎯</div><span class="text-xs font-bold text-pink-900">Social</span></div><!-- Maid --><div class="group bg-white p-4 rounded-xl soft-shadow border border-gray-100/50 hover:border-teal-300/40 transition-all cursor-pointer flex flex-col items-center justify-center aspect-square"><div class="w-12 h-12 rounded-full bg-teal-50/50 flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">🧹</div><span class="text-xs font-bold text-teal-900">Maid</span></div><!-- Transport --><div class="group bg-white p-4 rounded-xl soft-shadow border border-gray-100/50 hover:border-slate-300/40 transition-all cursor-pointer flex flex-col items-center justify-center aspect-square"><div class="w-12 h-12 rounded-full bg-slate-50/50 flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">🚌</div><span class="text-xs font-bold text-slate-900">Transport</span></div></div>
+</section>
+<!-- Recommended Section (Horizontal Scroll) -->
+<section class="mb-10">
+<div class="flex items-center justify-between mb-5">
+<h2 class="font-quicksand text-xl font-bold text-primary">Handpicked for you</h2>
+<button class="text-primary-light text-sm font-semibold hover:underline">Explore</button>
+</div>
+<div class="flex gap-5 overflow-x-auto hide-scrollbar pb-4 snap-x">
+<!-- Recommendation Card 1 -->
+<div class="flex-shrink-0 w-[280px] snap-start bg-white rounded-card border border-gray-100 overflow-hidden soft-shadow">
+<div class="h-44 w-full relative">
+<div class="w-full h-full bg-cover bg-center" data-alt="A brightly lit, modern 2BHK apartment in Indiranagar, Bengaluru." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAVWjh63MnUnaNq9W3_oyBctoLzaU3ni44sjjhBoXu52tUXfVGXZAa60ygAeqz92JjtK91lrrifKBg3uV5J_p28m8vLujxc_HZrA39niNRWzeK6jFkfj3zpHPt4ZBBOdfGFim3l1NPUiXl6mdeKVWUlTo2O8N9T5BXQkSKV1PAXfJKtgIhShSE7yJUtMe3LqyhHdjf48Qv0tW-tlscvIm8cPxbCQ6yPmzPNFBFa8nw_uvTtbizPQyGX-w&quot;);"></div>
+<span class="absolute top-3 left-3 bg-secondary text-yellow-900 px-3 py-1 rounded-full text-xs font-bold shadow-sm">Best Rated</span>
+</div>
+<div class="p-5">
+<h4 class="font-semibold text-base text-gray-900 truncate">Spacious 2BHK - Indiranagar</h4>
+<p class="text-gray-500 text-sm mt-1">₹35,000 / month</p>
+<div class="flex items-center gap-1.5 mt-3">
+<span class="material-symbols-outlined text-emerald-500 text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">verified</span>
+<span class="text-xs font-semibold text-emerald-600">Verified Owner</span>
+</div>
+</div>
+</div>
+<!-- Recommendation Card 2 -->
+<div class="flex-shrink-0 w-[280px] snap-start bg-white rounded-card border border-gray-100 overflow-hidden soft-shadow">
+<div class="h-44 w-full relative">
+<div class="w-full h-full bg-cover bg-center" data-alt="A diverse group of young professionals enjoying a meal together at a rooftop garden restaurant in Bengaluru." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBI2cxO7H8K3rJjjFnJj8jpLyXmh3xTTXyeM-HY-YOyptMWJxoPatTGXzgMCR8BTTiPj4YxpEVbj7ay-t2Q7ZehFXAHh774KeHvNtaeQBezEzCskQbyDJqPY7q2eYzwiMiM-D_6p-mTOee_yidriOkIJh2_No5qgUyVZS6RxLi2WfafsgKt_wF94ydXTG17MgnkDJwV2tgu7gtXaMg0B6S3DpZ979rmSl_HNf-2KaEBg_3YoT0gsi6AMw&quot;);"></div>
+<span class="absolute top-3 left-3 bg-primary text-white px-3 py-1 rounded-full text-xs font-bold shadow-sm">Community Choice</span>
+</div>
+<div class="p-5">
+<h4 class="font-semibold text-base text-gray-900 truncate">Weekend Mixer - Koramangala</h4>
+<p class="text-gray-500 text-sm mt-1">Free Entry • Sat 6PM</p>
+<div class="flex items-center gap-1.5 mt-3">
+<span class="material-symbols-outlined text-primary text-[18px]">group</span>
+<span class="text-xs font-medium text-gray-600">45 Attending</span>
+</div>
+</div>
+</div>
+<!-- Recommendation Card 3 -->
+<div class="flex-shrink-0 w-[280px] snap-start bg-white rounded-card border border-gray-100 overflow-hidden soft-shadow">
+<div class="h-44 w-full relative">
+<div class="w-full h-full bg-cover bg-center" data-alt="A traditional South Indian tiffin delivery box (dabba) arranged beautifully on a rustic wooden table with fresh banana leaves." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuARI_k2DRUyE4yy14ibct28zy5TAZ4t6EGNXsgNc-uyXLkigMIeJ_0jRCyO4kQvsKn7jiZVXTBviTEtSU7Sm3qOcJ4o0PCMYzgYV-3hscjhfWcLC2i6LrcMJMcaHiYP42_SfoVaT1TVkGzZ14RtPH9wiINVaZws1cYpKYmJC3Zmj8VAmn5JYrYdGuD7zCoJJRNkfDE6nYZ8XTJ0ieUSUg--4MAfub2BrT9cciMQOycoO0yJaNYlobH18Q&quot;);"></div>
+</div>
+<div class="p-5">
+<h4 class="font-semibold text-base text-gray-900 truncate">Amma's Kitchen Tiffin</h4>
+<p class="text-gray-500 text-sm mt-1">Starting ₹120/meal</p>
+<div class="flex items-center gap-1.5 mt-3">
+<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="text-xs font-medium text-gray-600">4.9 (120+ reviews)</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-[0_-8px_30px_rgba(30,27,75,0.06)] pb-safe border-t border-gray-100">
+<div class="flex justify-around items-center px-4 py-3">
+<a class="flex flex-col items-center justify-center text-primary after:content-['•'] after:text-[16px] after:-mt-1 after:leading-none active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: &quot;FILL&quot; 1;">home</span>
+<span class="text-xs font-semibold">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-400 hover:text-primary active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined mb-1">explore</span>
+<span class="text-xs font-medium">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-400 hover:text-primary active:scale-90 transition-all duration-200 relative" href="#">
+<span class="material-symbols-outlined mb-1">bookmark</span>
+<span class="text-xs font-medium">Saved</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-400 hover:text-primary active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</div>
+</nav>
+<!-- FAB for Quick Actions (Contextual) -->
+<button class="fixed right-6 bottom-24 w-14 h-14 bg-primary text-white rounded-full premium-shadow flex items-center justify-center active:scale-95 transition-transform z-40 hover:bg-primary-light">
+<span class="material-symbols-outlined text-[28px]">add</span>
+</button>
+<script>
+        // Micro-interactions and Tab Logic
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                // In a real app, this would handle routing
+                // e.preventDefault();
+                
+                // Simple active state toggle simulation
+                document.querySelectorAll('nav a').forEach(l => {
+                    l.classList.remove('text-primary', "after:content-['•']", 'after:text-[16px]', 'after:-mt-1', 'after:leading-none');
+                    l.classList.add('text-gray-400');
+                    const span = l.querySelector('span.text-xs');
+                    span.classList.remove('font-semibold');
+                    span.classList.add('font-medium');
+                    const icon = l.querySelector('.material-symbols-outlined');
+                    icon.style.fontVariationSettings = "'FILL' 0";
+                });
+                
+                this.classList.remove('text-gray-400');
+                this.classList.add('text-primary', "after:content-['•']", 'after:text-[16px]', 'after:-mt-1', 'after:leading-none');
+                const span = this.querySelector('span.text-xs');
+                span.classList.remove('font-medium');
+                span.classList.add('font-semibold');
+                const icon = this.querySelector('.material-symbols-outlined');
+                icon.style.fontVariationSettings = "'FILL' 1";
+            });
+        });
+
+        // Search bar focus effect
+        const searchInput = document.querySelector('input[type="text"]');
+        searchInput</script></body></html>

@@ -1,14 +1,11 @@
 import mongoose from 'mongoose';
 import dns from 'dns';
 
-// Fix local DNS resolution issues for MongoDB SRV records in development/local environments
-if (process.env.NODE_ENV === 'development' || !process.env.NODE_ENV) {
-  try {
-    dns.setServers(['8.8.8.8', '1.1.1.1']);
-  } catch (err) {
-    console.warn('Failed to set public DNS servers:', err);
-  }
+// Fix Node.js 17+ IPv6/IPv4 DNS resolution priority issues for SRV records
+if (typeof dns.setDefaultResultOrder === 'function') {
+  dns.setDefaultResultOrder('ipv4first');
 }
+
 
 const MONGODB_URI = process.env.MONGODB_URI;
 

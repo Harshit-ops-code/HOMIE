@@ -15,7 +15,7 @@ export async function GET(request, { params }) {
     const listing = await Listing.findByIdAndUpdate(
       id,
       { $inc: { viewCount: 1 } },
-      { new: true }
+      { returnDocument: 'after' }
     )
       .populate('city', 'name slug')
       .populate('category', 'name slug icon')
@@ -97,7 +97,7 @@ export async function PUT(request, { params }) {
     const updatedListing = await Listing.findByIdAndUpdate(
       id,
       { $set: updateData },
-      { new: true }
+      { returnDocument: 'after' }
     ).populate('city category');
 
     return NextResponse.json({

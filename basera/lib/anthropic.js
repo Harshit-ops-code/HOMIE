@@ -1,39 +1,41 @@
-const ANTHROPIC_API_URL = 'https://api.anthropic.com/v1/messages';
+const GROQ_API_URL = 'https://api.groq.com/openai/v1/chat/completions';
 
 /**
- * Call Claude API
+ * Call Groq API (replacing callClaude integration)
  * @param {Array} messages - Conversation history [{role, content}]
  * @param {string} systemPrompt - System prompt string
  * @param {number} maxTokens - Max response tokens (default 1024)
  */
 export async function callClaude(messages, systemPrompt, maxTokens = 1024) {
-  if (!process.env.ANTHROPIC_API_KEY) {
-    throw new Error('ANTHROPIC_API_KEY is not set in environment variables');
-  }
+  const apiKey = process.env.GROQ_API_KEY;
 
-  const response = await fetch(ANTHROPIC_API_URL, {
+  const response = await fetch(GROQ_API_URL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'x-api-key': process.env.ANTHROPIC_API_KEY,
-      'anthropic-version': '2023-06-01',
+      'Authorization': `Bearer ${apiKey}`,
     },
     body: JSON.stringify({
-      model: 'claude-sonnet-4-6',
+      model: 'openai/gpt-oss-120b',
       max_tokens: maxTokens,
-      system: systemPrompt,
-      messages,
+      messages: [
+        ...(systemPrompt ? [{ role: 'system', content: systemPrompt }] : []),
+        ...messages
+      ],
+      temperature: 1,
+      top_p: 1
     }),
   });
 
   if (!response.ok) {
     const error = await response.json();
-    throw new Error(`Anthropic API error: ${error.error?.message || response.statusText}`);
+    throw new Error(`Groq API error: ${error.error?.message || response.statusText}`);
   }
 
   const data = await response.json();
-  return data.content[0].text;
+  return data.choices[0].message.content;
 }
+
 
 /**
  * Extract JSON from Claude's response (handles markdown code blocks)
