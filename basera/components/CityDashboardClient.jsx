@@ -129,7 +129,7 @@ export default function CityDashboardClient({ cityData, categories, initialListi
       <Navbar />
 
       {/* Full-width Premium Travel Portal Hero Header */}
-      <section className="relative h-[300px] w-full overflow-hidden flex flex-col items-center justify-center border-b border-outline-variant/65 shadow-md">
+      <section className="relative h-[380px] md:h-[480px] w-full overflow-hidden flex flex-col items-center justify-center border-b border-outline-variant/65 shadow-md">
         {/* Background slideshow */}
         <div className="absolute inset-0 z-0">
           {citySlides.map((url, idx) => (
@@ -144,7 +144,7 @@ export default function CityDashboardClient({ cityData, categories, initialListi
         </div>
 
         {/* Content Inside Hero */}
-        <div className="relative z-20 text-center px-6 max-w-2xl w-full flex flex-col items-center gap-3.5">
+        <div className="relative z-20 text-center px-6 max-w-5xl w-full flex flex-col items-center gap-3.5">
           <span className="text-[9px] font-extrabold text-white/80 tracking-widest uppercase bg-white/10 px-3.5 py-1.5 rounded-xl backdrop-blur-md border border-white/20 shadow-sm">
             📍 {cityData.name} Portal
           </span>
@@ -161,7 +161,7 @@ export default function CityDashboardClient({ cityData, categories, initialListi
       </section>
 
       {/* Main Content Dashboard */}
-      <main className="max-w-max-width-desktop mx-auto px-6 w-full mt-10 flex-grow">
+      <main className="relative max-w-max-width-desktop mx-auto px-6 w-full mt-10 flex-grow">
         
         {/* Background Aurora Blurs */}
         <div className="absolute top-0 left-1/4 w-[400px] h-[400px] rounded-full bg-purple-200/25 aurora-blur select-none pointer-events-none"></div>
@@ -218,7 +218,7 @@ export default function CityDashboardClient({ cityData, categories, initialListi
             </div>
           </div>
           
-          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3">
             {categories.map(cat => {
               const iconMap = {
                 housing: '🏠',
@@ -256,13 +256,15 @@ export default function CityDashboardClient({ cityData, categories, initialListi
                 <Link
                   key={cat.slug}
                   href={`/${cityData.slug}/${cat.slug}`}
-                  className={`group relative overflow-hidden bg-gradient-to-br ${themeClass} p-5 rounded-2xl border hover:border-current hover:-translate-y-1 transition-all active:scale-95 duration-300 flex flex-col items-center justify-center aspect-square shadow-sm hover:shadow-lg`}
+                  className={`group relative overflow-hidden bg-gradient-to-br ${themeClass} p-3 rounded-2xl border hover:border-current hover:-translate-y-0.5 transition-all active:scale-95 duration-300 flex items-center gap-3 shadow-sm hover:shadow-md`}
                 >
-                  <div className="absolute top-0 right-0 w-16 h-16 bg-white/20 rounded-bl-full translate-x-3 -translate-y-3 group-hover:scale-110 transition-transform duration-300"></div>
-                  <div className="w-13 h-13 rounded-full bg-white/95 shadow-sm border border-inherit flex items-center justify-center text-2xl mb-3.5 group-hover:rotate-6 transition-transform duration-300">
+                  <div className="w-10 h-10 rounded-xl bg-white/95 shadow-sm border border-inherit flex-shrink-0 flex items-center justify-center text-xl group-hover:scale-105 transition-transform duration-300">
                     {iconMap[cat.slug] || cat.icon || '🏷️'}
                   </div>
-                  <span className="text-[11px] font-extrabold text-primary text-center truncate w-full tracking-tight">{cat.name}</span>
+                  <div className="flex flex-col min-w-0 text-left">
+                    <span className="text-xs font-bold text-primary truncate tracking-tight">{cat.name}</span>
+                    <span className="text-[9px] text-gray-400 font-extrabold tracking-widest uppercase">Explore</span>
+                  </div>
                 </Link>
               );
             })}

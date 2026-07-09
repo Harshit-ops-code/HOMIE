@@ -58,8 +58,8 @@ body {
 
 /* Premium micro-grid background pattern */
 .bg-pattern {
-  background-image: radial-gradient(rgba(28, 25, 23, 0.02) 1px, transparent 1px);
-  background-size: 24px 24px;
+  background-image: radial-gradient(rgba(28, 25, 23, 0.007) 1.5px, transparent 1.5px);
+  background-size: 32px 32px;
 }
 
 /* Glassmorphism panels */
@@ -168,4 +168,92 @@ body {
   0% { transform: translate(0, 0) scale(1); }
   50% { transform: translate(60px, -110px) scale(1.02); }
   100% { transform: translate(-90px, -60px) scale(0.95); }
+}
+
+/* Viewport Scroll Reveal Utility */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Aurora Backdrop Blur */
+.aurora-blur {
+  filter: blur(120px);
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Spotlight Hover Glow Cards */
+.glow-card {
+  position: relative;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(20px);
+}
+
+.glow-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    400px circle at var(--mouse-x, 0px) var(--mouse-y, 0px),
+    rgba(99, 102, 241, 0.06),
+    transparent 40%
+  );
+  z-index: 1;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+.glow-card:hover::before {
+  opacity: 1;
+}
+
+.glow-card::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 24px;
+  padding: 1px;
+  background: radial-gradient(
+    300px circle at var(--mouse-x, 0px) var(--mouse-y, 0px),
+    rgba(99, 102, 241, 0.28),
+    rgba(244, 63, 94, 0.28) 50%,
+    transparent 100%
+  );
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.glow-card:hover::after {
+  opacity: 1;
+}
+
+/* Spotlight Card Row focus styles */
+.spotlight-grid:hover .spotlight-card:not(:hover) {
+  opacity: 0.65;
+  filter: grayscale(12%) blur(0.2px);
+}
+
+.spotlight-card {
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }

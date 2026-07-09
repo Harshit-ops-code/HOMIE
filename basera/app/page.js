@@ -21,11 +21,11 @@ const LandingHubMap = dynamic(
 );
 
 const CITIES = [
-  { name: 'Bengaluru', slug: 'bengaluru', icon: '🌳', desc: 'Silicon Valley & Cafes', image: 'https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=600&q=80' },
-  { name: 'Mumbai', slug: 'mumbai', icon: '🌊', desc: 'Sea Breeze & Bollywood', image: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=600&q=80' },
-  { name: 'Delhi NCR', slug: 'delhi', icon: '🏛️', desc: 'Heritage & Street Food', image: '/Delhi/delhi1.jpg' },
-  { name: 'Hyderabad', slug: 'hyderabad', icon: '🏰', desc: 'Pearls & Cyber Hubs', image: '/hyderabad/pexels-dropshado-11321242.jpg' },
-  { name: 'Pune', slug: 'pune', icon: '⛰️', desc: 'Hills & Student Culture', image: '/pune/pexels-ankit-rainloure-1425442-14441811.jpg' }
+  { name: 'Bengaluru', slug: 'bengaluru', icon: '🌳', desc: 'Silicon Valley & Cafes', tag: 'Silicon Valley of India', tagColor: 'bg-amber-500/85', image: '/benguluru/pexels-akhil-dasari-2160057282-36817688.jpg' },
+  { name: 'Mumbai', slug: 'mumbai', icon: '🌊', desc: 'Sea Breeze & Bollywood', tag: 'Sea Breeze & Bollywood', tagColor: 'bg-emerald-600/85', image: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=80' },
+  { name: 'Delhi NCR', slug: 'delhi', icon: '🏛️', desc: 'Heritage & Street Food', tag: 'Heart of the Nation', tagColor: 'bg-indigo-600/85', image: '/Delhi/delhi1.jpg' },
+  { name: 'Hyderabad', slug: 'hyderabad', icon: '🏰', desc: 'Pearls & Cyber Hubs', tag: 'Pearls & Cyber Hubs', tagColor: 'bg-cyan-600/85', image: '/hyderabad/pexels-dropshado-11321242.jpg' },
+  { name: 'Pune', slug: 'pune', icon: '⛰️', desc: 'Hills & Student Culture', tag: 'The Cultural Hub', tagColor: 'bg-rose-500/85', image: '/pune/pexels-charlieheng-15623165.jpg' }
 ];
 
 export default function LandingPage() {
@@ -46,6 +46,37 @@ export default function LandingPage() {
     return () => clearInterval(timer);
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, {
+      threshold: 0.05,
+      rootMargin: '0px 0px -20px 0px'
+    });
+
+    const elements = document.querySelectorAll('.reveal');
+    elements.forEach((el) => observer.observe(el));
+
+    return () => {
+      elements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
+
+  const handleMouseMove = (e) => {
+    const cards = document.querySelectorAll('.glow-card');
+    cards.forEach((card) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    });
+  };
+
   const filteredCities = CITIES.filter(city => 
     city.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
@@ -53,6 +84,11 @@ export default function LandingPage() {
   return (
     <div className="text-on-surface font-body-md antialiased min-h-screen flex flex-col bg-pattern relative overflow-x-hidden">
       
+      {/* Floating Aurora Blobs for Apple/Linear Style Ambient Depth */}
+      <div className="absolute top-[-100px] left-[-100px] w-[500px] h-[500px] rounded-full bg-indigo-200/25 blur-3xl pointer-events-none select-none animate-pulse duration-[12000ms] -z-30"></div>
+      <div className="absolute top-[200px] right-[-100px] w-[600px] h-[600px] rounded-full bg-rose-100/20 blur-3xl pointer-events-none select-none animate-pulse duration-[16000ms] -z-30"></div>
+      <div className="absolute top-[600px] left-[15%] w-[450px] h-[450px] rounded-full bg-blue-100/15 blur-3xl pointer-events-none select-none -z-30"></div>
+
       {/* Full-Bleed Seamless City Slideshow Background Watermark (No Edges/Boxes) */}
       <div className="absolute top-0 left-0 right-0 h-[620px] -z-20 overflow-hidden pointer-events-none select-none">
         {heroSlides.map((img, idx) => (
@@ -130,58 +166,62 @@ export default function LandingPage() {
         </section>
 
         {/* City Hub Cards Section */}
-        <section id="cities" className="py-24 bg-primary-container/30 border-y border-outline-variant/65 relative z-10">
+        <section id="cities" className="reveal py-24 bg-primary-container/30 border-y border-outline-variant/65 relative z-10">
           <div className="max-w-max-width-desktop mx-auto px-6">
             <div className="flex flex-col gap-1 text-center md:text-left mb-12">
-              <h2 className="font-plus-jakarta text-3xl font-extrabold text-primary tracking-tight">Active Hubs</h2>
+              <h2 className="font-plus-jakarta text-3xl font-extrabold text-primary tracking-tight">Discover Your Hub</h2>
               <p className="text-[10px] font-extrabold text-gray-400 uppercase tracking-widest">Select your new destination to explore listings</p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            <div className="spotlight-grid grid grid-cols-1 md:grid-cols-3 gap-6">
               {filteredCities.length === 0 ? (
                 <p className="col-span-full text-center text-xs font-bold text-gray-400 py-12">No active hubs match your query.</p>
               ) : (
-                filteredCities.map(city => (
-                  <Link 
-                    key={city.slug}
-                    href={`/${city.slug}`}
-                    className="group relative h-80 rounded-3xl overflow-hidden border border-outline/80 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-end p-6"
-                  >
-                    <img 
-                      src={city.image} 
-                      alt={city.name} 
-                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-102 transition-transform duration-700 ease-out z-0" 
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/35 to-transparent z-10 group-hover:opacity-95 transition-opacity duration-300"></div>
-                    
-                    <div className="relative z-20 text-white flex flex-col gap-1">
-                      <div className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-xl mb-1.5 group-hover:scale-110 transition-transform duration-300">
-                        {city.icon}
+                filteredCities.map((city, idx) => {
+                  const colSpanClass = idx === 0 ? 'md:col-span-2' : 'md:col-span-1';
+                  return (
+                    <Link 
+                      key={city.slug}
+                      href={`/${city.slug}`}
+                      className={`spotlight-card group relative h-80 rounded-3xl overflow-hidden border border-outline/80 shadow-sm hover:shadow-2xl hover:scale-[1.02] ${colSpanClass} flex flex-col justify-end p-6`}
+                    >
+                      <img 
+                        src={city.image} 
+                        alt={city.name} 
+                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out z-0" 
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/30 to-transparent z-10 group-hover:opacity-90 transition-opacity duration-300"></div>
+                      
+                      <div className="relative z-20 text-white flex flex-col items-start gap-1 w-full">
+                        {city.tag && (
+                          <span className={`inline-block ${city.tagColor || 'bg-primary/80'} text-white text-[9px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-md mb-2 shadow-sm`}>
+                            {city.tag}
+                          </span>
+                        )}
+                        <h3 className="font-plus-jakarta text-2xl font-extrabold tracking-tight text-white">{city.name}</h3>
                       </div>
-                      <h3 className="font-plus-jakarta text-lg font-bold tracking-tight text-white">{city.name}</h3>
-                      <p className="text-[10px] text-white/70 font-bold tracking-widest uppercase leading-snug">{city.desc}</p>
-                    </div>
-                  </Link>
-                ))
+                    </Link>
+                  );
+                })
               )}
             </div>
           </div>
         </section>
 
         {/* Services Bento Grid Section */}
-        <section id="services" className="py-28 max-w-max-width-desktop mx-auto px-6 w-full relative z-10">
+        <section id="services" className="reveal py-28 max-w-max-width-desktop mx-auto px-6 w-full relative z-10">
           <div className="text-center mb-20 flex flex-col items-center gap-1">
             <h2 className="font-plus-jakarta text-3xl font-extrabold text-primary tracking-tight">Relocate in minutes.</h2>
             <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Everything you need to settle in</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div onMouseMove={handleMouseMove} className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Bento Card 1 */}
-            <div className="glass-panel p-8 rounded-3xl hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex flex-col gap-5 border border-primary-container">
-              <div className="w-12 h-12 rounded-2xl bg-primary-container border border-primary/5 flex items-center justify-center text-xl text-primary shadow-sm">
+            <div className="glow-card p-8 rounded-3xl hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex flex-col gap-5 border border-primary-container">
+              <div className="relative z-10 w-12 h-12 rounded-2xl bg-primary-container border border-primary/5 flex items-center justify-center text-xl text-primary shadow-sm">
                 🏠
               </div>
-              <div>
+              <div className="relative z-10">
                 <h3 className="font-plus-jakarta text-lg font-bold text-primary mb-2">Verified Stays</h3>
                 <p className="text-xs text-gray-500 font-semibold leading-relaxed">
                   Broker-free properties with fully audited agreements, coordinate mapping details, and exact deposit parameters.
@@ -190,11 +230,11 @@ export default function LandingPage() {
             </div>
 
             {/* Bento Card 2 */}
-            <div className="glass-panel p-8 rounded-3xl hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex flex-col gap-5 border border-secondary-container">
-              <div className="w-12 h-12 rounded-2xl bg-secondary-container border border-secondary/15 flex items-center justify-center text-xl text-secondary shadow-sm">
+            <div className="glow-card p-8 rounded-3xl hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex flex-col gap-5 border border-secondary-container">
+              <div className="relative z-10 w-12 h-12 rounded-2xl bg-secondary-container border border-secondary/15 flex items-center justify-center text-xl text-secondary shadow-sm">
                 🍱
               </div>
-              <div>
+              <div className="relative z-10">
                 <h3 className="font-plus-jakarta text-lg font-bold text-primary mb-2">Tiffin & Messes</h3>
                 <p className="text-xs text-gray-500 font-semibold leading-relaxed">
                   Discover local home kitchens delivering regional tiffins. Free test trials and transparent subscription models.
@@ -203,11 +243,11 @@ export default function LandingPage() {
             </div>
 
             {/* Bento Card 3 */}
-            <div className="glass-panel p-8 rounded-3xl hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex flex-col gap-5 border border-amber-100">
-              <div className="w-12 h-12 rounded-2xl bg-amber-50 border border-amber-100 flex items-center justify-center text-xl text-amber-600 shadow-sm">
+            <div className="glow-card p-8 rounded-3xl hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex flex-col gap-5 border border-amber-100">
+              <div className="relative z-10 w-12 h-12 rounded-2xl bg-amber-50 border border-amber-100 flex items-center justify-center text-xl text-amber-600 shadow-sm">
                 🧹
               </div>
-              <div>
+              <div className="relative z-10">
                 <h3 className="font-plus-jakarta text-lg font-bold text-primary mb-2">Verified Helpers</h3>
                 <p className="text-xs text-gray-500 font-semibold leading-relaxed">
                   Cooks, maids, and housekeepers with background audits, standard rates, and active contact numbers.
@@ -218,7 +258,7 @@ export default function LandingPage() {
         </section>
 
         {/* Why Basera Guarantee */}
-        <section id="why-basera" className="py-24 bg-white/40 border-t border-outline/50 relative z-10">
+        <section id="why-basera" className="reveal py-24 bg-white/40 border-t border-outline/50 relative z-10">
           <div className="max-w-4xl mx-auto px-6 text-center flex flex-col items-center gap-6">
             <h2 className="font-plus-jakarta text-3xl font-extrabold text-primary tracking-tight">The Local Guide Standard</h2>
             <p className="text-xs.5 text-gray-500 font-semibold max-w-2xl leading-relaxed">
@@ -233,7 +273,7 @@ export default function LandingPage() {
         </section>
 
         {/* Bottom Interactive Coverage Map Checker */}
-        <section className="py-24 bg-white border-t border-outline/50 relative z-10">
+        <section className="reveal py-24 bg-white border-t border-outline/50 relative z-10">
           <div className="max-w-max-width-desktop mx-auto px-6 flex flex-col lg:flex-row items-center gap-12">
             
             {/* Left side: Directory list & text */}

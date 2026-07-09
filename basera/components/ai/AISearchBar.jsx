@@ -63,13 +63,13 @@ export default function AISearchBar({ city = 'bengaluru', onSearchComplete }) {
             placeholder="Try asking: 'budget PG under 15000 in Koramangala with WiFi'"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="w-full bg-white border border-outline rounded-full py-4.5 pl-14 pr-16 focus:ring-4 focus:ring-primary/5 focus:border-primary transition-all text-xs font-bold outline-none text-primary shadow-sm"
+            className="w-full bg-white border border-outline rounded-full py-5.5 pl-16 pr-32 focus:ring-4 focus:ring-primary/5 focus:border-primary transition-all text-sm font-semibold outline-none text-primary shadow-sm placeholder:text-gray-400"
           />
-          <span className="absolute left-5 top-[16px] text-gray-400 material-symbols-outlined">psychology</span>
+          <span className="absolute left-6 top-[20px] text-gray-400 material-symbols-outlined text-[22px]">psychology</span>
           
           <button 
             type="submit" disabled={loading}
-            className="absolute right-3.5 top-[7px] bg-primary text-white text-[10px] font-bold uppercase tracking-wider px-5 py-2.5 rounded-full hover:opacity-90 transition-all flex items-center gap-1 cursor-pointer"
+            className="absolute right-3 top-[9px] bg-primary text-white text-[10px] font-extrabold uppercase tracking-widest px-6 py-3 rounded-full hover:opacity-90 transition-all flex items-center gap-1.5 cursor-pointer shadow-md"
           >
             {loading ? (
               <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
