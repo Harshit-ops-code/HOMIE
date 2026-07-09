@@ -60,7 +60,7 @@ export default function LandingPage() {
             key={img}
             src={img}
             alt="Direct Relocation Hub"
-            className={`absolute inset-0 w-full h-full object-cover transition-all duration-[1500ms] ease-in-out ${idx === currentSlide ? 'opacity-[0.15] scale-102 blur-[5px]' : 'opacity-0 scale-100 blur-[5px]'}`}
+            className={`absolute inset-0 w-full h-full object-cover transition-all duration-[1500ms] ease-in-out ${idx === currentSlide ? 'opacity-[0.38] scale-102 blur-[1.5px]' : 'opacity-0 scale-100 blur-[1.5px]'}`}
           />
         ))}
         {/* Soft vignette to fade the slideshow bottom edge seamlessly into the page background */}
@@ -75,6 +75,8 @@ export default function LandingPage() {
         
         {/* Harmonized Light-Theme Hero Section (Seamless Content Layout) */}
         <section className="relative w-full pt-20 pb-16 px-6 max-w-5xl mx-auto text-center flex flex-col items-center gap-6 z-10">
+          {/* Subtle glowing radial halo behind the text content area to ensure high contrast */}
+          <div className="absolute inset-x-0 top-6 bottom-6 bg-[radial-gradient(circle,rgba(255,255,255,0.85)_0%,rgba(255,255,255,0.4)_50%,transparent_100%)] -z-10 rounded-full blur-2xl max-w-4xl mx-auto"></div>
 
           <div className="inline-flex items-center gap-2 bg-indigo-50/60 border border-indigo-100/70 px-4 py-1.5 rounded-full shadow-[0_2px_15px_rgba(99,102,241,0.05)] backdrop-blur-md">
             <span className="text-[10px] font-extrabold uppercase tracking-widest text-indigo-700">
