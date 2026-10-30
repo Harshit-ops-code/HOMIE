@@ -109,7 +109,11 @@ export default function Navbar() {
             <div className="relative" ref={cityDropdownRef}>
               <button
                 type="button"
-                onClick={() => setCityMenuOpen(!cityMenuOpen)}
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  setDropdownOpen(false);
+                  setCityMenuOpen(!cityMenuOpen);
+                }}
                 className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold transition-all border cursor-pointer active:scale-95 ${
                   activeCity
                     ? 'bg-[#c85a32]/10 border-[#c85a32]/30 text-[#c85a32] hover:bg-[#c85a32]/15'
@@ -127,7 +131,7 @@ export default function Navbar() {
 
               {/* City Dropdown Menu */}
               {cityMenuOpen && (
-                <div className="absolute left-0 mt-3 w-64 bg-white/95 backdrop-blur-2xl border border-[#2d2621]/15 rounded-3xl shadow-2xl p-2 z-50 animate-in fade-in zoom-in-95 duration-200">
+                <div className="absolute left-0 mt-3 w-64 max-w-[calc(100vw-2rem)] bg-white/95 backdrop-blur-2xl border border-[#2d2621]/15 rounded-3xl shadow-2xl p-2 z-50 animate-in fade-in zoom-in-95 duration-200">
                   <div className="px-3 py-2 border-b border-[#2d2621]/10 mb-1">
                     <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#c85a32]">
                       Direct Relocation Portals
@@ -285,7 +289,11 @@ export default function Navbar() {
             {/* Mobile Hamburger Toggle */}
             <button
               type="button"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              onClick={() => {
+                setCityMenuOpen(false);
+                setDropdownOpen(false);
+                setMobileMenuOpen(!mobileMenuOpen);
+              }}
               aria-label="Toggle Menu"
               className="md:hidden w-8 h-8 rounded-full bg-[#f5f0e8] flex items-center justify-center text-gray-700 hover:text-[#2d2621] transition-colors cursor-pointer border border-[#2d2621]/10"
             >

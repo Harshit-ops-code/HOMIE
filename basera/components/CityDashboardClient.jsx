@@ -359,13 +359,13 @@ export default function CityDashboardClient({ cityData, categories, initialListi
       {/* Floating Action Button for Registering Listing */}
       <Link 
         href="/onboard"
-        className="fixed right-6 bottom-24 w-13 h-13 bg-primary text-white rounded-full shadow-md flex items-center justify-center active:scale-95 transition-all z-40"
+        className="fixed right-4 md:right-6 bottom-36 md:bottom-24 w-12 h-12 md:w-13 md:h-13 bg-primary text-white rounded-full shadow-lg flex items-center justify-center active:scale-95 transition-all z-40"
       >
-        <span className="material-symbols-outlined text-[24px] text-white">add</span>
+        <span className="material-symbols-outlined text-[22px] md:text-[24px] text-white">add</span>
       </Link>
 
       {/* Bottom Navigation Bar (Mobile only) */}
-      <nav className="fixed bottom-0 left-0 w-full z-50 bg-[#fdfbf7]/95 backdrop-blur-md border-t border-outline pb-safe md:hidden">
+      <nav className="fixed bottom-0 left-0 w-full z-50 bg-[#fdfbf7]/95 backdrop-blur-md border-t border-outline pb-[calc(0.5rem+env(safe-area-inset-bottom,0px))] md:hidden">
         <div className="flex justify-around items-center px-4 py-3 max-w-md mx-auto">
           <button 
             onClick={() => setActiveTab('home')}

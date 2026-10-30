@@ -111,30 +111,30 @@ export default function LandingPage() {
       <main className="flex-grow flex flex-col relative">
         
         {/* Harmonized Light-Theme Hero Section (Seamless Content Layout) */}
-        <section className="relative w-full pt-20 pb-16 px-6 max-w-5xl mx-auto text-center flex flex-col items-center gap-6 z-10">
+        <section className="relative w-full pt-10 sm:pt-20 pb-8 sm:pb-16 px-4 sm:px-6 max-w-5xl mx-auto text-center flex flex-col items-center gap-4 sm:gap-6 z-10">
           {/* Subtle glowing radial halo behind the text content area to ensure high contrast */}
           <div className="absolute inset-x-0 top-6 bottom-6 bg-[radial-gradient(circle,rgba(255,255,255,0.85)_0%,rgba(255,255,255,0.4)_50%,transparent_100%)] -z-10 rounded-full blur-2xl max-w-4xl mx-auto"></div>
 
-          <div className="inline-flex items-center gap-2 bg-sand/80 border border-outline px-4 py-1.5 rounded-full shadow-sm backdrop-blur-md">
-            <span className="material-symbols-outlined text-terracotta text-[15px]">verified_user</span>
-            <span className="text-[10px] font-extrabold uppercase tracking-widest text-primary">
+          <div className="inline-flex items-center gap-2 bg-sand/80 border border-outline px-3 sm:px-4 py-1 sm:py-1.5 rounded-full shadow-sm backdrop-blur-md">
+            <span className="material-symbols-outlined text-terracotta text-[14px] sm:text-[15px]">verified_user</span>
+            <span className="text-[9px] sm:text-[10px] font-extrabold uppercase tracking-widest text-primary">
               India&apos;s Direct Relocation & Local Guide
             </span>
           </div>
           
-          <h1 className="font-editorial text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.98] max-w-5xl text-primary select-none">
+          <h1 className="font-editorial text-4xl sm:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.05] sm:leading-[0.98] max-w-5xl text-primary select-none">
             Settle in like a <span className="shimmer-text">local.</span> <br />
-            <span className="font-editorial text-primary text-4xl sm:text-6xl lg:text-7xl font-bold leading-tight block mt-2 text-stone-700">
+            <span className="font-editorial text-primary text-2xl sm:text-5xl lg:text-7xl font-bold leading-tight block mt-1.5 sm:mt-2 text-stone-700">
               <span className="text-terracotta">बिना ब्रोकर</span>, घर जैसा एहसास।
             </span>
           </h1>
 
-          <p className="text-sm md:text-base text-gray-500 font-medium max-w-2xl leading-relaxed mt-1">
+          <p className="text-xs sm:text-base text-gray-500 font-medium max-w-2xl leading-relaxed mt-0.5 sm:mt-1">
             Skip broker lists and fake pictures. We audit stays, map transport corridors, test regional meals, and verify helper contacts so you move with absolute confidence.
           </p>
 
           {/* Quick Search Floating Glassmorphic Bar with Action Button */}
-          <div className="w-full max-w-xl mt-3 relative group z-30">
+          <div className="w-full max-w-xl mt-1 sm:mt-3 relative group z-30">
             <div className="absolute -inset-1.5 bg-terracotta/10 rounded-full blur opacity-40 group-hover:opacity-70 transition duration-300"></div>
             <div className="relative flex items-center w-full">
               <input 
@@ -142,9 +142,9 @@ export default function LandingPage() {
                 placeholder="Search your destination city..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-white border border-outline rounded-full py-4 pl-12 pr-28 focus:ring-4 focus:ring-terracotta/10 focus:border-terracotta transition-all text-sm font-semibold outline-none text-primary shadow-lg hover:shadow-xl"
+                className="w-full bg-white border border-outline rounded-full py-3.5 sm:py-4 pl-11 sm:pl-12 pr-24 sm:pr-28 focus:ring-4 focus:ring-terracotta/10 focus:border-terracotta transition-all text-xs sm:text-sm font-semibold outline-none text-primary shadow-lg hover:shadow-xl"
               />
-              <span className="absolute left-4 top-[15px] text-gray-400 material-symbols-outlined text-[20px]">search</span>
+              <span className="absolute left-3.5 sm:left-4 top-[14px] sm:top-[15px] text-gray-400 material-symbols-outlined text-[18px] sm:text-[20px]">search</span>
               <button 
                 type="button"
                 onClick={() => {
@@ -153,23 +153,23 @@ export default function LandingPage() {
                     citiesSection.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
-                className="absolute right-2 top-2 bottom-2 bg-terracotta hover:bg-[#b04d29] text-white px-6 rounded-full text-[10px] font-extrabold uppercase tracking-wider active:scale-95 transition-all flex items-center justify-center gap-1 shadow-sm cursor-pointer"
+                className="absolute right-1.5 sm:right-2 top-1.5 sm:top-2 bottom-1.5 sm:bottom-2 bg-terracotta hover:bg-[#b04d29] text-white px-4 sm:px-6 rounded-full text-[9px] sm:text-[10px] font-extrabold uppercase tracking-wider active:scale-95 transition-all flex items-center justify-center gap-1 shadow-sm cursor-pointer"
               >
                 Explore
-                <span className="material-symbols-outlined text-[13px] text-white">arrow_forward</span>
+                <span className="material-symbols-outlined text-[12px] sm:text-[13px] text-white">arrow_forward</span>
               </button>
             </div>
           </div>
 
           {/* Active hubs indicators */}
-          <div className="flex items-center gap-2 mt-2 text-[10px] text-gray-500 font-bold uppercase tracking-widest select-none">
-            <span className="w-2 h-2 rounded-full bg-terracotta animate-pulse"></span>
+          <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mt-1 sm:mt-2 text-[9px] sm:text-[10px] text-gray-500 font-bold uppercase tracking-widest select-none text-center">
+            <span className="w-2 h-2 rounded-full bg-terracotta animate-pulse inline-block"></span>
             <span>Active Relocation Hubs: Delhi • Hyderabad • Bengaluru • Mumbai • Pune</span>
           </div>
         </section>
 
         {/* City Hub Cards Section - Interactive Atmosphere Switcher */}
-        <section id="cities" className="reveal py-20 bg-sand/30 border-y border-outline relative z-10">
+        <section id="cities" className="reveal py-10 sm:py-20 bg-sand/30 border-y border-outline relative z-10">
           <div className="max-w-7xl mx-auto px-6 mb-8 text-center flex flex-col items-center gap-1.5">
             <span className="text-[10px] text-terracotta font-extrabold uppercase tracking-widest">
               Explore Active Relocation Portals

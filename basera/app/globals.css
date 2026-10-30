@@ -183,6 +183,14 @@ body {
   transform: translateY(0);
 }
 
+/* Ensure mobile devices instantly render all content without blank wait delays */
+@media (max-width: 768px) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 /* Warm Backdrop Blur */
 .aurora-blur {
   filter: blur(120px);

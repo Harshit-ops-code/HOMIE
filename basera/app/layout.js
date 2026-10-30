@@ -31,8 +31,8 @@ export default function RootLayout({ children }) {
           <div className="mesh-blob-3 bottom-[-10%] left-[20%]"></div>
         </div>
 
-        {/* Global SVG Tactile Film Grain Noise Overlay */}
-        <svg className="fixed inset-0 w-full h-full opacity-[0.015] pointer-events-none -z-40 select-none mix-blend-overlay" xmlns="http://www.w3.org/2000/svg">
+        {/* Global SVG Tactile Film Grain Noise Overlay (Desktop only to prevent mobile GPU throttling) */}
+        <svg className="hidden md:block fixed inset-0 w-full h-full opacity-[0.015] pointer-events-none -z-40 select-none mix-blend-overlay" xmlns="http://www.w3.org/2000/svg">
           <filter id="noiseFilter">
             <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="3" stitchTiles="stitch" />
           </filter>

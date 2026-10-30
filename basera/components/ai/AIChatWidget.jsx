@@ -53,9 +53,9 @@ export default function AIChatWidget({ city = 'bengaluru' }) {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+    <div className="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-40 flex flex-col items-end">
       {isOpen && (
-        <div className="w-[360px] h-[500px] bg-white border border-outline rounded-3xl shadow-2xl flex flex-col overflow-hidden mb-4 animate-in fade-in slide-in-from-bottom-6 duration-300">
+        <div className="w-[calc(100vw-2rem)] sm:w-[360px] max-w-[360px] h-[480px] sm:h-[500px] bg-white border border-outline rounded-3xl shadow-2xl flex flex-col overflow-hidden mb-4 animate-in fade-in slide-in-from-bottom-6 duration-300">
           {/* Header */}
           <div className="bg-primary p-4 text-white flex justify-between items-center">
             <div className="flex items-center gap-2">
