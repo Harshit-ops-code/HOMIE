@@ -117,6 +117,6 @@ const ListingSchema = new mongoose.Schema({
 ListingSchema.index({ city: 1, category: 1 });
 ListingSchema.index({ city: 1, 'rating.average': -1 });
 ListingSchema.index({ name: 'text', description: 'text', locality: 'text' });
-ListingSchema.index({ coordinates: '2dsphere' });
+ListingSchema.index({ 'coordinates.lat': 1, 'coordinates.lng': 1 });
 
 export default mongoose.models.Listing || mongoose.model('Listing', ListingSchema);

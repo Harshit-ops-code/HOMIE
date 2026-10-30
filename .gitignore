@@ -4,11 +4,21 @@ basera/.next/
 basera/out/
 
 # Environment files
-basera/.env.local
-basera/.env.development.local
-basera/.env.test.local
-basera/.env.production.local
+basera/.env*
+.env*
 
 # OS files
 .DS_Store
 Thumbs.db
+
+# Test screenshots, audit scripts, and local data dumps
+basera/screenshots/
+.agents/
+del.json
+hyd.json
+basera/scripts/test_*.mjs
+basera/scripts/verify_*.mjs
+basera/scripts/audit_*.mjs
+basera/scripts/capture_*.mjs
+basera/scripts/check_*.mjs
+basera/scripts/import_*.mjs

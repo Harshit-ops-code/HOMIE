@@ -3,43 +3,45 @@
 import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { useSession } from 'next-auth/react';
 import Navbar from '@/components/layout/Navbar';
 import AIReviewSummary from '@/components/ai/AIReviewSummary';
 import NeighbourhoodScorer from '@/components/ai/NeighbourhoodScorer';
 import RecommendedListings from '@/components/ai/RecommendedListings';
 import NegotiationChat from '@/components/listings/NegotiationChat';
+import ListingReviews from '@/components/listings/ListingReviews';
 
 
 export default function ListingDetailsClient({ city, category, listing, initialReviews }) {
   const router = useRouter();
-  const [reviews, setReviews] = useState(initialReviews);
-  const [rating, setRating] = useState(5);
-  const [comment, setComment] = useState('');
+  const { data: session } = useSession();
   const [isSaved, setIsSaved] = useState(false);
-  const [reviewError, setReviewError] = useState('');
-  const [submittingReview, setSubmittingReview] = useState(false);
   const [isNegotiating, setIsNegotiating] = useState(false);
 
 
   const checkSavedStatus = useCallback(async () => {
+    if (!session?.user) return;
     try {
       const res = await fetch('/api/listings/saved');
+      if (!res.ok) return;
       const json = await res.json();
       if (json.success && Array.isArray(json.data)) {
         setIsSaved(json.data.some(item => item._id === listing._id));
       }
-    } catch (err) {
-      console.error('Error checking saved status:', err);
+    } catch {
+      // Gracefully ignore network hiccups for unauthenticated users
     }
-  }, [listing._id]);
+  }, [listing._id, session]);
 
-  // Sync bookmark state on mount
+  // Sync bookmark state on mount or when session arrives
   useEffect(() => {
-    const timer = setTimeout(() => {
-      checkSavedStatus();
-    }, 0);
-    return () => clearTimeout(timer);
-  }, [listing._id, checkSavedStatus]);
+    if (session?.user) {
+      const timer = setTimeout(() => {
+        checkSavedStatus();
+      }, 0);
+      return () => clearTimeout(timer);
+    }
+  }, [session, checkSavedStatus]);
 
   // Bookmark toggle
   const toggleSave = async () => {
@@ -57,36 +59,7 @@ export default function ListingDetailsClient({ city, category, listing, initialR
     }
   };
 
-  const handleReviewSubmit = async (e) => {
-    e.preventDefault();
-    setReviewError('');
-    setSubmittingReview(true);
-
-    try {
-      const res = await fetch('/api/reviews', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          listingId: listing._id,
-          rating,
-          comment
-        })
-      });
-
-      const data = await res.json();
-      if (res.status === 201 || res.status === 211 || data.success) {
-        setReviews([data.data, ...reviews]);
-        setComment('');
-        setRating(5);
-      } else {
-        setReviewError(data.error || 'Failed to submit review.');
-      }
-    } catch (err) {
-      setReviewError('Connection error.');
-    } finally {
-      setSubmittingReview(false);
-    }
-  };
+  // Review handler is now fully managed internally by ListingReviews component
 
   // Dynamic category-based placeholder images to avoid duplicating same photos everywhere
   const categoryPlaceholders = {
@@ -127,7 +100,7 @@ export default function ListingDetailsClient({ city, category, listing, initialR
     ]
   };
 
-  const currentCategory = category?.slug || listing.categorySlug || 'home-services';
+  const currentCategory = (typeof category === 'string' ? category : category?.slug) || listing.category?.slug || listing.categorySlug || 'home-services';
   const placeholders = categoryPlaceholders[currentCategory] || [
     'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80',
     'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=600&q=80',
@@ -161,29 +134,31 @@ export default function ListingDetailsClient({ city, category, listing, initialR
   };
 
   return (
-    <div className="bg-surface text-on-surface font-body-md min-h-screen flex flex-col bg-pattern">
+    <div className="bg-surface text-on-surface font-body-md min-h-screen flex flex-col bg-pattern overflow-x-hidden">
       {/* Global Navbar */}
       <Navbar />
 
       {/* Detail Sub-header with Back & Save */}
-      <div className="bg-white border-b border-outline-variant/60">
-        <div className="flex justify-between items-center px-6 w-full py-4 max-w-max-width-desktop mx-auto">
+      <div className="bg-white border-b border-outline-variant/60 w-full">
+        <div className="flex justify-between items-center px-4 sm:px-6 w-full py-3 max-w-7xl mx-auto">
           <button 
             onClick={() => router.back()}
-            className="flex items-center gap-1.5 text-primary hover:text-gray-600 transition-colors group focus:outline-none cursor-pointer"
+            className="flex items-center gap-1.5 text-primary hover:text-gray-600 transition-colors group focus:outline-none cursor-pointer min-h-[44px] py-2 px-1"
+            aria-label="Back to Listings"
           >
             <span className="material-symbols-outlined text-[20px]">arrow_back</span>
             <span className="text-xs font-bold uppercase tracking-wider">Back to Listings</span>
           </button>
           <button 
             onClick={toggleSave}
-            className={`w-9 h-9 rounded-full flex items-center justify-center border transition-all active:scale-95 cursor-pointer ${
+            aria-label={isSaved ? 'Remove from saved' : 'Save listing'}
+            className={`w-11 h-11 rounded-full flex items-center justify-center border transition-all active:scale-95 cursor-pointer ${
               isSaved 
                 ? 'bg-red-50 border-red-200 text-red-500' 
                 : 'bg-white border-outline hover:bg-gray-50'
             }`}
           >
-            <span className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: ` 'FILL' ${isSaved ? 1 : 0}` }}>
+            <span className="material-symbols-outlined text-[20px]" style={{ fontVariationSettings: ` 'FILL' ${isSaved ? 1 : 0}` }}>
               favorite
             </span>
           </button>
@@ -191,72 +166,83 @@ export default function ListingDetailsClient({ city, category, listing, initialR
       </div>
 
       {/* Main details content */}
-      <main className="max-w-max-width-desktop mx-auto px-6 w-full py-8 flex-grow flex flex-col gap-8">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 w-full py-8 pb-28 lg:pb-8 flex-grow flex flex-col gap-8 overflow-x-clip">
         
         {/* Photo Grid Section */}
-        <section className="grid grid-cols-1 md:grid-cols-4 gap-3 rounded-card overflow-hidden border border-outline">
-          <div className="md:col-span-2 aspect-[4/3] md:aspect-auto h-76 md:h-[400px] relative overflow-hidden">
+        <section className="grid grid-cols-1 md:grid-cols-4 gap-3 rounded-3xl overflow-hidden border border-outline w-full bg-sand">
+          <div className="md:col-span-2 aspect-[4/3] md:aspect-auto h-64 sm:h-80 md:h-[400px] relative overflow-hidden bg-sand">
             <img 
               alt={listing.name} 
               className="w-full h-full object-cover" 
               src={imagesList[0]} 
+              referrerPolicy="no-referrer"
               onError={(e) => handleImageError(e, 0)}
+              loading="eager"
             />
           </div>
           <div className="hidden md:grid grid-cols-2 col-span-2 gap-3 h-[400px]">
-            <div className="h-[194px] relative overflow-hidden">
+            <div className="h-[194px] relative overflow-hidden bg-sand">
               <img 
                 alt="Interior" 
                 className="w-full h-full object-cover" 
                 src={imagesList[1]} 
+                referrerPolicy="no-referrer"
                 onError={(e) => handleImageError(e, 1)}
+                loading="lazy"
               />
             </div>
-            <div className="h-[194px] relative overflow-hidden">
+            <div className="h-[194px] relative overflow-hidden bg-sand">
               <img 
                 alt="Secondary view" 
                 className="w-full h-full object-cover" 
                 src={imagesList[2]} 
+                referrerPolicy="no-referrer"
                 onError={(e) => handleImageError(e, 2)}
+                loading="lazy"
               />
             </div>
-            <div className="h-[194px] relative overflow-hidden">
+            <div className="h-[194px] relative overflow-hidden bg-sand">
               <img 
                 alt="Additional view" 
                 className="w-full h-full object-cover" 
                 src={imagesList[3]} 
+                referrerPolicy="no-referrer"
                 onError={(e) => handleImageError(e, 3)}
+                loading="lazy"
               />
             </div>
-            <div className="h-[194px] relative overflow-hidden">
+            <div className="h-[194px] relative overflow-hidden bg-sand">
               <img 
                 alt="Detail view" 
                 className="w-full h-full object-cover" 
                 src={imagesList[4]} 
+                referrerPolicy="no-referrer"
                 onError={(e) => handleImageError(e, 4)}
+                loading="lazy"
               />
             </div>
           </div>
         </section>
 
         {/* Info Grid */}
-        <section className="flex flex-col lg:flex-row gap-8">
+        <section className="flex flex-col lg:flex-row gap-8 w-full">
           
           {/* Main Info Left Column */}
-          <div className="flex-grow flex flex-col gap-8">
+          <div className="flex-grow min-w-0 w-full flex flex-col gap-8">
             
             {/* Title & Metadata */}
             <div>
               <div className="flex flex-wrap items-center gap-3 mb-2">
-                <h1 className="font-plus-jakarta text-2xl font-bold text-primary tracking-tight">{listing.name}</h1>
+                <h1 className="font-editorial text-3xl md:text-4xl font-bold text-primary tracking-tight">{listing.name}</h1>
                 {listing.isVerified && (
-                  <span className="bg-primary/5 text-primary border border-primary/10 px-2.5 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-widest flex items-center gap-0.5 shadow-sm">
+                  <span className="bg-sand text-terracotta border border-outline px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest flex items-center gap-1 shadow-sm">
+                    <span className="material-symbols-outlined text-[13px] text-terracotta">verified</span>
                     Verified
                   </span>
                 )}
               </div>
-              <p className="text-xs font-semibold text-gray-500 flex items-center gap-1">
-                <span className="material-symbols-outlined text-[15px] text-gray-400">location_on</span>
+              <p className="text-xs sm:text-sm font-medium text-gray-500 flex items-center gap-1">
+                <span className="material-symbols-outlined text-[16px] text-terracotta">location_on</span>
                 {listing.address || `${listing.locality}, ${city}`}
               </p>
             </div>
@@ -303,70 +289,13 @@ export default function ListingDetailsClient({ city, category, listing, initialR
             </div>
 
             {/* AI Review Summary Box */}
-            <AIReviewSummary listingId={listing._id} initialSummary={listing.aiSummary} reviews={reviews} />
+            <AIReviewSummary listingId={listing._id} initialSummary={listing.aiSummary} reviews={initialReviews} />
 
             {/* Neighbourhood Compatibility Scorer */}
             <NeighbourhoodScorer locality={listing.locality} cityName={city} listingData={listing} />
 
             {/* Interactive Reviews Section */}
-            <div className="bg-white p-6 rounded-card border border-outline shadow-sm flex flex-col gap-6">
-              <h3 className="font-plus-jakarta text-sm font-bold text-primary uppercase tracking-wider">Reviews ({reviews.length})</h3>
-
-              {/* Review submit form */}
-              <form onSubmit={handleReviewSubmit} className="flex flex-col gap-4 p-5 bg-gray-50 rounded-card border border-outline">
-                <h4 className="text-[10px] font-bold text-primary uppercase tracking-widest">Submit Feedback</h4>
-                
-                <div className="flex items-center gap-1">
-                  <span className="text-xs font-bold text-gray-500 mr-2">Score:</span>
-                  {[1, 2, 3, 4, 5].map(val => (
-                    <button
-                      key={val}
-                      type="button"
-                      onClick={() => setRating(val)}
-                      className="text-primary focus:outline-none"
-                    >
-                      <span className="material-symbols-outlined text-[20px]" style={{ fontVariationSettings: ` 'FILL' ${rating >= val ? 1 : 0}` }}>
-                        star
-                      </span>
-                    </button>
-                  ))}
-                </div>
-
-                <textarea
-                  value={comment}
-                  onChange={(e) => setComment(e.target.value)}
-                  className="w-full bg-white border border-outline rounded-xl p-3 text-xs font-semibold outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 min-h-[90px] text-primary"
-                  placeholder="Share your experience..."
-                  required
-                />
-
-                {reviewError && <p className="text-xs font-semibold text-error">{reviewError}</p>}
-
-                <button
-                  type="submit"
-                  disabled={submittingReview}
-                  className="bg-primary text-white py-3 rounded-full text-xs font-bold uppercase tracking-wider active:scale-98 transition-all disabled:opacity-50"
-                >
-                  {submittingReview ? 'Submitting...' : 'Post Review'}
-                </button>
-              </form>
-
-              {/* Reviews List */}
-              <div className="flex flex-col gap-4">
-                {reviews.map(rev => (
-                  <div key={rev._id} className="p-4 rounded-xl border border-outline bg-gray-50 flex flex-col gap-2">
-                    <div className="flex justify-between items-center">
-                      <span className="font-bold text-xs text-primary">{rev.user?.name || 'Anonymous User'}</span>
-                      <div className="flex items-center gap-0.5 text-gray-600 font-bold text-xs">
-                        <span className="material-symbols-outlined text-[14px] text-yellow-500">star</span>
-                        <span>{rev.rating}</span>
-                      </div>
-                    </div>
-                    <p className="text-xs text-gray-600 font-semibold">{rev.comment}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <ListingReviews listingId={listing._id} initialReviews={initialReviews} />
 
           </div>
 
@@ -381,37 +310,39 @@ export default function ListingDetailsClient({ city, category, listing, initialR
                     <span className="material-symbols-outlined text-gray-600">person</span>
                   </div>
                   <div>
-                    <h4 className="font-bold text-xs text-primary">{listing.contactName || 'Local Hub Representative'}</h4>
+                    <h4 className="font-bold text-xs text-primary">{listing.contact?.name || listing.contactName || 'Local Hub Representative'}</h4>
                     <p className="text-[10px] text-gray-400 font-semibold">Verified Owner</p>
                   </div>
                 </div>
 
-                <div className="flex flex-col gap-2">
-                  <a
-                    href={`tel:${listing.contactPhone || '9876543210'}`}
-                    className="w-full bg-primary text-white py-3 rounded-full text-xs font-bold uppercase tracking-wider text-center flex items-center justify-center gap-1.5 hover:opacity-90 active:scale-98 transition-all"
-                  >
-                    <span className="material-symbols-outlined text-[16px]">call</span>
-                    Call Landlord
-                  </a>
-                  <a
-                    href={`https://wa.me/91${listing.contactPhone || '9876543210'}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full border border-outline text-primary py-3 rounded-full text-xs font-bold uppercase tracking-wider text-center flex items-center justify-center gap-1.5 hover:bg-gray-50 active:scale-98 transition-all"
-                  >
-                    <span className="material-symbols-outlined text-[16px]">chat</span>
-                    WhatsApp
-                  </a>
+                <div className="flex flex-col gap-3">
                   {listing.price?.value && (
                     <button
                       onClick={() => setIsNegotiating(true)}
-                      className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-full text-xs font-bold uppercase tracking-wider text-center flex items-center justify-center gap-1.5 hover:opacity-90 active:scale-98 transition-all shadow-md cursor-pointer mt-1"
+                      className="w-full bg-gradient-to-r from-indigo-600 to-accent text-white py-3.5 rounded-xl text-xs font-extrabold uppercase tracking-wider text-center flex items-center justify-center gap-1.5 hover:opacity-95 active:scale-98 transition-all shadow-md cursor-pointer"
                     >
                       <span className="material-symbols-outlined text-[16px]">handshake</span>
                       Negotiate Rent (AI)
                     </button>
                   )}
+                  <div className="grid grid-cols-2 gap-2">
+                    <a
+                      href={`tel:${listing.contact?.phone || listing.contactPhone || '9876543210'}`}
+                      className="border border-outline text-primary py-3 rounded-xl text-xs font-bold uppercase tracking-wider text-center flex items-center justify-center gap-1.5 hover:bg-gray-50 active:scale-98 transition-all"
+                    >
+                      <span className="material-symbols-outlined text-[16px]">call</span>
+                      Call
+                    </a>
+                    <a
+                      href={`https://wa.me/${(listing.contact?.whatsapp || listing.contact?.phone || listing.contactPhone || '919876543210').replace(/[^0-9]/g, '')}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="border border-outline text-primary py-3 rounded-xl text-xs font-bold uppercase tracking-wider text-center flex items-center justify-center gap-1.5 hover:bg-gray-50 active:scale-98 transition-all"
+                    >
+                      <span className="material-symbols-outlined text-[16px]">chat</span>
+                      WhatsApp
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -422,6 +353,44 @@ export default function ListingDetailsClient({ city, category, listing, initialR
         {/* Recommended listings section */}
         <RecommendedListings listingId={listing._id} currentCitySlug={city} />
       </main>
+
+      {/* Sticky Mobile Contact & Booking Action Bar */}
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-2xl border-t border-[#2d2621]/15 px-4 py-3 shadow-[0_-8px_30px_rgba(0,0,0,0.12)] flex items-center justify-between gap-3">
+        <div className="flex flex-col min-w-0">
+          <span className="text-[9px] font-extrabold uppercase tracking-widest text-gray-400">Monthly</span>
+          <span className="font-editorial text-lg font-bold text-[#2d2621] truncate">
+            {listing.price?.displayText || (listing.price?.value ? `₹${listing.price.value.toLocaleString('en-IN')}` : 'On Request')}
+          </span>
+        </div>
+        <div className="flex items-center gap-2 flex-shrink-0">
+          {listing.price?.value && (
+            <button
+              type="button"
+              onClick={() => setIsNegotiating(true)}
+              className="px-3 py-2.5 rounded-full bg-gradient-to-r from-[#2d2621] to-[#3d322a] text-white text-[11px] font-bold uppercase tracking-wider flex items-center gap-1 shadow-sm active:scale-95 cursor-pointer"
+            >
+              <span className="material-symbols-outlined text-[15px] text-amber-300">handshake</span>
+              <span>Negotiate</span>
+            </button>
+          )}
+          <a
+            href={`tel:${listing.contact?.phone || listing.contactPhone || '9876543210'}`}
+            className="w-10 h-10 rounded-full border border-[#2d2621]/20 bg-[#f5f0e8] text-[#2d2621] flex items-center justify-center active:scale-95 transition-all shadow-sm"
+            aria-label="Call Provider"
+          >
+            <span className="material-symbols-outlined text-[18px]">call</span>
+          </a>
+          <a
+            href={`https://wa.me/${(listing.contact?.whatsapp || listing.contact?.phone || listing.contactPhone || '919876543210').replace(/[^0-9]/g, '')}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center active:scale-95 transition-all shadow-sm"
+            aria-label="WhatsApp Provider"
+          >
+            <span className="material-symbols-outlined text-[18px]">chat</span>
+          </a>
+        </div>
+      </div>
 
       {/* Interactive AI Landlord Negotiation */}
       {isNegotiating && (

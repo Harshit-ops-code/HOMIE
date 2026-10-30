@@ -1,11 +1,63 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { useSession, signOut } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 
 export default function ProfilePage() {
-  const { data: session, status } = useSession();
+  const { data: session, status, update } = useSession();
+  const router = useRouter();
+
+  const [showVendorModal, setShowVendorModal] = useState(false);
+  const [businessName, setBusinessName] = useState('');
+  const [businessType, setBusinessType] = useState('housing');
+  const [phone, setPhone] = useState('');
+  const [address, setAddress] = useState('');
+  const [applying, setApplying] = useState(false);
+  const [vendorSuccess, setVendorSuccess] = useState(false);
+  const [vendorError, setVendorError] = useState('');
+
+  useEffect(() => {
+    let timer;
+    if (typeof window !== 'undefined' && window.location.search.includes('applyVendor=true')) {
+      timer = setTimeout(() => {
+        setShowVendorModal(true);
+      }, 0);
+    }
+    return () => {
+      if (timer) clearTimeout(timer);
+    };
+  }, []);
+
+  const handleVendorApply = async (e) => {
+    e.preventDefault();
+    setApplying(true);
+    setVendorError('');
+
+    try {
+      const res = await fetch('/api/vendors', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ businessName, businessType, phone, address })
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        setVendorSuccess(true);
+        if (update) await update();
+        setTimeout(() => {
+          router.push('/vendor/dashboard');
+        }, 1500);
+      } else {
+        setVendorError(data.error || 'Failed to submit vendor application');
+      }
+    } catch (err) {
+      setVendorError('Server connection error. Please try again.');
+    } finally {
+      setApplying(false);
+    }
+  };
 
   if (status === 'loading') {
     return (
@@ -113,16 +165,20 @@ export default function ProfilePage() {
                   <span className="material-symbols-outlined text-sm text-gray-400 group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
                 </Link>
               ) : (
-                <Link 
-                  href="/onboard"
-                  className="flex items-center justify-between p-4 bg-white border border-outline rounded-xl hover:bg-gray-50 transition-colors group"
+                <button 
+                  type="button"
+                  onClick={() => setShowVendorModal(true)}
+                  className="w-full flex items-center justify-between p-4 bg-white border border-outline rounded-xl hover:bg-gray-50 transition-colors group cursor-pointer text-left"
                 >
                   <div className="flex items-center gap-3">
                     <span className="material-symbols-outlined text-primary">storefront</span>
-                    <span className="text-xs font-bold text-gray-700">Become a Verified Vendor</span>
+                    <div>
+                      <span className="text-xs font-bold text-gray-700 block">Become a Verified Vendor</span>
+                      <span className="text-[10px] text-gray-400 font-semibold">List and manage properties or local services</span>
+                    </div>
                   </div>
                   <span className="material-symbols-outlined text-sm text-gray-400 group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
-                </Link>
+                </button>
               )}
             </div>
           </div>
@@ -144,6 +200,110 @@ export default function ProfilePage() {
           </div>
         </div>
       </main>
+
+      {/* Vendor Application Modal */}
+      {showVendorModal && (
+        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="bg-white border border-outline rounded-3xl w-full max-w-md p-6 sm:p-8 shadow-2xl animate-in fade-in zoom-in-95 duration-200 flex flex-col gap-5">
+            <div className="flex justify-between items-start">
+              <div>
+                <h3 className="font-plus-jakarta text-lg font-bold text-primary">Vendor Onboarding</h3>
+                <p className="text-xs text-gray-500 font-semibold mt-0.5">Register your business to start listing on Basera</p>
+              </div>
+              <button 
+                onClick={() => setShowVendorModal(false)}
+                className="text-gray-400 hover:text-primary transition p-1 cursor-pointer"
+              >
+                ✕
+              </button>
+            </div>
+
+            {vendorSuccess ? (
+              <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-2xl text-emerald-800 text-center flex flex-col gap-2">
+                <span className="material-symbols-outlined text-3xl text-emerald-600">check_circle</span>
+                <p className="text-xs font-bold">Application Approved!</p>
+                <p className="text-[11px] text-emerald-700">Redirecting to your Vendor Dashboard...</p>
+              </div>
+            ) : (
+              <form onSubmit={handleVendorApply} className="flex flex-col gap-4">
+                <div>
+                  <label className="text-[10px] font-bold text-gray-500 uppercase tracking-wider block mb-1">Business Name</label>
+                  <input 
+                    type="text" 
+                    required
+                    placeholder="e.g. Royal Living Co."
+                    value={businessName}
+                    onChange={(e) => setBusinessName(e.target.value)}
+                    className="w-full bg-gray-50 border border-outline rounded-xl px-3.5 py-2.5 text-xs font-semibold text-primary focus:bg-white focus:outline-none focus:border-primary transition"
+                  />
+                </div>
+
+                <div>
+                  <label className="text-[10px] font-bold text-gray-500 uppercase tracking-wider block mb-1">Business Category</label>
+                  <select
+                    value={businessType}
+                    onChange={(e) => setBusinessType(e.target.value)}
+                    className="w-full bg-gray-50 border border-outline rounded-xl px-3.5 py-2.5 text-xs font-semibold text-primary focus:bg-white focus:outline-none focus:border-primary transition"
+                  >
+                    <option value="housing">Housing & PG</option>
+                    <option value="food-dining">Food & Dining</option>
+                    <option value="tiffin-mess">Tiffin & Mess</option>
+                    <option value="home-services">Home Services</option>
+                    <option value="maid-cook">Maid & Cook Agency</option>
+                    <option value="gym-fitness">Gym & Fitness</option>
+                    <option value="transport">Local Transport</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label className="text-[10px] font-bold text-gray-500 uppercase tracking-wider block mb-1">Phone / WhatsApp</label>
+                  <input 
+                    type="tel" 
+                    required
+                    placeholder="e.g. 9876543210"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    className="w-full bg-gray-50 border border-outline rounded-xl px-3.5 py-2.5 text-xs font-semibold text-primary focus:bg-white focus:outline-none focus:border-primary transition"
+                  />
+                </div>
+
+                <div>
+                  <label className="text-[10px] font-bold text-gray-500 uppercase tracking-wider block mb-1">Business Address</label>
+                  <textarea 
+                    required
+                    rows={2}
+                    placeholder="e.g. Indiranagar, Bengaluru"
+                    value={address}
+                    onChange={(e) => setAddress(e.target.value)}
+                    className="w-full bg-gray-50 border border-outline rounded-xl px-3.5 py-2.5 text-xs font-semibold text-primary focus:bg-white focus:outline-none focus:border-primary transition resize-none"
+                  />
+                </div>
+
+                {vendorError && (
+                  <p className="text-[11px] font-semibold text-error bg-red-50 border border-red-150 p-2.5 rounded-xl">{vendorError}</p>
+                )}
+
+                <div className="flex gap-3 pt-2">
+                  <button 
+                    type="button"
+                    onClick={() => setShowVendorModal(false)}
+                    className="flex-1 border border-outline hover:bg-gray-50 text-gray-600 py-3 rounded-full text-xs font-bold uppercase tracking-wider transition cursor-pointer"
+                  >
+                    Cancel
+                  </button>
+                  <button 
+                    type="submit"
+                    disabled={applying}
+                    className="flex-1 bg-primary hover:opacity-95 text-white py-3 rounded-full text-xs font-bold uppercase tracking-wider transition disabled:opacity-50 cursor-pointer"
+                  >
+                    {applying ? 'Submitting...' : 'Register as Vendor'}
+                  </button>
+                </div>
+              </form>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

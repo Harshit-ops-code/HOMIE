@@ -134,7 +134,7 @@ export default function SavedListingsPage() {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {listings.map(listing => (
+            {listings.filter(Boolean).map(listing => (
               <div 
                 key={listing._id}
                 className="bg-white rounded-card border border-outline overflow-hidden hover:shadow-md transition-all duration-300 flex flex-col group"

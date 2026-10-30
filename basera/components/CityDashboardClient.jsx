@@ -1,53 +1,61 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Navbar from '@/components/layout/Navbar';
 import AISearchBar from '@/components/ai/AISearchBar';
 import AIChatWidget from '@/components/ai/AIChatWidget';
+import CommuteRadarWidget from '@/components/relocation/CommuteRadarWidget';
+import InteractiveCommuteMap from '@/components/relocation/InteractiveCommuteMap';
+import SurvivalKitModal from '@/components/relocation/SurvivalKitModal';
+import EditorialListingCard from '@/components/listings/EditorialListingCard';
+
+// Banner slideshow image mappings for our cities
+const citySlidesData = {
+  bengaluru: [
+    'https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=1200&q=80',
+    'https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?auto=format&fit=crop&w=1200&q=80',
+    'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1200&q=80'
+  ],
+  mumbai: [
+    'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=80',
+    'https://images.unsplash.com/photo-1562154055-728904309216?auto=format&fit=crop&w=1200&q=80',
+    'https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?auto=format&fit=crop&w=1200&q=80'
+  ],
+  delhi: [
+    '/Delhi/delhi1.jpg',
+    '/Delhi/pexels-abdus-samad-mahkri-1624305361-34201914.jpg',
+    '/Delhi/pexels-josh-pritam-1176850597-21783045.jpg',
+    '/Delhi/pexels-mohit-hambiria-92377455-28678222.jpg',
+    '/Delhi/pexels-ravi-roshan-2875998-16931337.jpg',
+    '/Delhi/pexels-roman-saienko-1867764487-28672803.jpg'
+  ],
+  hyderabad: [
+    '/hyderabad/pexels-dropshado-11321242.jpg',
+    '/hyderabad/pexels-dropshado-33813000.jpg',
+    '/hyderabad/pexels-dropshado-4456656.jpg',
+    '/hyderabad/pexels-jansher-chakkittammal-230257630-32142811.jpg'
+  ],
+  pune: [
+    '/pune/pexels-ankit-rainloure-1425442-14441811.jpg',
+    '/pune/pexels-charlieheng-15623165.jpg'
+  ]
+};
 
 export default function CityDashboardClient({ cityData, categories, initialListings }) {
   const router = useRouter();
   const [checklist, setChecklist] = useState([]);
   const [activeTab, setActiveTab] = useState('home');
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isSurvivalKitOpen, setIsSurvivalKitOpen] = useState(false);
+  const [commuteFilter, setCommuteFilter] = useState(null);
 
-  // Banner slideshow image mappings for our cities
-  const citySlidesData = {
-    bengaluru: [
-      'https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1200&q=80'
-    ],
-    mumbai: [
-      'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1562154055-728904309216?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?auto=format&fit=crop&w=1200&q=80'
-    ],
-    delhi: [
-      '/Delhi/delhi1.jpg',
-      '/Delhi/pexels-abdus-samad-mahkri-1624305361-34201914.jpg',
-      '/Delhi/pexels-josh-pritam-1176850597-21783045.jpg',
-      '/Delhi/pexels-mohit-hambiria-92377455-28678222.jpg',
-      '/Delhi/pexels-ravi-roshan-2875998-16931337.jpg',
-      '/Delhi/pexels-roman-saienko-1867764487-28672803.jpg'
-    ],
-    hyderabad: [
-      '/hyderabad/pexels-dropshado-11321242.jpg',
-      '/hyderabad/pexels-dropshado-33813000.jpg',
-      '/hyderabad/pexels-dropshado-4456656.jpg',
-      '/hyderabad/pexels-jansher-chakkittammal-230257630-32142811.jpg'
-    ],
-    pune: [
-      '/pune/pexels-ankit-rainloure-1425442-14441811.jpg',
-      '/pune/pexels-charlieheng-15623165.jpg'
-    ]
-  };
-
-  const citySlides = citySlidesData[cityData.slug] || [
-    'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80'
-  ];
+  const citySlides = useMemo(() => {
+    return citySlidesData[cityData.slug] || [
+      'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80'
+    ];
+  }, [cityData.slug]);
 
   useEffect(() => {
     if (citySlides.length <= 1) return;
@@ -121,6 +129,38 @@ export default function CityDashboardClient({ cityData, categories, initialListi
   const totalCount = checklist.length;
   const progressPercent = totalCount > 0 ? (completedCount / totalCount) * 100 : 0;
 
+  // Filter and annotate listings based on commute radar if active
+  const displayedListings = useMemo(() => {
+    if (!commuteFilter || !commuteFilter.hub) {
+      return initialListings;
+    }
+
+    const { hub, maxMinutes, mode } = commuteFilter;
+    const speedKmH = mode === 'walk' ? 4.5 : mode === 'cab' ? 24 : 32; // Average metro speed 32km/h incl stops
+
+    const withCommute = initialListings.map(item => {
+      if (!item.coordinates?.lat || !item.coordinates?.lng) {
+        return { ...item, commuteMins: 20 };
+      }
+      // Haversine distance
+      const R = 6371;
+      const dLat = (hub.lat - item.coordinates.lat) * Math.PI / 180;
+      const dLon = (hub.lng - item.coordinates.lng) * Math.PI / 180;
+      const a = 
+        Math.sin(dLat/2) * Math.sin(dLat/2) +
+        Math.cos(item.coordinates.lat * Math.PI / 180) * Math.cos(hub.lat * Math.PI / 180) * 
+        Math.sin(dLon/2) * Math.sin(dLon/2);
+      const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+      const distKm = R * c;
+      const travelMins = Math.round((distKm / speedKmH) * 60) + (mode === 'metro' ? 6 : 2); // 6 min station access
+      return { ...item, commuteMins: travelMins, distanceKm: distKm.toFixed(1) };
+    });
+
+    const filtered = withCommute.filter(item => item.commuteMins <= maxMinutes);
+    // If filter is too strict, return sorted by closest
+    return filtered.length > 0 ? filtered : withCommute.sort((a, b) => a.commuteMins - b.commuteMins);
+  }, [initialListings, commuteFilter]);
+
 
 
   return (
@@ -131,74 +171,101 @@ export default function CityDashboardClient({ cityData, categories, initialListi
       {/* Full-width Premium Travel Portal Hero Header */}
       <section className="relative h-[380px] md:h-[480px] w-full overflow-hidden flex flex-col items-center justify-center border-b border-outline-variant/65 shadow-md">
         {/* Background slideshow */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 overflow-hidden">
           {citySlides.map((url, idx) => (
             <img 
               key={url}
               alt={cityData.name} 
               className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out ${idx === currentSlide ? 'opacity-100 scale-101 z-0' : 'opacity-0 scale-100 -z-10'}`} 
               src={url}
+              onError={(e) => {
+                e.currentTarget.onerror = null;
+                e.currentTarget.src = 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80';
+              }}
             />
           ))}
           <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/50 to-primary z-10"></div>
         </div>
 
         {/* Content Inside Hero */}
-        <div className="relative z-20 text-center px-6 max-w-5xl w-full flex flex-col items-center gap-3.5">
-          <span className="text-[9px] font-extrabold text-white/80 tracking-widest uppercase bg-white/10 px-3.5 py-1.5 rounded-xl backdrop-blur-md border border-white/20 shadow-sm">
-            📍 {cityData.name} Portal
+        <div className="relative z-20 text-center px-4 sm:px-6 max-w-5xl w-full flex flex-col items-center gap-3.5">
+          <span className="text-[10px] font-extrabold text-white/90 tracking-widest uppercase bg-black/30 px-3.5 py-1.5 rounded-full backdrop-blur-md border border-white/20 shadow-sm flex items-center gap-1.5">
+            <span className="material-symbols-outlined text-[14px] text-terracotta">location_on</span>
+            <span>{cityData.name} Relocation Portal</span>
           </span>
-          <h2 className="font-plus-jakarta text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-none drop-shadow-md">
+          <h2 className="font-editorial text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-none drop-shadow-md">
             Your City. Your Home.
           </h2>
-          <p className="text-white/75 text-xs font-semibold uppercase tracking-wider">
-            Settle in like a local neighbor.
+          <p className="text-white/80 text-xs sm:text-sm font-medium tracking-wide">
+            Settle in like a local neighbor with verified stays, kitchens, and local services.
           </p>
           <div className="w-full mt-2">
             <AISearchBar city={cityData.slug} />
+          </div>
+
+          {/* Breakthrough Stand-out Feature: 48-Hour Survival Kit Button */}
+          <div className="flex items-center gap-3 mt-3">
+            <button
+              type="button"
+              onClick={() => setIsSurvivalKitOpen(true)}
+              className="bg-terracotta hover:bg-[#b04d29] text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-2 shadow-lg hover:shadow-xl active:scale-95 transition-all cursor-pointer"
+            >
+              <span className="material-symbols-outlined text-[18px]">inventory_2</span>
+              <span>Build 48-Hour Survival Kit (Stay + Tiffin + Maid)</span>
+            </button>
           </div>
         </div>
       </section>
 
       {/* Main Content Dashboard */}
-      <main className="relative max-w-max-width-desktop mx-auto px-6 w-full mt-10 flex-grow">
+      <main className="relative max-w-7xl mx-auto px-4 sm:px-6 w-full mt-10 flex-grow overflow-x-clip">
         
-        {/* Background Aurora Blurs */}
-        <div className="absolute top-0 left-1/4 w-[400px] h-[400px] rounded-full bg-purple-200/25 aurora-blur select-none pointer-events-none"></div>
-        <div className="absolute top-20 right-1/4 w-[500px] h-[500px] rounded-full bg-amber-100/20 aurora-blur select-none pointer-events-none animate-pulse" style={{ animationDuration: '10s' }}></div>
+        {/* Background Ambient Blurs */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none select-none -z-10">
+          <div className="absolute top-0 left-1/4 w-[350px] sm:w-[400px] h-[350px] sm:h-[400px] rounded-full bg-sand/60 aurora-blur select-none pointer-events-none"></div>
+          <div className="absolute top-20 right-1/4 w-[400px] sm:w-[500px] h-[400px] sm:h-[500px] rounded-full bg-terracotta/5 aurora-blur select-none pointer-events-none" style={{ animationDuration: '10s' }}></div>
+        </div>
+
+        {/* Breakthrough Feature 2: Interactive Commute & Route Simulator with Polyline & Cab Fares */}
+        <section className="relative z-10">
+          <InteractiveCommuteMap 
+            citySlug={cityData.slug} 
+            listings={displayedListings}
+          />
+        </section>
 
         {/* Checklist Section */}
         {checklist.length > 0 && (
           <section className="mb-10 relative z-10">
-            <div className="bg-white/80 backdrop-blur-md p-6 rounded-3xl border border-outline/80 shadow-sm">
+            <div className="bg-white/90 backdrop-blur-md p-6 rounded-3xl border border-outline shadow-sm">
               <div className="flex justify-between items-start mb-4">
                 <div>
-                  <h3 className="font-plus-jakarta text-lg font-bold text-primary mb-1">
-                    New in town? Your Checklist
+                  <h3 className="font-editorial text-xl font-bold text-primary mb-1">
+                    New in town? Your Relocation Checklist
                   </h3>
-                  <p className="text-[10px] text-gray-400 font-bold uppercase tracking-wider">{completedCount} of {totalCount} tasks completed</p>
+                  <p className="text-[10px] text-gray-500 font-bold uppercase tracking-wider">{completedCount} of {totalCount} tasks completed</p>
                 </div>
               </div>
               
-              <div className="w-full bg-gray-150 h-2 rounded-full overflow-hidden mb-5 border border-outline/20">
+              <div className="w-full bg-sand h-2 rounded-full overflow-hidden mb-5 border border-outline">
                 <div 
-                  className="bg-primary h-full rounded-full transition-all duration-300 ease-out" 
+                  className="bg-terracotta h-full rounded-full transition-all duration-300 ease-out" 
                   style={{ width: `${progressPercent}%` }}
                 ></div>
               </div>
               
-              <div className="flex gap-3 overflow-x-auto hide-scrollbar pb-2 snap-x">
+              <div className="flex gap-3 overflow-x-auto hide-scrollbar pb-2 snap-x w-full max-w-full">
                 {checklist.map(item => (
                   <button
                     key={item.id}
                     onClick={() => toggleChecklistItem(item.id)}
-                    className={`flex-shrink-0 px-4 py-2.5 rounded-xl border flex items-center gap-2 transition-all active:scale-98 snap-start text-xs font-bold ${
+                    className={`flex-shrink-0 px-4 py-2.5 rounded-xl border flex items-center gap-2 transition-all active:scale-98 snap-start text-xs font-bold cursor-pointer ${
                       item.completed 
-                        ? 'bg-gray-100 border-primary text-primary' 
-                        : 'bg-white border-outline text-gray-500 hover:border-gray-400'
+                        ? 'bg-sand border-terracotta/40 text-terracotta' 
+                        : 'bg-white border-outline text-gray-600 hover:border-gray-400'
                     }`}
                   >
-                    <span className={`material-symbols-outlined text-[18px] ${item.completed ? 'text-primary' : 'text-gray-400'}`}>
+                    <span className={`material-symbols-outlined text-[18px] ${item.completed ? 'text-terracotta' : 'text-gray-400'}`}>
                       {item.completed ? 'check_box' : 'check_box_outline_blank'}
                     </span>
                     <span>{item.text}</span>
@@ -213,56 +280,41 @@ export default function CityDashboardClient({ cityData, categories, initialListi
         <section className="mb-12 relative z-10">
           <div className="flex items-center justify-between mb-6">
             <div className="flex flex-col gap-0.5">
-              <h2 className="font-plus-jakarta text-xl font-bold text-primary tracking-tight">Services & Utilities</h2>
-              <span className="text-[10px] font-bold text-gray-400 tracking-wider uppercase">Select category to explore</span>
+              <h2 className="font-editorial text-2xl font-bold text-primary tracking-tight">Services & Utilities</h2>
+              <span className="text-[10px] font-bold text-gray-400 tracking-wider uppercase">Select category to explore verified options</span>
             </div>
           </div>
           
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3">
             {categories.map(cat => {
               const iconMap = {
-                housing: '🏠',
-                'food-dining': '🍽️',
-                grocery: '🛒',
-                'sabji-mandi': '🥦',
-                dairy: '🥛',
-                'home-services': '🔧',
-                'tiffin-mess': '🍱',
-                'gym-fitness': '💪',
-                'places-to-visit': '🗺️',
-                'social-fun': '🎯',
-                'maid-cook': '🧹',
-                transport: '🚌'
+                housing: 'home',
+                'food-dining': 'restaurant',
+                grocery: 'shopping_basket',
+                'sabji-mandi': 'eco',
+                dairy: 'egg_alt',
+                'home-services': 'handyman',
+                'tiffin-mess': 'bento',
+                'gym-fitness': 'fitness_center',
+                'places-to-visit': 'explore',
+                'social-fun': 'celebration',
+                'maid-cook': 'cleaning_services',
+                transport: 'directions_subway'
               };
 
-              const colorsMap = {
-                housing: 'from-blue-50 to-indigo-50 border-indigo-100 hover:shadow-indigo-100/50 text-indigo-600',
-                'food-dining': 'from-orange-50 to-amber-50 border-orange-100 hover:shadow-orange-100/50 text-orange-600',
-                grocery: 'from-green-50 to-emerald-50 border-green-100 hover:shadow-green-100/50 text-green-600',
-                'sabji-mandi': 'from-lime-50 to-emerald-50 border-lime-100 hover:shadow-lime-100/50 text-lime-600',
-                dairy: 'from-sky-50 to-blue-50 border-sky-100 hover:shadow-sky-100/50 text-sky-600',
-                'home-services': 'from-amber-50 to-yellow-50 border-amber-100 hover:shadow-amber-100/50 text-amber-600',
-                'tiffin-mess': 'from-red-50 to-orange-50 border-red-100 hover:shadow-red-100/50 text-red-600',
-                'gym-fitness': 'from-purple-50 to-fuchsia-50 border-purple-100 hover:shadow-purple-100/50 text-purple-600',
-                'places-to-visit': 'from-emerald-50 to-teal-50 border-emerald-100 hover:shadow-emerald-100/50 text-emerald-600',
-                'social-fun': 'from-pink-50 to-rose-50 border-pink-100 hover:shadow-pink-100/50 text-pink-600',
-                'maid-cook': 'from-teal-50 to-cyan-50 border-teal-100 hover:shadow-teal-100/50 text-teal-600',
-                transport: 'from-slate-50 to-zinc-50 border-slate-100 hover:shadow-slate-100/50 text-slate-600'
-              };
-
-              const themeClass = colorsMap[cat.slug] || 'from-gray-50 to-slate-50 border-gray-100 hover:shadow-gray-100/50 text-gray-600';
+              const iconName = iconMap[cat.slug] || cat.icon || 'explore';
 
               return (
                 <Link
                   key={cat.slug}
                   href={`/${cityData.slug}/${cat.slug}`}
-                  className={`group relative overflow-hidden bg-gradient-to-br ${themeClass} p-3 rounded-2xl border hover:border-current hover:-translate-y-0.5 transition-all active:scale-95 duration-300 flex items-center gap-3 shadow-sm hover:shadow-md`}
+                  className="group relative overflow-hidden bg-white hover:bg-sand/60 p-3.5 rounded-2xl border border-outline hover:border-terracotta/40 hover:-translate-y-0.5 transition-all active:scale-95 duration-300 flex items-center gap-3 shadow-sm hover:shadow-md"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-white/95 shadow-sm border border-inherit flex-shrink-0 flex items-center justify-center text-xl group-hover:scale-105 transition-transform duration-300">
-                    {iconMap[cat.slug] || cat.icon || '🏷️'}
+                  <div className="w-10 h-10 rounded-xl bg-sand/80 border border-outline flex-shrink-0 flex items-center justify-center text-primary group-hover:text-terracotta group-hover:scale-105 transition-all duration-300">
+                    <span className="material-symbols-outlined text-[20px]">{iconName}</span>
                   </div>
                   <div className="flex flex-col min-w-0 text-left">
-                    <span className="text-xs font-bold text-primary truncate tracking-tight">{cat.name}</span>
+                    <span className="text-xs font-bold text-primary truncate tracking-tight group-hover:text-terracotta transition-colors">{cat.name}</span>
                     <span className="text-[9px] text-gray-400 font-extrabold tracking-widest uppercase">Explore</span>
                   </div>
                 </Link>
@@ -275,56 +327,28 @@ export default function CityDashboardClient({ cityData, categories, initialListi
         <section className="mb-12 relative z-10">
           <div className="flex items-center justify-between mb-6">
             <div className="flex flex-col gap-0.5">
-              <h2 className="font-plus-jakarta text-xl font-bold text-primary tracking-tight">Recommended for you</h2>
-              <span className="text-[10px] font-bold text-gray-400 tracking-wider uppercase">Top verified choices</span>
+              <h2 className="font-editorial text-2xl font-bold text-primary tracking-tight">Recommended for you</h2>
+              <span className="text-[10px] font-bold text-gray-500 tracking-wider uppercase">Audited & verified neighborhood choices</span>
             </div>
-            <Link href={`/${cityData.slug}/housing`} className="text-primary hover:underline text-xs font-bold uppercase tracking-wider">
+            <Link href={`/${cityData.slug}/housing`} className="text-terracotta hover:underline text-xs font-bold uppercase tracking-wider">
               Explore All
             </Link>
           </div>
           
-          <div className="flex gap-6 overflow-x-auto hide-scrollbar pb-4 snap-x">
-            {initialListings.length === 0 ? (
-              <div className="p-10 text-center bg-white/80 backdrop-blur-md rounded-3xl border border-outline w-full text-xs font-semibold text-gray-400 shadow-sm">
+          <div className="flex gap-6 overflow-x-auto hide-scrollbar pb-4 snap-x w-full max-w-full">
+            {displayedListings.length === 0 ? (
+              <div className="p-10 text-center bg-white/90 backdrop-blur-md rounded-3xl border border-outline w-full text-xs font-semibold text-gray-400 shadow-sm">
                 No listings seeded yet for {cityData.name}.
               </div>
             ) : (
-              initialListings.map(listing => (
-                <Link
-                  key={listing._id}
-                  href={`/${cityData.slug}/${listing.category?.slug || 'housing'}/${listing._id}`}
-                  className="flex-shrink-0 w-[270px] snap-start bg-white rounded-3xl border border-outline/80 overflow-hidden shadow-sm hover:shadow-md hover:border-primary/25 transition-all duration-300 group"
-                >
-                  <div className="h-44 w-full relative overflow-hidden">
-                    <img 
-                      alt={listing.name} 
-                      className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500 ease-out" 
-                      src={listing.images?.[0] || 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=400&q=80'}
-                    />
-                    {listing.isVerified && (
-                      <span className="absolute top-3.5 left-3.5 bg-primary/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-wider flex items-center gap-1 shadow-sm">
-                        <span className="material-symbols-outlined text-[10px]">verified</span>
-                        Verified
-                      </span>
-                    )}
-                  </div>
-                  <div className="p-5">
-                    <h4 className="font-bold text-sm text-primary truncate leading-snug group-hover:text-primary/80 transition-colors">{listing.name}</h4>
-                    <p className="text-gray-400 text-xs font-semibold mt-1 flex items-center gap-0.5">
-                      <span className="material-symbols-outlined text-[12px] text-gray-300">location_on</span>
-                      {listing.locality || 'Local area'}
-                    </p>
-                    <div className="flex justify-between items-center mt-4 pt-3 border-t border-gray-100">
-                      <span className="text-xs font-bold text-primary">
-                        {listing.price?.displayText || `₹${listing.price?.value?.toLocaleString('en-IN')}`}
-                      </span>
-                      <div className="flex items-center gap-0.5 text-gray-600 font-bold text-xs">
-                        <span className="material-symbols-outlined text-[12px] text-yellow-500">star</span>
-                        <span>{listing.rating?.average || 4.2}</span>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
+              displayedListings.map(listing => (
+                <div key={listing._id} className="flex-shrink-0 w-[300px] snap-start">
+                  <EditorialListingCard 
+                    listing={listing} 
+                    citySlug={cityData.slug} 
+                    categorySlug={listing.category?.slug || 'housing'} 
+                  />
+                </div>
               ))
             )}
           </div>
@@ -340,9 +364,9 @@ export default function CityDashboardClient({ cityData, categories, initialListi
         <span className="material-symbols-outlined text-[24px] text-white">add</span>
       </Link>
 
-      {/* Bottom Navigation Bar */}
-      <nav className="fixed bottom-0 left-0 w-full z-50 bg-white/95 border-t border-outline-variant/60 pb-safe">
-        <div className="flex justify-around items-center px-4 py-3.5 max-w-md mx-auto">
+      {/* Bottom Navigation Bar (Mobile only) */}
+      <nav className="fixed bottom-0 left-0 w-full z-50 bg-[#fdfbf7]/95 backdrop-blur-md border-t border-outline pb-safe md:hidden">
+        <div className="flex justify-around items-center px-4 py-3 max-w-md mx-auto">
           <button 
             onClick={() => setActiveTab('home')}
             className={`flex flex-col items-center justify-center transition-colors duration-200 ${activeTab === 'home' ? 'text-primary' : 'text-gray-400 hover:text-primary'}`}
@@ -388,6 +412,13 @@ export default function CityDashboardClient({ cityData, categories, initialListi
 
       {/* Floating AI assistant widget */}
       <AIChatWidget city={cityData.slug} />
+
+      {/* Standout Relocation 48-Hour Survival Kit Modal */}
+      <SurvivalKitModal
+        isOpen={isSurvivalKitOpen}
+        onClose={() => setIsSurvivalKitOpen(false)}
+        cityName={cityData.name}
+      />
     </div>
   );
 }

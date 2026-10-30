@@ -2,11 +2,25 @@ import { notFound } from 'next/navigation';
 import dbConnect from '@/lib/mongodb';
 import Listing from '@/models/Listing';
 import MapPageClient from '@/components/MapPageClient';
+import mongoose from 'mongoose';
+import { MOCK_LISTINGS } from '@/constants/mockListings';
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
-  await dbConnect();
-  const listing = await Listing.findById(id).lean();
+  let listing = null;
+  try {
+    if (mongoose.isValidObjectId(id)) {
+      await dbConnect();
+      listing = await Listing.findById(id).lean();
+    }
+  } catch (err) {
+    console.warn('[MapPage generateMetadata] DB offline:', err.message);
+  }
+
+  if (!listing) {
+    listing = MOCK_LISTINGS.find(l => l._id === id);
+  }
+
   return {
     title: listing ? `${listing.name} — Map Location` : 'Map Location',
     description: 'Find listing location and driving directions on the interactive map.',
@@ -16,9 +30,24 @@ export async function generateMetadata({ params }) {
 export default async function MapPage({ params }) {
   const { city, category, id } = await params;
 
-  await dbConnect();
+  if (!mongoose.isValidObjectId(id)) {
+    notFound();
+  }
 
-  const listing = await Listing.findById(id).lean();
+  let listing = null;
+  try {
+    await dbConnect();
+    listing = await Listing.findById(id).lean();
+  } catch (err) {
+    console.warn(`[MapPage] MongoDB error: ${err.message}`);
+  }
+
+  if (!listing) {
+    const matched = MOCK_LISTINGS.find(l => l._id === id);
+    if (matched) {
+      listing = matched;
+    }
+  }
 
   if (!listing) {
     notFound();

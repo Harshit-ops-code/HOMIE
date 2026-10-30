@@ -33,9 +33,11 @@ export async function GET() {
       );
     }
 
+    const validListings = (user.savedListings || []).filter(item => item && typeof item === 'object');
+
     return NextResponse.json({
       success: true,
-      data: user.savedListings || []
+      data: validListings
     });
   } catch (error) {
     console.error('GET /api/listings/saved Error:', error);

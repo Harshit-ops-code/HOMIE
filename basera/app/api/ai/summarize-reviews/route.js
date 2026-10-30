@@ -29,11 +29,15 @@ export async function POST(request) {
 
     // Cache the summary in MongoDB to avoid repeat API calls if listingId is valid
     if (listingId && listingId !== 'test123') {
-      await dbConnect();
-      await Listing.findByIdAndUpdate(listingId, {
-        aiSummary: summary,
-        aiSummaryGeneratedAt: new Date(),
-      });
+      try {
+        await dbConnect();
+        await Listing.findByIdAndUpdate(listingId, {
+          aiSummary: summary,
+          aiSummaryGeneratedAt: new Date(),
+        });
+      } catch (cacheErr) {
+        console.warn('[Review Summarizer] Cache skip due to DB offline:', cacheErr.message);
+      }
     }
 
     return NextResponse.json({ success: true, summary });

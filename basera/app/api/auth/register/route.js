@@ -2,38 +2,50 @@ import { NextResponse } from 'next/server';
 import bcrypt from 'bcryptjs';
 import dbConnect from '@/lib/mongodb';
 import User from '@/models/User';
+import { checkRateLimit, getClientIp } from '@/lib/rateLimit';
+import { validateEmail, validateString } from '@/lib/validator';
 
 export async function POST(req) {
   try {
-    await dbConnect();
-    const { name, email, password } = await req.json();
-
-    if (!name || !email || !password) {
+    const ip = getClientIp(req);
+    const rateLim = checkRateLimit(ip, 'auth');
+    if (!rateLim.allowed) {
       return NextResponse.json(
-        { error: 'Name, email and password are required fields.' },
+        { error: `Too many requests. Please try again in ${rateLim.resetSeconds}s.` },
+        { status: 429 }
+      );
+    }
+
+    await dbConnect();
+    const body = await req.json();
+    const { name, email, password } = body || {};
+
+    // Input Validation
+    if (!validateString(name, 2, 50)) {
+      return NextResponse.json(
+        { error: 'Name must be between 2 and 50 characters long.' },
         { status: 400 }
       );
     }
 
-    // Check if email format is valid
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
+    const normalizedEmail = (email || '').trim().toLowerCase();
+
+    if (!validateEmail(normalizedEmail)) {
       return NextResponse.json(
         { error: 'Please enter a valid email address.' },
         { status: 400 }
       );
     }
 
-    // Check if password length is at least 6 characters
-    if (password.length < 6) {
+    if (!validateString(password, 6, 100)) {
       return NextResponse.json(
-        { error: 'Password must be at least 6 characters long.' },
+        { error: 'Password must be between 6 and 100 characters long.' },
         { status: 400 }
       );
     }
 
     // Check if user already exists
-    const existingUser = await User.findOne({ email });
+    const existingUser = await User.findOne({ email: normalizedEmail });
     if (existingUser) {
       return NextResponse.json(
         { error: 'An account with this email address already exists.' },
@@ -46,8 +58,8 @@ export async function POST(req) {
 
     // Create new user in the database
     const newUser = await User.create({
-      name,
-      email,
+      name: name.trim(),
+      email: normalizedEmail,
       password: hashedPassword,
       role: 'user'
     });
@@ -57,9 +69,9 @@ export async function POST(req) {
       { status: 201 }
     );
   } catch (error) {
-    console.error('Registration error:', error);
+    console.error('Registration error details:', error);
     return NextResponse.json(
-      { error: 'Internal server registration error. Please try again.' },
+      { error: 'Registration failed due to a server error.' },
       { status: 500 }
     );
   }

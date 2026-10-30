@@ -51,7 +51,7 @@ export default function RecommendedListings({ listingId, currentCitySlug = 'beng
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         {recommendations.slice(0, 4).map(listing => (
           <Link 
             key={listing._id}
@@ -64,6 +64,11 @@ export default function RecommendedListings({ listingId, currentCitySlug = 'beng
                   src={listing.images[0]} 
                   alt={listing.name} 
                   className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
+                  onError={(e) => {
+                    e.currentTarget.onerror = null;
+                    e.currentTarget.src = 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=400&q=80';
+                  }}
+                  loading="lazy"
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-gray-300">

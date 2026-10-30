@@ -53,11 +53,15 @@ export default function CreateListing() {
   };
 
   useEffect(() => {
+    if (status === 'loading') return;
+    if (!session?.user || (session.user.role !== 'vendor' && session.user.role !== 'admin')) {
+      return;
+    }
     const timer = setTimeout(() => {
       fetchMetadata();
     }, 0);
     return () => clearTimeout(timer);
-  }, []);
+  }, [status, session]);
 
   const handleImageUpload = async (e) => {
     const file = e.target.files?.[0];
@@ -177,17 +181,26 @@ export default function CreateListing() {
 
   if (status === 'unauthenticated' || (session?.user?.role !== 'vendor' && session?.user?.role !== 'admin')) {
     return (
-      <div className="bg-surface min-h-screen flex flex-col justify-center items-center">
+      <div className="bg-surface min-h-screen flex flex-col bg-pattern overflow-x-hidden">
         <Navbar />
-        <p className="text-sm font-bold text-gray-500">Access Denied. Vendors Only.</p>
+        <main className="flex-grow flex items-center justify-center p-6 text-center">
+          <div className="bg-white border border-outline rounded-3xl p-8 max-w-md w-full shadow-sm flex flex-col items-center gap-3">
+            <span className="material-symbols-outlined text-4xl text-gray-400">lock</span>
+            <h2 className="font-plus-jakarta text-lg font-bold text-primary">Vendor Access Required</h2>
+            <p className="text-xs text-gray-500 font-medium">You need an approved vendor account to create or edit listings.</p>
+            <Link href="/profile?applyVendor=true" className="mt-2 text-xs font-bold uppercase tracking-wider bg-primary text-white px-5 py-2.5 rounded-full hover:opacity-90 transition-all">
+              Apply to Become a Vendor
+            </Link>
+          </div>
+        </main>
       </div>
     );
   }
 
   return (
-    <div className="bg-surface min-h-screen flex flex-col bg-pattern">
+    <div className="bg-surface min-h-screen flex flex-col bg-pattern overflow-x-hidden">
       <Navbar />
-      <main className="flex-grow max-w-3xl w-full mx-auto px-6 py-12">
+      <main className="flex-grow max-w-3xl w-full mx-auto px-4 sm:px-6 py-8 sm:py-12">
         <div className="bg-white border border-outline rounded-card p-8 shadow-sm flex flex-col gap-8">
           <div>
             <h1 className="font-plus-jakarta text-2xl font-extrabold text-primary tracking-tight">Create Verified Listing</h1>
@@ -370,7 +383,7 @@ export default function CreateListing() {
                 <div className="grid grid-cols-4 gap-4 mt-2">
                   {images.map((url, idx) => (
                     <div key={idx} className="relative h-20 rounded-xl overflow-hidden border border-outline">
-                      <img src={url} className="w-full h-full object-cover" />
+                      <img src={url} alt={`Preview image ${idx + 1}`} className="w-full h-full object-cover" />
                       <button 
                         type="button" onClick={() => setImages(prev => prev.filter((_, i) => i !== idx))}
                         className="absolute top-1 right-1 bg-black/60 text-white w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold"

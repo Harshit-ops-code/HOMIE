@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import dbConnect from '@/lib/mongodb';
 import Listing from '@/models/Listing';
 import { callClaude, extractJSON } from '@/lib/anthropic';
+import { getClientIp, checkAICostLimit } from '@/lib/rateLimit';
+import mongoose from 'mongoose';
 
 // Deterministic generation of landlord personality based on listing details
 function getLandlordProfile(listingId, listingName, originalRent) {
@@ -53,11 +55,34 @@ function getLandlordProfile(listingId, listingName, originalRent) {
 export async function POST(request, { params }) {
   try {
     const { id } = await params;
+    if (!mongoose.isValidObjectId(id)) {
+      return NextResponse.json({ success: false, error: 'Property listing not found' }, { status: 404 });
+    }
     const { messages, userProfile } = await request.json();
 
     if (!messages || !Array.isArray(messages)) {
       return NextResponse.json({ success: false, error: 'Messages array is required' }, { status: 400 });
     }
+
+    // Cost Control: Daily limit check to prevent loop API bill drains
+    const ip = getClientIp(request);
+    const costLimit = checkAICostLimit(ip);
+    if (!costLimit.allowed) {
+      return NextResponse.json({
+        success: false,
+        error: 'Daily query budget limit exceeded for this IP. Please try again tomorrow.'
+      }, { status: 429 });
+    }
+
+    // Prompt Sanitization: Strip injection keywords and limit payload sizes
+    const sanitizedMessages = messages.map(msg => {
+      if (msg.role === 'user') {
+        let content = String(msg.content || '').slice(0, 500);
+        content = content.replace(/(system prompt|ignore previous instructions|ignore the rules|you are now|developer mode|override)/gi, '[removed]');
+        return { ...msg, content };
+      }
+      return msg;
+    });
 
     await dbConnect();
     const listing = await Listing.findById(id).lean();
@@ -102,10 +127,40 @@ Format your output as direct JSON only. Do not add any markdown wrapper in your 
 `;
 
     // Extract last 6 messages to keep context window compact
-    const conversationHistory = messages.slice(-6);
+    const conversationHistory = sanitizedMessages.slice(-6);
 
     const responseText = await callClaude(conversationHistory, systemPrompt);
-    const result = extractJSON(responseText);
+    
+    let result = null;
+    try {
+      result = extractJSON(responseText);
+    } catch (e) {
+      console.error('Failed to parse JSON landlord response:', responseText);
+    }
+
+    if (!result || !result.message) {
+      result = {
+        message: "I didn't quite catch that suggestion. Let's keep things straightforward.",
+        dealStatus: "negotiating",
+        currentRentOffered: landlord.listPrice,
+        landlordPatience: 80,
+        sentiment: "neutral",
+        dealTerms: null
+      };
+    }
+
+    // Deterministic Server-Side Security Guard: Overrule LLM jailbreaks
+    if (result && result.dealStatus === 'accepted') {
+      const rentValue = Number(result.currentRentOffered);
+      if (isNaN(rentValue) || rentValue < landlord.minAcceptablePrice) {
+        result.dealStatus = 'negotiating';
+        result.currentRentOffered = landlord.listPrice;
+        result.message = `Wait, I cannot accept that price. As mentioned, my minimum acceptable rent is ₹${landlord.minAcceptablePrice.toLocaleString('en-IN')}. Let's keep it realistic.`;
+        result.dealTerms = null;
+        result.sentiment = 'frustrated';
+        result.landlordPatience = Math.max(0, (result.landlordPatience || 100) - 20);
+      }
+    }
 
     return NextResponse.json({
       success: true,

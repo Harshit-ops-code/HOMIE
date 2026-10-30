@@ -4,6 +4,8 @@ import { authOptions } from '@/lib/auth';
 import dbConnect from '@/lib/mongodb';
 import Review from '@/models/Review';
 import Listing from '@/models/Listing';
+import { checkRateLimit, getClientIp } from '@/lib/rateLimit';
+import { validateObjectId, validateNumberRange, validateString } from '@/lib/validator';
 
 export async function GET(request) {
   try {
@@ -12,9 +14,9 @@ export async function GET(request) {
     const page = parseInt(searchParams.get('page') || '1');
     const limit = parseInt(searchParams.get('limit') || '10');
 
-    if (!listingId) {
+    if (!listingId || !validateObjectId(listingId)) {
       return NextResponse.json(
-        { success: false, error: 'listingId query parameter is required', code: 'VALIDATION_ERROR' },
+        { success: false, error: 'Valid listingId query parameter is required', code: 'VALIDATION_ERROR' },
         { status: 400 }
       );
     }
@@ -53,6 +55,15 @@ export async function GET(request) {
 
 export async function POST(request) {
   try {
+    const ip = getClientIp(request);
+    const rateLim = checkRateLimit(ip, 'user');
+    if (!rateLim.allowed) {
+      return NextResponse.json(
+        { success: false, error: `Too many requests. Try again in ${rateLim.resetSeconds}s.`, code: 'RATE_LIMIT_EXCEEDED' },
+        { status: 429 }
+      );
+    }
+
     const session = await getServerSession(authOptions);
     if (!session) {
       return NextResponse.json(
@@ -62,19 +73,27 @@ export async function POST(request) {
     }
 
     const body = await request.json();
-    const { listingId, rating, comment } = body;
+    const { listingId, rating, comment } = body || {};
 
-    if (!listingId || !rating) {
+    // Strict validation
+    if (!validateObjectId(listingId)) {
       return NextResponse.json(
-        { success: false, error: 'Listing ID and rating are required', code: 'VALIDATION_ERROR' },
+        { success: false, error: 'Invalid Listing ID format', code: 'VALIDATION_ERROR' },
         { status: 400 }
       );
     }
 
     const numericRating = Number(rating);
-    if (numericRating < 1 || numericRating > 5) {
+    if (!validateNumberRange(numericRating, 1, 5) || !Number.isInteger(numericRating)) {
       return NextResponse.json(
-        { success: false, error: 'Rating must be between 1 and 5', code: 'VALIDATION_ERROR' },
+        { success: false, error: 'Rating must be an integer between 1 and 5', code: 'VALIDATION_ERROR' },
+        { status: 400 }
+      );
+    }
+
+    if (comment !== undefined && !validateString(comment, 0, 500)) {
+      return NextResponse.json(
+        { success: false, error: 'Comment cannot exceed 500 characters', code: 'VALIDATION_ERROR' },
         { status: 400 }
       );
     }
@@ -103,7 +122,7 @@ export async function POST(request) {
       listing: listingId,
       user: session.user.id,
       rating: numericRating,
-      comment: comment || ''
+      comment: (comment || '').trim()
     });
 
     // Recalculate listing average rating and counts
@@ -119,15 +138,21 @@ export async function POST(request) {
       }
     });
 
+    const populatedReview = {
+      ...review.toObject(),
+      user: { name: session.user.name || 'Anonymous User', _id: session.user.id }
+    };
+
     return NextResponse.json({
       success: true,
       message: 'Review submitted successfully',
-      data: review
-    }, { status: 211 }); // Created
+      data: populatedReview,
+      review: populatedReview
+    }, { status: 201 });
   } catch (error) {
-    console.error('POST /api/reviews Error:', error);
+    console.error('POST /api/reviews Error Details:', error);
     return NextResponse.json(
-      { success: false, error: 'Server error', code: 'SERVER_ERROR' },
+      { success: false, error: 'Submit failed due to a server error.', code: 'SERVER_ERROR' },
       { status: 500 }
     );
   }

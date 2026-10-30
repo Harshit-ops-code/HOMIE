@@ -4,10 +4,17 @@ import { authOptions } from '@/lib/auth';
 import dbConnect from '@/lib/mongodb';
 import User from '@/models/User';
 import Listing from '@/models/Listing';
+import mongoose from 'mongoose';
 
 export async function POST(request, { params }) {
   try {
     const { id } = await params;
+    if (!mongoose.isValidObjectId(id)) {
+      return NextResponse.json(
+        { success: false, error: 'Listing not found', code: 'NOT_FOUND' },
+        { status: 404 }
+      );
+    }
     const session = await getServerSession(authOptions);
 
     if (!session) {
@@ -62,6 +69,12 @@ export async function POST(request, { params }) {
 export async function DELETE(request, { params }) {
   try {
     const { id } = await params;
+    if (!mongoose.isValidObjectId(id)) {
+      return NextResponse.json(
+        { success: false, error: 'Listing not found', code: 'NOT_FOUND' },
+        { status: 404 }
+      );
+    }
     const session = await getServerSession(authOptions);
 
     if (!session) {

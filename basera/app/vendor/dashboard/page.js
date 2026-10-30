@@ -11,18 +11,15 @@ export default function VendorDashboard() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
+  const userId = session?.user?.id;
+
   const fetchVendorListings = useCallback(async () => {
+    if (!userId) return;
     try {
-      // In a real application, you would hit an endpoint filtered by vendor, 
-      // for this implementation we fetch the general listings and show the user's listings.
-      const res = await fetch('/api/listings?limit=50');
+      const res = await fetch(`/api/listings?vendor=${userId}&limit=100`);
       const json = await res.json();
       if (json.success) {
-        // Filter by logged in vendor user ID if listing matches
-        const myListings = json.data.filter(
-          item => item.vendor === session?.user?.id || item.vendor?._id === session?.user?.id
-        );
-        setListings(myListings);
+        setListings(json.data || []);
       } else {
         setError(json.error || 'Failed to fetch listings');
       }
@@ -31,7 +28,7 @@ export default function VendorDashboard() {
     } finally {
       setLoading(false);
     }
-  }, [session?.user?.id]);
+  }, [userId]);
 
   useEffect(() => {
     let active = true;

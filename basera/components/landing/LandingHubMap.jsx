@@ -37,9 +37,10 @@ export default function LandingHubMap() {
   const pulsingIcon = typeof window !== 'undefined' ? L.divIcon({
     className: 'custom-pulsing-icon',
     html: `
-      <div class="relative flex items-center justify-center">
-        <div class="absolute w-6 h-6 bg-indigo-500/30 rounded-full animate-ping"></div>
-        <div class="relative w-3.5 h-3.5 bg-indigo-600 border border-white rounded-full shadow-md"></div>
+      <div class="relative flex items-center justify-center -translate-x-1/2 -translate-y-1/2">
+        <div class="absolute w-8 h-8 bg-indigo-500/30 rounded-full radar-ping"></div>
+        <div class="absolute w-5 h-5 bg-primary-400/50 rounded-full animate-ping"></div>
+        <div class="relative w-4 h-4 bg-gradient-to-tr from-primary-600 to-indigo-500 border-2 border-white rounded-full shadow-[0_0_15px_rgba(99,102,241,0.9)]"></div>
       </div>
     `,
     iconSize: [24, 24],
@@ -47,7 +48,11 @@ export default function LandingHubMap() {
   }) : null;
 
   return (
-    <div className="w-full h-[400px] md:h-[450px] relative rounded-3xl overflow-hidden border border-outline shadow-lg bg-gray-50">
+    <div className="w-full h-[400px] md:h-[450px] relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-slate-950">
+      {/* Vignette Scrim Overlays */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-slate-950/80 to-transparent z-10" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-slate-950/80 to-transparent z-10" />
+
       <MapContainer
         center={[20.5937, 78.9629]} // Centered on India
         zoom={5}
@@ -55,8 +60,9 @@ export default function LandingHubMap() {
         className="w-full h-full z-0"
       >
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png" // Modern elegant light map theme
+          attribution='&copy; <a href="https://www.esri.com/">Esri</a>'
+          url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}"
+          maxZoom={16}
         />
         {CITIES_COORDS.map(city => (
           <Marker

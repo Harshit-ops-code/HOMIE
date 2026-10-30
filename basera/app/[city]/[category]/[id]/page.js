@@ -3,12 +3,26 @@ import dbConnect from '@/lib/mongodb';
 import Listing from '@/models/Listing';
 import Review from '@/models/Review';
 import ListingDetailsClient from '@/components/ListingDetailsClient';
+import mongoose from 'mongoose';
+import { MOCK_LISTINGS } from '@/constants/mockListings';
 
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
-  await dbConnect();
-  const listing = await Listing.findById(id).lean();
+  let listing = null;
+  try {
+    if (mongoose.isValidObjectId(id)) {
+      await dbConnect();
+      listing = await Listing.findById(id).lean();
+    }
+  } catch (err) {
+    console.warn('[ListingDetails generateMetadata] DB offline:', err.message);
+  }
+
+  if (!listing) {
+    listing = MOCK_LISTINGS.find(l => l._id === id);
+  }
+
   return {
     title: listing ? `${listing.name} — Details` : 'Listing Details',
     description: listing ? listing.description : 'Explore listing details on Basera.',
@@ -18,27 +32,46 @@ export async function generateMetadata({ params }) {
 export default async function ListingDetailsPage({ params }) {
   const { city, category, id } = await params;
 
-  await dbConnect();
+  if (!mongoose.isValidObjectId(id)) {
+    notFound();
+  }
 
-  // Find listing by ID and increment view count
-  const listingDoc = await Listing.findByIdAndUpdate(
-    id,
-    { $inc: { viewCount: 1 } },
-    { returnDocument: 'after' }
-  )
-    .populate('city', 'name slug')
-    .populate('category', 'name slug icon')
-    .lean();
+  let listingDoc = null;
+  let reviews = [];
+
+  try {
+    await dbConnect();
+
+    // Find listing by ID and increment view count
+    listingDoc = await Listing.findByIdAndUpdate(
+      id,
+      { $inc: { viewCount: 1 } },
+      { returnDocument: 'after' }
+    )
+      .populate('city', 'name slug')
+      .populate('category', 'name slug icon')
+      .lean();
+
+    if (listingDoc) {
+      reviews = await Review.find({ listing: id })
+        .populate('user', 'name')
+        .sort({ createdAt: -1 })
+        .lean();
+    }
+  } catch (err) {
+    console.warn(`[ListingDetailsPage] MongoDB error: ${err.message}`);
+  }
+
+  if (!listingDoc) {
+    const matched = MOCK_LISTINGS.find(l => l._id === id);
+    if (matched) {
+      listingDoc = matched;
+    }
+  }
 
   if (!listingDoc) {
     notFound();
   }
-
-  // Find all reviews associated with this listing
-  const reviews = await Review.find({ listing: id })
-    .populate('user', 'name')
-    .sort({ createdAt: -1 })
-    .lean();
 
   // Serialize Mongoose values for Next.js boundary transfer
   const serializedListing = {

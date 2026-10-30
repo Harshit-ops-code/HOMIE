@@ -4,6 +4,9 @@ import City from '@/models/City';
 import Category from '@/models/Category';
 import Listing from '@/models/Listing';
 import CategoryListingsClient from '@/components/CategoryListingsClient';
+import { CITIES } from '@/constants/cities';
+import { CATEGORIES } from '@/constants/categories';
+import { MOCK_LISTINGS } from '@/constants/mockListings';
 
 export async function generateMetadata({ params }) {
   const { city, category } = await params;
@@ -18,61 +21,94 @@ export async function generateMetadata({ params }) {
 export default async function CategoryListingsPage({ params }) {
   const { city, category } = await params;
 
-  await dbConnect();
+  let cityDoc = null;
+  let categoryDoc = null;
+  let allCategories = [];
+  let rawListings = [];
 
-  // Find the city and category documents
-  const cityDoc = await City.findOne({ slug: city }).lean();
-  const categoryDoc = await Category.findOne({ slug: category }).lean();
-  const allCategories = await Category.find({ isActive: true }).sort({ sortOrder: 1 }).lean();
+  try {
+    await dbConnect();
+    cityDoc = await City.findOne({ slug: city.toLowerCase() }).lean();
+    categoryDoc = await Category.findOne({ slug: category.toLowerCase() }).lean();
+    allCategories = await Category.find({ isActive: true }).sort({ sortOrder: 1 }).lean();
+
+    if (cityDoc) {
+      rawListings = await Listing.find({
+        city: cityDoc._id,
+        isActive: true
+      })
+        .populate('category', 'name slug icon')
+        .sort({ isVerified: -1, 'rating.average': -1 })
+        .lean();
+    }
+  } catch (err) {
+    console.warn(`[CategoryListingsPage] MongoDB connection error: ${err.message}. Using fallback constants.`);
+  }
+
+  if (!cityDoc) {
+    const matchedCity = CITIES.find(c => c.slug.toLowerCase() === city.toLowerCase());
+    if (matchedCity) {
+      cityDoc = {
+        _id: `fallback-${matchedCity.slug}`,
+        name: matchedCity.name,
+        slug: matchedCity.slug,
+      };
+    }
+  }
+
+  if (!categoryDoc) {
+    const matchedCategory = CATEGORIES.find(c => c.slug.toLowerCase() === category.toLowerCase());
+    if (matchedCategory) {
+      categoryDoc = {
+        _id: `cat-${matchedCategory.slug}`,
+        name: matchedCategory.name,
+        slug: matchedCategory.slug,
+        icon: matchedCategory.icon,
+        description: matchedCategory.description,
+        subcategories: matchedCategory.subcategories || [],
+      };
+    }
+  }
+
+  if (!allCategories || allCategories.length === 0) {
+    allCategories = CATEGORIES.map(cat => ({
+      _id: `cat-${cat.slug}`,
+      name: cat.name,
+      slug: cat.slug,
+      icon: cat.icon,
+      description: cat.description,
+      isActive: true,
+      sortOrder: cat.sortOrder,
+    }));
+  }
 
   if (!cityDoc || !categoryDoc) {
     notFound();
   }
 
-  // Find all active listings for this city (regardless of category, showing everything at the start!)
-  const rawListings = await Listing.find({
-    city: cityDoc._id,
-    isActive: true
-  })
-    .populate('category', 'name slug icon')
-    .sort({ isVerified: -1, 'rating.average': -1 })
-    .lean();
+  // Fallback to MOCK_LISTINGS if DB returned no listings or was unreachable
+  if (!rawListings || rawListings.length === 0) {
+    const cityLower = city.toLowerCase();
+    const catLower = category.toLowerCase();
+    rawListings = MOCK_LISTINGS.filter(l => 
+      l.citySlug.toLowerCase() === cityLower && 
+      (catLower === 'all' || l.categorySlug.toLowerCase() === catLower)
+    );
+  }
 
-  // Extract unique subcategories from matching listings
-  const subcategories = Array.from(
+  // Extract unique subcategories from matching listings or fallback from categoryDoc
+  let subcategories = Array.from(
     new Set(rawListings.map(l => l.subcategory).filter(Boolean))
   );
+  if (subcategories.length === 0 && categoryDoc.subcategories?.length > 0) {
+    subcategories = categoryDoc.subcategories;
+  }
 
   // Serialize Mongoose data for Next.js Server-Client boundaries
-  const serializedCity = {
-    ...cityDoc,
-    _id: cityDoc._id.toString(),
-  };
-
-  const serializedCategory = {
-    ...categoryDoc,
-    _id: categoryDoc._id.toString(),
-  };
-
-  const serializedCategories = allCategories.map(cat => ({
-    ...cat,
-    _id: cat._id.toString(),
-  }));
-
-  const serializedListings = rawListings.map(listing => ({
-    ...listing,
-    _id: listing._id.toString(),
-    city: listing.city?.toString() || '',
-    category: (listing.category && typeof listing.category === 'object' && listing.category._id) ? {
-      name: listing.category.name || '',
-      slug: listing.category.slug || '',
-      icon: listing.category.icon || '',
-      _id: listing.category._id.toString(),
-    } : null,
-    vendor: listing.vendor?.toString() || null,
-    createdAt: listing.createdAt?.toISOString() || null,
-    updatedAt: listing.updatedAt?.toISOString() || null,
-  }));
+  const serializedCity = JSON.parse(JSON.stringify(cityDoc));
+  const serializedCategory = JSON.parse(JSON.stringify(categoryDoc));
+  const serializedCategories = JSON.parse(JSON.stringify(allCategories));
+  const serializedListings = JSON.parse(JSON.stringify(rawListings));
 
   return (
     <CategoryListingsClient

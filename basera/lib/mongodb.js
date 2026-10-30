@@ -5,6 +5,12 @@ import dns from 'dns';
 if (typeof dns.setDefaultResultOrder === 'function') {
   dns.setDefaultResultOrder('ipv4first');
 }
+try {
+  // Ensure public DNS servers are used if the local ISP or router rejects SRV records
+  dns.setServers(['8.8.8.8', '1.1.1.1']);
+} catch {
+  // Fall back to system defaults if restricted
+}
 
 
 const MONGODB_URI = process.env.MONGODB_URI;
@@ -24,7 +30,12 @@ async function dbConnect() {
   if (!cached.promise) {
     cached.promise = mongoose.connect(MONGODB_URI, {
       bufferCommands: false,
-    }).then((mongoose) => mongoose);
+      serverSelectionTimeoutMS: 5000,
+    }).then((mongoose) => mongoose)
+      .catch((err) => {
+        cached.promise = null;
+        throw err;
+      });
   }
 
   cached.conn = await cached.promise;

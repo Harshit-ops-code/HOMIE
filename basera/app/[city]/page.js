@@ -4,6 +4,9 @@ import City from '@/models/City';
 import Category from '@/models/Category';
 import Listing from '@/models/Listing';
 import CityDashboardClient from '@/components/CityDashboardClient';
+import { CITIES } from '@/constants/cities';
+import { CATEGORIES } from '@/constants/categories';
+import { MOCK_LISTINGS } from '@/constants/mockListings';
 
 export async function generateMetadata({ params }) {
   const { city } = await params;
@@ -17,52 +20,65 @@ export async function generateMetadata({ params }) {
 export default async function CityDashboard({ params }) {
   const { city } = await params;
 
-  await dbConnect();
+  let cityDoc = null;
+  let categories = [];
+  let rawListings = [];
 
-  // Find the city
-  const cityDoc = await City.findOne({ slug: city }).lean();
-  
-  if (!cityDoc) {
-    // If city is not supported, redirect to onboard
-    redirect('/onboard');
+  try {
+    await dbConnect();
+    cityDoc = await City.findOne({ slug: city.toLowerCase() }).lean();
+    if (cityDoc) {
+      categories = await Category.find({ isActive: true })
+        .sort({ sortOrder: 1 })
+        .lean();
+      rawListings = await Listing.find({ city: cityDoc._id, isActive: true })
+        .populate('category', 'name slug icon')
+        .limit(6)
+        .lean();
+    }
+  } catch (err) {
+    console.warn(`[CityDashboard] MongoDB connection error: ${err.message}. Using fallback constants.`);
   }
 
-  // Find all active categories
-  const categories = await Category.find({ isActive: true })
-    .sort({ sortOrder: 1 })
-    .lean();
+  // If cityDoc was not in DB or DB connection failed, resolve from CITIES constant
+  if (!cityDoc) {
+    const matchedCity = CITIES.find(c => c.slug.toLowerCase() === city.toLowerCase());
+    if (matchedCity) {
+      cityDoc = {
+        _id: `fallback-${matchedCity.slug}`,
+        name: matchedCity.name,
+        slug: matchedCity.slug,
+        bannerImage: matchedCity.image,
+        description: `Explore verified listings, local checklists, and essential services in ${matchedCity.name}.`,
+      };
+    } else {
+      redirect('/onboard');
+    }
+  }
 
-  // Find handpicked listings in this city (limit 6)
-  const rawListings = await Listing.find({ city: cityDoc._id, isActive: true })
-    .populate('category', 'name slug icon')
-    .limit(6)
-    .lean();
+  // If categories are empty, fallback to CATEGORIES constant
+  if (!categories || categories.length === 0) {
+    categories = CATEGORIES.map(cat => ({
+      _id: `cat-${cat.slug}`,
+      name: cat.name,
+      slug: cat.slug,
+      icon: cat.icon,
+      description: cat.description,
+      isActive: true,
+      sortOrder: cat.sortOrder,
+    }));
+  }
 
-  // Serialize Mongoose ObjectIds to simple strings for client boundary
-  const serializedCity = {
-    ...cityDoc,
-    _id: cityDoc._id.toString(),
-  };
+  // If listings are empty in DB or DB offline, fallback to MOCK_LISTINGS
+  if (!rawListings || rawListings.length === 0) {
+    const citySlugLower = city.toLowerCase();
+    rawListings = MOCK_LISTINGS.filter(l => l.citySlug.toLowerCase() === citySlugLower).slice(0, 6);
+  }
 
-  const serializedCategories = categories.map(cat => ({
-    ...cat,
-    _id: cat._id.toString(),
-  }));
-
-  const serializedListings = rawListings.map(listing => ({
-    ...listing,
-    _id: listing._id.toString(),
-    city: listing.city?.toString() || '',
-    category: (listing.category && typeof listing.category === 'object' && listing.category._id) ? {
-      name: listing.category.name || '',
-      slug: listing.category.slug || '',
-      icon: listing.category.icon || '',
-      _id: listing.category._id.toString(),
-    } : null,
-    vendor: listing.vendor?.toString() || null,
-    createdAt: listing.createdAt?.toISOString() || null,
-    updatedAt: listing.updatedAt?.toISOString() || null,
-  }));
+  // Serialize Mongoose ObjectIds and Dates to plain JSON for client boundary
+  const serializedCity = JSON.parse(JSON.stringify(cityDoc));
+  const serializedCategories = JSON.parse(JSON.stringify(categories));
+  const serializedListings = JSON.parse(JSON.stringify(rawListings));
 
   return (
     <CityDashboardClient

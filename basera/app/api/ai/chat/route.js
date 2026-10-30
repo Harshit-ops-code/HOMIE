@@ -19,27 +19,31 @@ export async function POST(request) {
 
     const lastMessage = messages[messages.length - 1].content;
 
-    await dbConnect();
-
-    // Resolve city slug to ObjectId
-    const cityDoc = await City.findOne({ slug: city });
-    const cityId = cityDoc ? cityDoc._id : null;
-
     let relevantListings = [];
-    if (cityId) {
-      // RAG: fetch relevant listings based on the user's message
-      relevantListings = await Listing.find(
-        {
-          $text: { $search: lastMessage },
-          city: cityId,
-          isActive: true,
-        },
-        { score: { $meta: 'textScore' } }
-      )
-        .sort({ score: { $meta: 'textScore' } })
-        .limit(5)
-        .populate('category', 'name')
-        .lean();
+    try {
+      await dbConnect();
+      const cityDoc = await City.findOne({ slug: city });
+      const cityId = cityDoc ? cityDoc._id : null;
+
+      if (cityId) {
+        relevantListings = await Listing.find(
+          {
+            $text: { $search: lastMessage },
+            city: cityId,
+            isActive: true,
+          },
+          { score: { $meta: 'textScore' } }
+        )
+          .sort({ score: { $meta: 'textScore' } })
+          .limit(5)
+          .populate('category', 'name')
+          .lean();
+      }
+    } catch (dbErr) {
+      console.warn('[Chat RAG] MongoDB unreachable, falling back to mock listings:', dbErr.message);
+      // Fallback search in mock data
+      const { MOCK_LISTINGS } = await import('@/constants/mockListings');
+      relevantListings = (MOCK_LISTINGS || []).slice(0, 5);
     }
 
     // Build context string from listings

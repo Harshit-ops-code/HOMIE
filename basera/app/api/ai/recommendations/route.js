@@ -25,8 +25,8 @@ export async function GET(request) {
     ).lean();
 
     if (usersWhoSaved.length < 3) {
-      // Not enough data — return top-rated listings in other categories
-      const topListings = await Listing.find({ isActive: true })
+      // Not enough data — return top-rated listings (excluding current listing)
+      const topListings = await Listing.find({ _id: { $ne: listingId }, isActive: true })
         .sort({ 'rating.average': -1 })
         .limit(4)
         .populate('category', 'name icon slug')
@@ -54,7 +54,7 @@ export async function GET(request) {
       .slice(0, 4)
       .map(([id]) => id);
 
-    const recommendations = await Listing.find({ _id: { $in: topCoSaved } })
+    const recommendations = await Listing.find({ _id: { $in: topCoSaved, $ne: listingId }, isActive: true })
       .populate('category', 'name icon slug')
       .lean();
 
