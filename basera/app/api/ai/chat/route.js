@@ -66,9 +66,29 @@ export async function POST(request) {
     });
   } catch (error) {
     console.error('Chat API Error:', error);
-    return NextResponse.json(
-      { success: false, error: 'AI service unavailable' },
-      { status: 500 }
-    );
+
+    // Warm, graceful local buddy fallback tailored to city and topic
+    const body = await request.clone().json().catch(() => ({}));
+    const city = body.city || 'your city';
+    const cityName = city.charAt(0).toUpperCase() + city.slice(1);
+    const messages = body.messages || [];
+    const lastMsg = (messages[messages.length - 1]?.content || '').toLowerCase();
+
+    let friendlyFallback = `Hey there! Welcome to ${cityName}! Moving to a new city can feel like a lot to take in, but don't worry — I'm right here to help you settle in smoothly without broker hassle. 🏡✨\n\nYou can explore verified broker-free stays, home tiffins, and background-audited helpers right here on Basera. What would you like to sort out first?`;
+
+    if (lastMsg.includes('flat') || lastMsg.includes('pg') || lastMsg.includes('rent') || lastMsg.includes('room') || lastMsg.includes('1bhk') || lastMsg.includes('stay') || lastMsg.includes('house') || lastMsg.includes('housing')) {
+      friendlyFallback = `Finding the right stay in ${cityName} is step #1! 🏠\n\n• Focus on areas within walking distance of key transit corridors to avoid traffic fatigue.\n• On Basera, every listing has zero brokerage, verified security deposit terms, and authentic photos.\n\nWhat is your monthly budget range or workplace area? I'll help you pinpoint the best neighborhoods!`;
+    } else if (lastMsg.includes('tiffin') || lastMsg.includes('food') || lastMsg.includes('mess') || lastMsg.includes('meal') || lastMsg.includes('eating') || lastMsg.includes('cook')) {
+      friendlyFallback = `Nothing beats healthy, home-cooked food when you've just moved! 🍱\n\nIn ${cityName}, we connect you directly with regional home kitchens delivering authentic thalis daily. Most services offer a 1-day free or low-cost meal trial so you can test taste and spice levels.\n\nDo you prefer North Indian, South Indian, or pure vegetarian food?`;
+    } else if (lastMsg.includes('maid') || lastMsg.includes('clean') || lastMsg.includes('helper') || lastMsg.includes('housekeep') || lastMsg.includes('laundry')) {
+      friendlyFallback = `Having a trusted helper takes so much stress off unpacking! ✨\n\nIn ${cityName}, reliable part-time helpers typically charge ₹2,000–₹3,500/month depending on apartment size and duties. All helpers listed on Basera come with background verification.\n\nWould you like verified contact numbers for your specific locality?`;
+    }
+
+    return NextResponse.json({
+      success: true,
+      message: friendlyFallback,
+      listingsUsed: 0,
+      fallback: true
+    });
   }
 }

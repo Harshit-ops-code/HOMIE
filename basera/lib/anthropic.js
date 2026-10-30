@@ -6,8 +6,12 @@ const GROQ_API_URL = 'https://api.groq.com/openai/v1/chat/completions';
  * @param {string} systemPrompt - System prompt string
  * @param {number} maxTokens - Max response tokens (default 1024)
  */
-export async function callClaude(messages, systemPrompt, maxTokens = 1024) {
+export async function callClaude(messages, systemPrompt, maxTokens = 450) {
   const apiKey = process.env.GROQ_API_KEY;
+
+  if (!apiKey) {
+    throw new Error('GROQ_API_KEY not configured');
+  }
 
   const response = await fetch(GROQ_API_URL, {
     method: 'POST',
@@ -22,8 +26,8 @@ export async function callClaude(messages, systemPrompt, maxTokens = 1024) {
         ...(systemPrompt ? [{ role: 'system', content: systemPrompt }] : []),
         ...messages
       ],
-      temperature: 1,
-      top_p: 1
+      temperature: 0.65,
+      top_p: 0.95
     }),
   });
 
